@@ -1,0 +1,466 @@
+<!doctype html>
+<html>
+<head>
+<!-- start: Meta -->
+	<meta charset="utf-8" />
+	<title>Ziksana Dashboard</title>
+	<meta name="description" content="Ziksana Dashboard version 1.2" />
+	<meta name="author" content="Kaivalya Shah" />
+	<meta name="keyword" content="Ziksana Version1.2" />
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	
+    <link href="../css/zik.css" rel="stylesheet" />
+	<link href="../css/zik-responsive.css" rel="stylesheet" />
+	<link href="../css/maintheme.css" rel="stylesheet" />
+    <link href="../css/bg-color.css" rel="stylesheet" />
+    <link href="../css/studycalendar.css" rel="stylesheet"/>
+    <link href="../css/tooltip.css" type="text/css" rel="stylesheet" />
+    <link href="../css/daterangepicker-bs2.css" rel="stylesheet" type="text/css" media="all"  />
+	<!-- end: CSS -->
+    
+    <style>
+	.caret
+	{
+	margin-top: 7px;
+	border-top: 8px solid #000000;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;	
+	}
+	
+	#reportrange
+	{
+	font-size:12px;	
+	}
+	
+	</style>
+    
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/tooltip.js"></script>
+
+<script>
+$(document).ready(function() {
+
+
+    $('div[rel=tooltip]').tooltip();
+});
+
+</script>
+  	<script type="text/javascript" src="../js/moment.js"></script>
+    <script type="text/javascript" src="../js/daterangepicker.js"></script>
+     <script type="text/javascript">
+               $(document).ready(function() {
+				   
+			   
+                  $('#reportrange').daterangepicker(
+                     {
+                        startDate: moment().subtract('days', 29),
+                        endDate: moment(),
+                        minDate: '01/01/2012',
+                        maxDate: '12/31/2014',
+                        dateLimit: { days: 60 },
+                        showDropdowns: true,
+                        showWeekNumbers: true,
+                        timePicker: false,
+                        timePickerIncrement: 1,
+                        timePicker12Hour: true,
+                        ranges: {
+                           'Today': [moment(), moment()],
+                           'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+                           'Last 7 Days': [moment().subtract('days', 6), moment()],
+                           'Last 30 Days': [moment().subtract('days', 29), moment()],
+                           'This Month': [moment().startOf('month'), moment().endOf('month')],
+                           'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+                        },
+                        opens: 'left',
+                        buttonClasses: ['btn btn-default'],
+                        applyClass: 'btn-small btn-primary',
+                        cancelClass: 'btn-small',
+                        format: 'MM/DD/YYYY',
+                        separator: ' to ',
+                        locale: {
+                            applyLabel: 'Submit',
+                            fromLabel: 'From',
+                            toLabel: 'To',
+                            customRangeLabel: 'Custom Range',
+                            daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+                            monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                            firstDay: 1
+                        }
+                     },
+                     function(start, end) {
+                      console.log("Callback has been called!");
+                      $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                     }
+                  );
+                  //Set the initial state of the picker label
+                  $('#reportrange span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+               });
+               </script>
+ 
+
+
+
+</head>
+
+<body>
+
+<!-- ###################### start of container #################### -->
+<div id="zikcontainer">
+
+<!-- ###################### start of zikheader #################### -->
+
+<div id="ajaxheader"></div>
+
+
+
+<!-- ###################### start of bodycontainer #################### -->
+
+<div id="bodycontainer">
+
+<!-- ###################### start of main-menu #################### -->
+
+<div id="ajaxmenu">
+
+</div>
+
+
+<!-- ###################### end of main-menu #################### --> 
+
+<div class="theatrewrapper pull-left ">
+
+<p class="pageheader fnt-color-blue"> Study Calendar </p>
+<hr class="pageheader_border border1px-color-blue">
+
+
+<div class="navbar selectcriteria" style="background-color:#f5f5f5;">
+   
+ 
+ <div class="selectlabel pull-left fnt-color-blue"> Select Search Criteria </div>
+ 
+ 
+ 
+ <div id="reportrange" class="pull-left" style="background: #fff; display:inline-block; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                  <i class="icon-calendar icon-large"></i>
+                  <span></span> <b class="caret"></b>
+               </div>
+
+   
+   
+     
+ 
+    
+</div> <!-- .navbar -->
+  
+<div class="clearmyfix"> </div>  
+  
+<div id="studycaldendarwrapper">
+
+<table class="table">
+              
+              <tbody>
+                <tr>
+                  <td class="subjectdate fnt-color-magenta">18th August 2013</td>
+                  <td>
+                  
+                  <p class="subjectheader fnt-color-magenta">Science</p>
+                  <p class="subjectdescription"> 
+                  
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+<a href="#linkurl">More.. </a>
+                  </p>
+             
+                    <div id="subject-pbar">
+                    
+                    <div class="socializeptext fnt-color-magenta"> Progress <span class="fnt-color-magenta"> 50% </span> </div> <!-- end of socializeptext -->
+                    <div class="progress" style=" margin-bottom:0px; display:inline-block; width:100px;">
+                    <div class="progress-bar progress-bar-info bg-color-magenta" style="width: 50%"></div>
+                    </div>  <!-- end of progressbar -->
+                    
+                    </div> <!-- end of subject-pbar -->
+                    
+                    
+                    <div class="no-of-alert fnt-color-magenta" rel="tooltip" title="Alerts">
+                    
+                    <a href="#linkurl" rel="Alerts" class="fnt-color-magenta">50 <span><i class="icon-switch fnt-color-magenta"></i></span></a>
+                    
+                    </div> <!-- end of no of alert  -->
+                    
+                     <div class="recommendation" rel="tooltip" title="Zik Recommends">
+                    
+                   <a href="#linkurl"> <img src="../img/recommends-icon.png"/> </a>
+                     
+                    
+                    </div> <!-- end of recommendation  -->
+                    
+                    <div class="clearmyfix"> </div>
+             
+                  
+                  </td>
+                
+                </tr>
+                
+                <tr>
+                  <td class="subjectdate fnt-color-purple">19th August 2013</td>
+                  <td>
+                  
+                  <p class="subjectheader fnt-color-purple">Science</p>
+                  <p class="subjectdescription"> 
+                  
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+<a href="#linkurl">More.. </a>
+                  </p>
+             
+                    <div id="subject-pbar">
+                    
+                    <div class="socializeptext fnt-color-purple"> Progress <span class="fnt-color-purple"> 50% </span> </div> <!-- end of socializeptext -->
+                    <div class="progress" style=" margin-bottom:0px; display:inline-block; width:100px;">
+                    <div class="progress-bar progress-bar-info bg-color-purple" style="width: 50%"></div>
+                    </div>  <!-- end of progressbar -->
+                    
+                    </div> <!-- end of subject-pbar -->
+                    
+                    
+                    <div class="no-of-alert fnt-color-purple" rel="tooltip" title="Alerts">
+                    
+                    <a href="#linkurl" rel="Alerts" class="fnt-color-purple">50 <span><i class="icon-switch fnt-color-purple"></i></span></a>
+                    
+                    </div> <!-- end of no of alert  -->
+                    
+                     <div class="recommendation" rel="tooltip" title="Zik Recommends">
+                    
+                   <a href="#linkurl"> <img src="../img/recommends-icon.png"/> </a>
+                     
+                    
+                    </div> <!-- end of recommendation  -->
+                    
+                    <div class="clearmyfix"> </div>
+             
+                  
+                  </td>
+                
+                </tr>
+                
+                
+                   <tr>
+                  <td class="subjectdate fnt-color-magenta">20th August 2013</td>
+                  <td>
+                  
+                  <p class="subjectheader fnt-color-magenta">Science</p>
+                  <p class="subjectdescription"> 
+                  
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+<a href="#linkurl">More.. </a>
+                  </p>
+             
+                    <div id="subject-pbar">
+                    
+                    <div class="socializeptext fnt-color-magenta"> Progress <span class="fnt-color-magenta"> 50% </span> </div> <!-- end of socializeptext -->
+                    <div class="progress" style=" margin-bottom:0px; display:inline-block; width:100px;">
+                    <div class="progress-bar progress-bar-info bg-color-magenta" style="width: 50%"></div>
+                    </div>  <!-- end of progressbar -->
+                    
+                    </div> <!-- end of subject-pbar -->
+                    
+                    
+                    <div class="no-of-alert fnt-color-magenta" rel="tooltip" title="Alerts">
+                    
+                    <a href="#linkurl" rel="Alerts" class="fnt-color-magenta">50 <span><i class="icon-switch fnt-color-magenta"></i></span></a>
+                    
+                    </div> <!-- end of no of alert  -->
+                    
+                     <div class="recommendation" rel="tooltip" title="Zik Recommends">
+                    
+                   <a href="#linkurl"> <img src="../img/recommends-icon.png"/> </a>
+                     
+                    
+                    </div> <!-- end of recommendation  -->
+                    
+                    <div class="clearmyfix"> </div>
+             
+                  
+                  </td>
+                
+                </tr>
+                
+                <tr>
+                  <td class="subjectdate fnt-color-purple">21st August 2013</td>
+                  <td>
+                  
+                  <p class="subjectheader fnt-color-purple">Science</p>
+                  <p class="subjectdescription"> 
+                  
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+<a href="#linkurl">More.. </a>
+                  </p>
+             
+                    <div id="subject-pbar">
+                    
+                    <div class="socializeptext fnt-color-purple"> Progress <span class="fnt-color-purple"> 50% </span> </div> <!-- end of socializeptext -->
+                    <div class="progress" style=" margin-bottom:0px; display:inline-block; width:100px;">
+                    <div class="progress-bar progress-bar-info bg-color-purple" style="width: 50%"></div>
+                    </div>  <!-- end of progressbar -->
+                    
+                    </div> <!-- end of subject-pbar -->
+                    
+                    
+                    <div class="no-of-alert fnt-color-purple" rel="tooltip" title="Alerts">
+                    
+                    <a href="#linkurl" rel="Alerts" class="fnt-color-purple">50 <span><i class="icon-switch fnt-color-purple"></i></span></a>
+                    
+                    </div> <!-- end of no of alert  -->
+                    
+                     <div class="recommendation" rel="tooltip" title="Zik Recommends">
+                    
+                   <a href="#linkurl"> <img src="../img/recommends-icon.png"/> </a>
+                     
+                    
+                    </div> <!-- end of recommendation  -->
+                    
+                    <div class="clearmyfix"> </div>
+             
+                  
+                  </td>
+                
+                </tr>
+                
+                
+                
+                
+                
+                   <tr>
+                  <td class="subjectdate fnt-color-magenta">22nd August 2013</td>
+                  <td>
+                  
+                  <p class="subjectheader fnt-color-magenta">Science</p>
+                  <p class="subjectdescription"> 
+                  
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+<a href="#linkurl">More.. </a>
+                  </p>
+             
+                    <div id="subject-pbar">
+                    
+                    <div class="socializeptext fnt-color-magenta"> Progress <span class="fnt-color-magenta"> 50% </span> </div> <!-- end of socializeptext -->
+                    <div class="progress" style=" margin-bottom:0px; display:inline-block; width:100px;">
+                    <div class="progress-bar progress-bar-info bg-color-magenta" style="width: 50%"></div>
+                    </div>  <!-- end of progressbar -->
+                    
+                    </div> <!-- end of subject-pbar -->
+                    
+                    
+                    <div class="no-of-alert fnt-color-magenta" rel="tooltip" title="Alerts">
+                    
+                    <a href="#linkurl" rel="Alerts" class="fnt-color-magenta">50 <span><i class="icon-switch fnt-color-magenta"></i></span></a>
+                    
+                    </div> <!-- end of no of alert  -->
+                    
+                     <div class="recommendation" rel="tooltip" title="Zik Recommends">
+                    
+                   <a href="#linkurl"> <img src="../img/recommends-icon.png"/> </a>
+                     
+                    
+                    </div> <!-- end of recommendation  -->
+                    
+                    <div class="clearmyfix"> </div>
+             
+                  
+                  </td>
+                
+                </tr>
+                
+                <tr>
+                  <td class="subjectdate fnt-color-purple">23rd August 2013</td>
+                  <td>
+                  
+                  <p class="subjectheader fnt-color-purple">Science</p>
+                  <p class="subjectdescription"> 
+                  
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+<a href="#linkurl">More.. </a>
+                  </p>
+             
+                    <div id="subject-pbar">
+                    
+                    <div class="socializeptext fnt-color-purple"> Progress <span class="fnt-color-purple"> 50% </span> </div> <!-- end of socializeptext -->
+                    <div class="progress" style=" margin-bottom:0px; display:inline-block; width:100px;">
+                    <div class="progress-bar progress-bar-info bg-color-purple" style="width: 50%"></div>
+                    </div>  <!-- end of progressbar -->
+                    
+                    </div> <!-- end of subject-pbar -->
+                    
+                    
+                    <div class="no-of-alert fnt-color-purple" rel="tooltip" title="Alerts">
+                    
+                    <a href="#linkurl" rel="Alerts" class="fnt-color-purple">50 <span><i class="icon-switch fnt-color-purple"></i></span></a>
+                    
+                    </div> <!-- end of no of alert  -->
+                    
+                     <div class="recommendation" rel="tooltip" title="Zik Recommends">
+                    
+                   <a href="#linkurl"> <img src="../img/recommends-icon.png"/> </a>
+                     
+                    
+                    </div> <!-- end of recommendation  -->
+                    
+                    <div class="clearmyfix"> </div>
+             
+                  
+                  </td>
+                
+                </tr>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+              
+              </tbody>
+            </table>
+
+
+
+
+</div> <!--end of studycaldendarwrapper-->
+
+
+</div> <!--end of theatrewrapper-->
+
+
+
+
+
+<div class="clearmyfix"> </div>
+
+</div> 
+<!-- ###################### end of bodycontainer #################### -->
+
+
+
+<!-- #################### start of footer #################### -->
+
+<div id="ajaxfooter">
+
+</div>
+
+<!-- #################### end of footer #################### -->
+
+
+
+
+
+</div>
+<!-- ###################### end of container #################### -->
+
+
+</body>
+</html>

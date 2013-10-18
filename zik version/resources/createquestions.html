@@ -1,0 +1,1202 @@
+<!doctype html>
+<html>
+<head>
+<!-- start: Meta -->
+	<meta charset="utf-8" />
+	<title>Ziksana Dashboard</title>
+	<meta name="description" content="Ziksana Dashboard version 1.2" />
+	<meta name="author" content="Kaivalya Shah" />
+	<meta name="keyword" content="Ziksana Version1.2" />
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	<link href="../css/zik.css" rel="stylesheet" />
+	<link href="../css/zik-responsive.css" rel="stylesheet" />
+	<link href="../css/maintheme.css" rel="stylesheet" />
+    <link href="../css/bg-color.css" rel="stylesheet" />
+    <link href="../css/createquestions.css" rel="stylesheet"/>
+    <link href="../css/tooltip_skin_variation.css" type="text/css" rel="stylesheet" />
+	
+    <style>
+		
+		.form-horizontal .controls {
+		margin-left: 5px !important;
+		}
+		
+		
+		
+		.sc-image
+		{
+		height:60px;
+		width:60px;	
+		}
+		
+		.sky-carousel-container
+		{
+		margin-top:25px !important;	
+		}
+		
+		.sky-carousel
+		{
+		margin: 0;	
+		}
+		
+		
+	</style>
+  
+	<!-- end: CSS -->
+    
+    	<script src="../js/jquery-1.9.1.min.js"></script>
+      
+		<script type="text/javascript" src="../js/custom/question.js"></script>
+		
+    
+      <script src="../js/filetype.js"> </script>
+        
+       <script type="text/javascript">
+	   $('.fileupload').fileupload()
+	  
+	   </script>
+
+</head>
+
+<body>
+
+<!-- ###################### start of container #################### -->
+<div id="zikcontainer">
+
+<!-- ###################### start of zikheader #################### -->
+
+<div id="ajaxheader"></div>
+
+
+
+
+<!-- ###################### start of bodycontainer #################### -->
+
+<div id="bodycontainer">
+
+<!-- ###################### start of main-menu #################### -->
+
+<div id="ajaxmenu">
+
+</div>
+
+
+<!-- ###################### end of main-menu #################### --> 
+
+
+<div class="theatrewrapper pull-left ">
+
+<p class="pageheader fnt-color-blue" style="margin-bottom:5px;"> Create Questions </p>
+<hr class="pageheader_border border1px-color-blue" style="margin-top:5px; margin-bottom:10px;">
+
+
+<div id="profilewrapper">
+
+
+<div id="questionoptions" class="pull-left">
+
+<ul>
+
+<li style="font-size:20px; margin-top:5px;" class="fnt-color-magenta"> Select Question Type</li>
+<li><a href="#linkurl" class="truefalsebtn link">True False Question</a> </li>
+<li><a href="#linkurl" class="multichoicesinglebtn link">Multi Choice Single Answer</a> </li>
+<li><a href="#linkurl" class="multichoicemultibtn link">Multi Choice Multi Answer </a> </li>
+<li><a href="#linkurl" class="orderingchoicebtn link">Ordering Choice</a> </li>
+<li><a href="#linkurl" class="matchthefollowingbtn link">Match the Following</a> </li>
+<li><a href="#linkurl" class="fillintheblanksbtn link">Fill in the blanks</a></li>
+<li><a href="#linkurl" class="jumbledsequencebtn link">Jumbled Sequence</a></li>
+<li><a href="#linkurl" class="descriptivequestionbtn link">Descriptive Questions</a></li>
+<li><a href="#linkurl" class="mathematicalquestionbtn link">Mahematical Questions</a></li>
+<li><a href="#linkurl" class="framethequestionbtn link">Frame the Questions</a></li>
+
+</ul>
+
+
+</div> <!-- end of profileoptions -->
+
+
+
+
+<div id="questiondetails" class="pull-left" style="height:420px; overflow:scroll; overflow-x:hidden; margin-left:20px;">
+
+<div id="truefalse">
+
+<p class="profileheader fnt-color-blue">Create True False Question</p>
+<hr class="profile_border border1px-color-blue" style="margin-bottom:5px; margin-top:5px;">
+
+<form>
+   
+   <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Difficulty Level</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Difficulty Level </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify any tags</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Any tags </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Subject area</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject area </option> </select>
+    </div>
+    
+    <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Specify Subject</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify Topic</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Topic </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Question Text</label>
+    <textarea style="width: 612px;height: 98px;">Question Description</textarea>
+ </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Instruction to the User</label>
+    <input class="input-xxlargekay" type="text" placeholder="Instruction to the user">
+ </div>
+ 
+ <div style="margin-bottom:10px;">
+<label class="inline fnt-size-14 mr-r-10"><span class="fnt-size-14 mr-r-5"> Select the Answer </span> 
+
+ <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> <span class="fnt-size-14 mr-l-5 mr-r-5"> True </span>
+ <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"><span class="fnt-size-14 mr-l-5 mr-r-5"> False </span>
+
+</label> 
+
+ </div>
+ 
+ 
+ <div>
+ <label class="fnt-size-14">Feedback when Correct</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+  <div>
+ <label class="fnt-size-14">Feedback when Incorrect</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+ 
+  <div>
+ 
+<label class="inline fnt-size-14 mr-r-10"><span class="fnt-size-14 mr-r-5"> Attach Additional Information:</span> 
+  
+ 
+<div class="fileupload fileupload-new" data-provides="fileupload">
+  <div class="input-append">
+    <div class="uneditable-input span3"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+  </div>
+</div>
+
+</label>
+ </div>
+
+ 
+
+<div class="buttonpanel pull-right">
+
+<a href="#linkurl" class="btn inline"> Preview Question </a>
+
+<a href="#linkurl" class="btn inline"> Submit</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+ 
+</form>
+
+
+
+</div> <!-- end of True False -->
+
+
+
+
+<div id="multichoicesingle">
+
+<p class="profileheader fnt-color-blue">Create Multichoice Single Question</p>
+<hr class="profile_border border1px-color-blue" style="margin-bottom:5px; margin-top:5px;">
+
+<form>
+   
+   <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Difficulty Level</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Difficulty Level </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify any tags</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Any Tags </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Subject area</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject area </option> </select>
+    </div>
+    
+    <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Specify Subject</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify Topic</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Topic </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Question Text</label>
+    <textarea style="width: 612px;height: 98px;">Question Description</textarea>
+ </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Instruction to the User</label>
+    <input class="input-xxlargekay" type="text" placeholder="Instruction to the user">
+ </div>
+ 
+ <div style="margin-bottom:10px;">
+ 
+<label class="inline">
+<input class="input-large" type="text" placeholder="Enter your Choice">  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> <span class="fnt-size-14"> Choose Correct Answer </span>
+</label>
+<label class="inline">
+<input class="input-large" type="text" placeholder="Enter your Choice">  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> <span class="fnt-size-14"> Choose Correct Answer </span>
+</label>
+ 
+
+ </div>
+ 
+ 
+ <div>
+ <label class="fnt-size-14">Feedback when Correct</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+  <div>
+ <label class="fnt-size-14">Feedback when Incorrect</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+ 
+  <div>
+ 
+<label class="inline fnt-size-14 mr-r-10"><span class="fnt-size-14 mr-r-5"> Attach Additional Information:</span> 
+  
+ 
+<div class="fileupload fileupload-new" data-provides="fileupload">
+  <div class="input-append">
+    <div class="uneditable-input span3"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+  </div>
+</div>
+
+</label>
+ </div>
+
+ 
+
+<div class="buttonpanel pull-right">
+
+<a href="#linkurl" class="btn inline"> Preview Question </a>
+
+<a href="#linkurl" class="btn inline"> Submit</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+ 
+</form>
+
+
+
+</div> <!-- end of Multi Chooice Single -->
+
+
+
+
+
+<div id="multichoicemulti">
+
+<p class="profileheader fnt-color-blue">Create Multichoice Multi Question</p>
+<hr class="profile_border border1px-color-blue" style="margin-bottom:5px; margin-top:5px;">
+
+<form>
+   
+   <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Difficulty Level</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Difficulty Level </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify any tags</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Any Tags </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Subject area</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject area </option> </select>
+    </div>
+    
+    <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Specify Subject</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify Topic</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Topic </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Question Text</label>
+    <textarea style="width: 612px;height: 98px;">Question Description</textarea>
+ </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Instruction to the User</label>
+    <input class="input-xxlargekay" type="text" placeholder="Instruction to the user">
+ </div>
+ 
+ <div style="margin-bottom:10px;">
+ 
+<label class="inline">
+<input class="input-large" type="text" placeholder="Enter your Choice">  
+ <input type="checkbox"> <span class="fnt-size-14"> Choose Correct Answer </span>
+      
+</label>
+<label class="inline">
+<input class="input-large" type="text" placeholder="Enter your Choice">  
+ <input type="checkbox"> <span class="fnt-size-14"> Choose Correct Answer </span>
+      
+</label>
+ 
+
+ </div>
+ 
+ 
+ <div>
+ <label class="fnt-size-14">Feedback when Correct</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+  <div>
+ <label class="fnt-size-14">Feedback when Incorrect</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+ 
+  <div>
+ 
+<label class="inline fnt-size-14 mr-r-10"><span class="fnt-size-14 mr-r-5"> Attach Additional Information:</span> 
+  
+ 
+<div class="fileupload fileupload-new" data-provides="fileupload">
+  <div class="input-append">
+    <div class="uneditable-input span3"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+  </div>
+</div>
+
+</label>
+ </div>
+
+ 
+
+<div class="buttonpanel pull-right">
+
+<a href="#linkurl" class="btn inline"> Preview Question </a>
+
+<a href="#linkurl" class="btn inline"> Submit</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+ 
+</form>
+
+
+
+</div> <!-- end of Multi Chooice Multi -->
+
+
+
+
+
+
+
+<div id="orderingchoices">
+
+<p class="profileheader fnt-color-blue">Create Ordering Choices Question</p>
+<hr class="profile_border border1px-color-blue" style="margin-bottom:5px; margin-top:5px;">
+
+<form>
+   
+   <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Difficulty Level</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Difficulty Level </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify any tags</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Any Tags </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Subject area</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject area </option> </select>
+    </div>
+    
+    <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Specify Subject</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify Topic</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Topic </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Question Text</label>
+    <textarea style="width: 612px;height: 98px;">Question Description</textarea>
+ </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Instruction to the User</label>
+    <input class="input-xxlargekay" type="text" placeholder="Instruction to the user">
+ </div>
+ 
+ <div>
+<p class="triangle-isosceles" style="margin-bottom: 20px;">Enter the details in order, Ziksana will Jumble the order when the question is presented to the student and later verify the answers based on the correct order you have provided.</p>
+ </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Enter your Choice</label>
+    <input class="input-xxlarge inline" type="text" placeholder="Enter your Choice">
+   <a href="#linkurl" class="fnt-color-darkgrey"> <span class="inline"> <i class="icon-plus-2 mr-l-5 fnt-size-16"></i> </span> </a>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ <div>
+ <label class="fnt-size-14">Feedback when Correct</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+  <div>
+ <label class="fnt-size-14">Feedback when Incorrect</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+ 
+  <div>
+ 
+<label class="inline fnt-size-14 mr-r-10"><span class="fnt-size-14 mr-r-5"> Attach Additional Information:</span> 
+  
+ 
+<div class="fileupload fileupload-new" data-provides="fileupload">
+  <div class="input-append">
+    <div class="uneditable-input span3"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+  </div>
+</div>
+
+</label>
+ </div>
+
+ 
+
+<div class="buttonpanel pull-right">
+
+<a href="#linkurl" class="btn inline"> Preview Question </a>
+
+<a href="#linkurl" class="btn inline"> Submit</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+ 
+</form>
+
+
+
+</div> <!-- Ordering Choices-->
+
+
+
+
+
+
+<div id="matchthefollowing">
+
+<p class="profileheader fnt-color-blue">Create Match the Following Question</p>
+<hr class="profile_border border1px-color-blue" style="margin-bottom:5px; margin-top:5px;">
+
+<form>
+   
+   <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Difficulty Level</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Difficulty Level </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify any tags</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Any Tags </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Subject area</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject area </option> </select>
+    </div>
+    
+    <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Specify Subject</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify Topic</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Topic </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Question Text</label>
+    <textarea style="width: 612px;height: 98px;">Question Description</textarea>
+ </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Instruction to the User</label>
+    <input class="input-xxlargekay" type="text" placeholder="Instruction to the user">
+ </div>
+ 
+ <div>
+<p class="triangle-isosceles" style="margin-bottom: 20px;">Enter the Correct Matches, Ziksana will Randomize them when the question is presented to the student and later verify the answers based on the correct Matches you have provided.</p>
+ </div>
+ 
+ 
+<div class="pull-left">
+
+<span class="inline fnt-size-16 mr-l-5" style="vertical-align: sub;">Q1</span><input class="input-medium inline mr-l-5" type="text" placeholder="Enter the Question" style="vertical-align: sub;"> 
+ <a href="#linkurl" class="fnt-color-darkgrey"> <span class="inline" style="vertical-align: sub;"> <i class="icon-plus-2 mr-l-5 fnt-size-16"></i> </span> </a>
+
+</div>
+
+
+<div class="pull-left">
+
+<input class="input-medium inline mr-l-5" type="text" placeholder="Enter the Answer">
+<select class="input-medium inline mr-l-5"><option> Select Matching Question </select> 
+ <a href="#linkurl" class="fnt-color-darkgrey"> <span class="inline"> <i class="icon-plus-2 mr-l-5 fnt-size-16" 
+ style="vertical-align: initial;"></i> </span> </a>
+
+</div>
+
+<div class="clearmyfix"> </div>
+ 
+ 
+ 
+ 
+ 
+ <div>
+ <label class="fnt-size-14">Feedback when Correct</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+  <div>
+ <label class="fnt-size-14">Feedback when Incorrect</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+ 
+  <div>
+ 
+<label class="inline fnt-size-14 mr-r-10"><span class="fnt-size-14 mr-r-5"> Attach Additional Information:</span> 
+  
+ 
+<div class="fileupload fileupload-new" data-provides="fileupload">
+  <div class="input-append">
+    <div class="uneditable-input span3"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+  </div>
+</div>
+
+</label>
+ </div>
+
+ 
+
+<div class="buttonpanel pull-right">
+
+<a href="#linkurl" class="btn inline"> Preview Question </a>
+
+<a href="#linkurl" class="btn inline"> Submit</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+ 
+</form>
+
+
+
+</div> <!-- Match the Following-->
+
+
+
+
+
+
+
+<div id="fillintheblanks">
+
+<p class="profileheader fnt-color-blue">Create Fill in the Blanks Question</p>
+<hr class="profile_border border1px-color-blue" style="margin-bottom:5px; margin-top:5px;">
+
+<form>
+   
+   <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Difficulty Level</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Difficulty Level </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify any tags</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Any Tags </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Subject area</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject area </option> </select>
+    </div>
+    
+    <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Specify Subject</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify Topic</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Topic </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ 
+ <div>
+<p class="triangle-isosceles" style="margin-bottom: 20px;">While framing the question use < > to indicate the blanks to be filled by teh student and enclose the correct answer within < >. Ziksana will create the blanks when the question is presented to the student and later verify against the answer you have specified.</p>
+ </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Question Text</label>
+    <textarea style="width: 612px;height: 98px;">Question Description</textarea>
+ </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Instruction to the User</label>
+    <input class="input-xxlargekay" type="text" placeholder="Instruction to the user">
+ </div>
+ 
+ 
+ 
+ 
+ <div>
+ <label class="fnt-size-14">Feedback when Correct</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+  <div>
+ <label class="fnt-size-14">Feedback when Incorrect</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+ 
+  <div>
+ 
+<label class="inline fnt-size-14 mr-r-10"><span class="fnt-size-14 mr-r-5"> Attach Additional Information:</span> 
+  
+ 
+<div class="fileupload fileupload-new" data-provides="fileupload">
+  <div class="input-append">
+    <div class="uneditable-input span3"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+  </div>
+</div>
+
+</label>
+ </div>
+
+ 
+
+<div class="buttonpanel pull-right">
+
+<a href="#linkurl" class="btn inline"> Preview Question </a>
+
+<a href="#linkurl" class="btn inline"> Submit</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+ 
+</form>
+
+
+
+</div> <!-- Fill in the blanks-->
+
+
+
+
+
+
+<div id="jumbledsequence">
+
+<p class="profileheader fnt-color-blue">Create Jumbled Sequence Question</p>
+<hr class="profile_border border1px-color-blue" style="margin-bottom:5px; margin-top:5px;">
+
+<form>
+   
+   <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Difficulty Level</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Difficulty Level </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify any tags</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Any Tags </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Subject area</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject area </option> </select>
+    </div>
+    
+    <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Specify Subject</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify Topic</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Topic </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ 
+ <div>
+<p class="triangle-isosceles" style="margin-bottom: 20px;">While framing the question use < > to indicate the blanks to be filled by teh student and enclose the correct answer within < >. Ziksana will create the blanks when the question is presented to the student and later verify against the answer you have specified.</p>
+ </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Question Text</label>
+    <textarea style="width: 612px;height: 98px;">Question Description</textarea>
+ </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Instruction to the User</label>
+    <input class="input-xxlargekay" type="text" placeholder="Instruction to the user">
+ </div>
+ 
+ 
+ 
+ 
+ <div>
+ <label class="fnt-size-14">Feedback when Correct</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+  <div>
+ <label class="fnt-size-14">Feedback when Incorrect</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+ 
+  <div>
+ 
+<label class="inline fnt-size-14 mr-r-10"><span class="fnt-size-14 mr-r-5"> Attach Additional Information:</span> 
+  
+ 
+<div class="fileupload fileupload-new" data-provides="fileupload">
+  <div class="input-append">
+    <div class="uneditable-input span3"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+  </div>
+</div>
+
+</label>
+ </div>
+
+ 
+
+<div class="buttonpanel pull-right">
+
+<a href="#linkurl" class="btn inline"> Preview Question </a>
+
+<a href="#linkurl" class="btn inline"> Submit</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+ 
+</form>
+
+
+
+</div> <!-- jumbled sequence -->
+
+
+
+
+<div id="mathematicalquestion">
+
+<p class="profileheader fnt-color-blue">Create a Mathematical Question</p>
+<hr class="profile_border border1px-color-blue" style="margin-bottom:5px; margin-top:5px;">
+
+<form>
+   
+   <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Difficulty Level</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Difficulty Level </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify any tags</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Any Tags </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Subject area</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject area </option> </select>
+    </div>
+    
+    <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Specify Subject</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify Topic</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Topic </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ 
+
+ 
+ <div>
+    <label class="fnt-size-14">Question Text</label>
+    <textarea style="width: 612px;height: 98px;">Question Description</textarea>
+ </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Instruction to the User</label>
+    <input class="input-xxlargekay" type="text" placeholder="Instruction to the user">
+ </div>
+ 
+  <div>
+    <label class="fnt-size-14">Answer</label>
+    <input class="input-xxlargekay" type="text" placeholder="Specify the Answer">
+ </div>
+ 
+  <div>
+    <label class="fnt-size-14">Aceeptable Range</label>
+    <input class="input-xxlargekay" type="text" placeholder="Specify the Aceeptable Range">
+ </div>
+ 
+ 
+ 
+ 
+ <div>
+ <label class="fnt-size-14">Feedback when Correct</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+  <div>
+ <label class="fnt-size-14">Feedback when Incorrect</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+ 
+  <div>
+ 
+<label class="inline fnt-size-14 mr-r-10"><span class="fnt-size-14 mr-r-5"> Attach Additional Information:</span> 
+  
+ 
+<div class="fileupload fileupload-new" data-provides="fileupload">
+  <div class="input-append">
+    <div class="uneditable-input span3"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+  </div>
+</div>
+
+</label>
+ </div>
+
+ 
+
+<div class="buttonpanel pull-right">
+
+<a href="#linkurl" class="btn inline"> Preview Question </a>
+
+<a href="#linkurl" class="btn inline"> Submit</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+ 
+</form>
+
+
+
+</div> <!-- Mathematical Question -->
+
+
+
+
+
+
+<div id="framethequestion">
+
+<p class="profileheader fnt-color-blue">Frame the Question</p>
+<hr class="profile_border border1px-color-blue" style="margin-bottom:5px; margin-top:5px;">
+
+<form>
+   
+   <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Difficulty Level</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Difficulty Level </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify any tags</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Any Tags </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Select Subject area</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject area </option> </select>
+    </div>
+    
+    <div class="pull-left" style="margin-right:10px;">
+    <label class="fnt-size-14">Specify Subject</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Subject </option> </select>
+    </div>
+    
+    <div class="pull-left">
+    <label class="fnt-size-14">Specify Topic</label>
+    <select class="input-mediumkay fnt-size-14"><option>Select Topic </option> </select>
+    </div>
+   
+ 
+ <div class="clearmyfix"> </div>
+ 
+ 
+
+ 
+ <div>
+    <label class="fnt-size-14">Question Text</label>
+    <textarea style="width: 612px;height: 98px;">Question Description</textarea>
+ </div>
+ 
+ 
+ <div>
+    <label class="fnt-size-14">Instruction to the User</label>
+    <input class="input-xxlargekay" type="text" placeholder="Instruction to the user">
+ </div>
+ 
+  <div>
+    <label class="fnt-size-14">Answer</label>
+    <input class="input-xxlargekay" type="text" placeholder="Specify the Answer">
+ </div>
+ 
+  <div>
+    <label class="fnt-size-14">Aceeptable Range</label>
+    <input class="input-xxlargekay" type="text" placeholder="Specify the Aceeptable Range">
+ </div>
+ 
+ 
+ 
+ 
+ <div>
+ <label class="fnt-size-14">Feedback when Correct</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+  <div>
+ <label class="fnt-size-14">Feedback when Incorrect</label>
+ <input class="input-xxlargekay" type="text" placeholder="Feedback when Correct">
+
+ </div>
+ 
+ 
+  <div>
+ 
+<label class="inline fnt-size-14 mr-r-10"><span class="fnt-size-14 mr-r-5"> Attach Additional Information:</span> 
+  
+ 
+<div class="fileupload fileupload-new" data-provides="fileupload">
+  <div class="input-append">
+    <div class="uneditable-input span3"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+  </div>
+</div>
+
+</label>
+ </div>
+
+ 
+
+<div class="buttonpanel pull-right">
+
+<a href="#linkurl" class="btn inline"> Preview Question </a>
+
+<a href="#linkurl" class="btn inline"> Submit</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+ 
+</form>
+
+
+
+</div> <!-- frame the question -->
+
+
+
+</div> <!-- end of profiledetails -->
+
+<div class="clearmyfix"> </div>
+
+
+
+
+</div> <!-- end of profilewrapper -->
+
+</div> <!--end of theatrewrapper-->
+
+
+
+
+
+<div class="clearmyfix"> </div>
+
+</div> 
+<!-- ###################### end of bodycontainer #################### -->
+
+
+<!-- #################### start of footer #################### -->
+
+<div id="ajaxfooter">
+
+</div>
+
+
+
+<!-- #################### end of footer #################### -->
+
+
+
+
+
+</div>
+<!-- ###################### end of container #################### -->
+
+
+
+</body>
+</html>

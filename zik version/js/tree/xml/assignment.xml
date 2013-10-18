@@ -1,0 +1,28 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<tree id="0">
+	<item text="My Stuff" id="Root_My_stuff" im0="Tree.png" im1="Tree.png" im2="Tree.png" select="1" call="1" open="1">
+		<item text="My Creations" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" open="1" id="Child_My_Creations">
+				<item text = "For My Reference" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" id="Child_For_My_Reference"/>
+				<item text = "Shared Content" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" id="Child_Shared_Content"/>
+		</item>
+		
+		<item text="University Content" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" open="1" id="Child_University_Content">
+				<item text = "Library Materials" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" id="Child_Library_Materials"/>
+				<item text = "My Contributions" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" id="Child_My_Contributions"/>
+		</item>
+		
+		<item text="My Accomplishments" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" open="1" id="Child_My_Accomplishments">
+				<item text = "University Certificates" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" id="Child_University_Certificates"/>
+				<item text = "External Acknowledgements" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" id="Child_External_Acknowledgements"/>
+				<item text = " Ziksana Rewards" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" id="Child_Ziksana_Rewards"/>
+		</item>
+		
+		<item text="External Content" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" open="1" id="Child_External_Content">
+				<item text = "YouTube" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" id="Child_YouTube"/>
+				<item text = "McGraw-Hill" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" id="Child_McGraw-Hill"/>
+		</item>
+
+
+</item>
+</tree> 

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+#socalizewrapper
+{
+margin-left:30px;
+height:400px;
+overflow:auto;	
+}
+
+.socializetabs{
+margin-left: 28px;
+}
+
+.sublinkborder
+{
+width:4px;
+height:23px;
+position:absolute;
+left:1px;		
+}
+
+.subscriptionsublinks ul
+{
+list-style-type: none;	
+}
+
+.subscriptionsublinks li
+{
+display:inline;	
+margin-right:19px;
+font-size:18px;
+padding-bottom:5px;
+}
+
+

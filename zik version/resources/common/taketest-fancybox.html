@@ -1,0 +1,651 @@
+<!doctype html>
+<html>
+<head>
+<!-- start: Meta -->
+	<meta charset="utf-8" />
+	<title>Ziksana Dashboard</title>
+	<meta name="description" content="Ziksana Dashboard version 1.2" />
+	<meta name="author" content="Kaivalya Shah" />
+	<meta name="keyword" content="Ziksana Version1.2" />
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->	
+   <link href="../../css/zik.css" rel="stylesheet" />
+	<link href="../../css/zik-responsive.css" rel="stylesheet" />
+	<link href="../../css/maintheme.css" rel="stylesheet" />
+    <link href="../../css/bg-color.css" rel="stylesheet" />
+    <link href="../../css/assignment.css" rel="stylesheet"/>
+    <link href="../../css/select.css" rel="stylesheet"/>
+    <link href="../../css/bootstrap-spinedit.css" rel="stylesheet"/>
+    <link href="../../css/taketest.css" rel="stylesheet" />
+ 
+	<!-- end: CSS -->
+    
+    <script src="../../js/tree/Common/common.js"></script>
+<script  src="../../js/tree/Common/dtree.js"></script>	
+<script language="JavaScript" src="../../js/tree/Menu/menu.js"></script>
+<script language="JavaScript" src="../../js/tree/Menu/menu_ext.js"></script>
+<script language="javascript" src="../../js/tree/Common/tree_ed.js"></script>
+<script language="javascript" src="../../js/tree/Common/dataprocessor.js"></script>
+<script language="javascript" src="../../js/filetype.js"></script>
+<style>
+
+.selectedTreeRow
+{
+border-color:#27b; background: #6D9EC5; color:#fff;
+font-weight:bold;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;	
+padding-top:-2px;
+padding-bottom:-2px;
+padding-left:3px;
+padding-right:3px;
+}
+
+
+span.standartTreeRow:hover
+{
+background: rgba(85, 142, 187, 0.63);
+color:#fff;	
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+padding:3px;
+}
+
+.table-assignment th, .table td {
+padding: 3px;
+line-height: 20px;
+text-align: center;
+border-top: 1px solid #dddddd;
+}
+
+.popover
+{
+width:auto !important;	
+}
+
+</style>
+
+</head>
+
+<body style="background:none; background-color:#f5f5f5;">
+
+
+
+    	<div id="taketest_wrapper" style="width:950px; margin:auto;">
+
+
+    <p class="pageheader fnt-color-blue" style="margin-bottom:3px;"> Take Test</p>
+    <hr class="pageheader_border border1px-color-blue" style="margin:0px; margin-left:30px; margin-bottom:10px;">
+    
+    
+        <div class="taketest_datacontainer mr-l-30 box-shadow">
+        
+        	<div class="taketest_formcontainer">
+            
+            <form class="form-horizontal">
+            	
+                <div class="controls zik-inline-block mr-l-0">
+                 <select id="Programs" name="Programs" class="bg-gray">
+                <option>Programs</option>
+                </select>
+                </div>
+            
+            
+                <div class="controls zik-inline-block form-mr-left">
+                 <select id="Course" name="Course" class="bg-gray">
+                <option>Course</option>
+                </select>
+                </div>
+            
+            
+                <div class="controls zik-inline-block form-mr-left">
+                 <select id="Topic" name="Topic" class="bg-gray">
+                <option>Topic</option>
+                </select>
+                </div>
+                
+                
+                 <div class="clearfix mr-top-10"></div>
+                 <div class="mr-top-10"></div>
+            
+            
+                <div class="control-group zik-inline-block">
+                <label class="control-label mr-top-10" for="Assign_nm">Assignment Name</label>
+                <div class="controls">
+                <textarea type="text" id="Assign_nm" class="input-large bg-gray" rows="4" style="width:575px; resize:vertical;"  placeholder="Assignment Name"></textarea>
+                </div>
+                </div>
+                
+                
+                
+                <div class="border1px-color-blue mr-btm-10"></div>
+                
+                <div class="controls zik-inline-block mr-l-0">
+               
+               <input type="text" id="Prg_Identifier" class="input-xlarge bg-gray pull-left" placeholder="Previous Attempts">
+              <a class='courseperformance plus_lnk pull-right' data-placement='right' title="Previous Attempts" href='#linkurl'><div class="bg-color-darkgrey box-plus-link icon-plus-2">
+               </div></a>
+               
+               <div class="clearfix"> </div>
+               
+                </div> <!-- end of previous attemps -->
+                
+<div id="popover_content_wrapper" style="display: none">
+  <div>
+  
+  
+   <div class="courseperformance-popover-wrapper">
+   
+    <div class="courseperformance-header bg-color-grey border1px-color-purple fnt-color-purple">
+    
+    </div> <!-- end of courseperoformance-header  -->
+    
+    
+    <table class="table table-striped table-bordered table-hover">
+    
+    <tbody>
+    <tr>
+    <th>12/11/2013</th>
+    <th>Bio Science Complete</th>
+    <th>A+</th>
+    
+    </tr>
+    
+    
+       <tr>
+    <th>12/11/2013</th>
+    <th>Bio Science Complete</th>
+    <th>A+</th>
+    
+    </tr>
+    
+    
+      <tr>
+    <th>12/11/2013</th>
+    <th>Bio Science Complete</th>
+    <th>A+</th>
+    
+    </tr>
+    
+    </tbody>
+    </table>
+    
+    <hr class="border1px-color-darkgrey">
+    
+    <textarea style="width: 491px; height: 99px;">
+    
+    </textarea>
+    
+    </div> <!-- end of courseperformance -->
+    
+ 
+    </div>
+    </div>       <!-- end of previous attemp wrapper -->
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="controls zik-inline-block form-mr-left pull-right">
+               <input type="text" id="Prg_Identifier" class="input-xlarge bg-gray pull-left" placeholder="Course Performance">
+              <a class='courseperformance plus_lnk pull-right' data-placement='left' title="Course Perfomance" href='#linkurl'><div class="bg-color-darkgrey box-plus-link icon-plus-2">
+               </div></a>
+                </div> <!-- end of courseperformance -->
+               
+               
+               <div id="popover_content_wrapper" style="display: none">
+  <div>
+  
+  
+   <div class="courseperformance-popover-wrapper">
+   
+    <div class="courseperformance-header bg-color-grey border1px-color-purple fnt-color-purple">
+    
+    </div> <!-- end of courseperoformance-header  -->
+    
+    
+    <table class="table table-striped table-bordered table-hover">
+    
+    <tbody>
+    <tr>
+    <th>12/11/2013</th>
+    <th>Bio Science Complete</th>
+    <th>A+</th>
+    
+    </tr>
+    
+    
+       <tr>
+    <th>12/11/2013</th>
+    <th>Bio Science Complete</th>
+    <th>A+</th>
+    
+    </tr>
+    
+    
+      <tr>
+    <th>12/11/2013</th>
+    <th>Bio Science Complete</th>
+    <th>A+</th>
+    
+    </tr>
+    
+    </tbody>
+    </table>
+    
+    <hr class="border1px-color-darkgrey">
+    
+    <textarea style="width: 491px; height: 99px;">
+    
+    </textarea>
+    
+    </div> <!-- end of courseperformance -->
+    
+ 
+    </div>
+    </div>       <!-- end of previous attemp wrapper -->
+          
+            	
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="clearfix mr-top-10"></div>
+			<div class="mr-btm-20 border1px-color-blue"></div>              
+              
+            
+            </form>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!--End of taketest_formcontainer -->
+            
+            <div class="clearfix"></div>
+            
+            
+            <div class="taketest_tabcontainer">
+            
+            <div class="taketestcontainer">
+            	
+                <div class="taketesttab bg-color-blue pull-left mr-r-5">
+                	<div class="fnt-color-white">
+                   	 <p class="fnt-size-24 mr-btm-0 pull-left">130</p>
+                     <p class="fnt-size-14 mr-btm-0 pull-left mr-l-10">Total Resume <br/> Question</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            	<!--End of taketesttab -->
+                
+                
+                
+                
+                  <div class="taketesttab bg-color-purple pull-left mr-r-5">
+                	<div class="fnt-color-white">
+                   	 <p class="fnt-size-24 mr-btm-0 pull-left">12</p>
+                     <p class="fnt-size-14 mr-btm-0 pull-left mr-l-10">Answered <br/> Question</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            	<!--End of taketesttab -->
+                
+                
+                
+                
+                
+                  <div class="taketesttab bg-color-darkorange pull-left">
+                	<div class="fnt-color-white">
+                   	 <p class="fnt-size-24 mr-btm-0 pull-left">13:5</p>
+                     <p class="fnt-size-14 mr-btm-0 pull-left mr-l-10">Time <br/> Spent</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            	<!--End of taketesttab -->
+                
+                
+                
+                  <div class="taketesttab bg-color-darkorange pull-right">
+                	<div class="fnt-color-white">
+                   	 <p class="fnt-size-24 mr-btm-0 pull-left">16:5</p>
+                     <p class="fnt-size-14 mr-btm-0 pull-left mr-l-10">Time Available <br/> Question</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            	<!--End of taketesttab -->
+                
+                
+                
+                  <div class="taketesttab bg-color-purple pull-right mr-r-5">
+                	<div class="fnt-color-white">
+                   	 <p class="fnt-size-24 mr-btm-0 pull-left">129</p>
+                     <p class="fnt-size-14 mr-btm-0 pull-left mr-l-10">Marks For<br/> the Question</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            	<!--End of taketesttab -->
+            
+            
+            <div class="clearfix"></div>
+            </div>
+            <!--End of taketestcontainer -->
+            
+            </div>
+            <!--End of taketest_tabcontainer -->
+            
+            
+            
+            
+            <div class="clearfix mr-btm-20"></div>
+            
+            
+            
+            <div class="carousel">
+ <ul>
+           <li>
+           
+            <div class="taketest_question">
+            
+            <div class="form_container">
+            
+            <form class="form-horizontal">
+            
+            
+           	 <div class="control-group zik-inline-block">
+                <div class="controls mr-l-0">
+                <textarea type="text" id="Que_txt" class="input-large" rows="4" style="width:820px; resize:vertical;"  placeholder="Question Text"></textarea>
+                </div>
+                </div>
+               
+               
+             <div class="clearfix"></div>
+             
+             
+              <div class="controls zik-inline-block mr-l-0">
+               <input type="text" id="Instruction_user" class="taketest_input" placeholder="Instructions to the User">
+                </div>   
+              
+              
+              
+              <div class="clearfix"></div>
+              
+              
+              <div class="control-group zik-inline-block">
+               <label class="control-label mr-top-10" for="Assign_nm">Select the Answer:</label>
+               <div class="controls mr-top-10">
+                <label class="radio pull-left">
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  True
+                </label>  
+                
+                <label class="radio pull-left mr-l-20 mr-top-5">
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  False
+                </label>  
+                </div>              
+                </div>
+              
+              
+              
+              
+               <div class="clearfix"></div>
+               
+               
+               
+               <div class="control-group zik-inline-block mr-btm-0">
+                <label class="control-label mr-top-10 feedback-label" for="Assign_nm">Feedback When Correct</label>
+                <div class="controls feedback-input mr-top-10">
+                <input type="text" id="Assign_nm" class="input-xlarge" placeholder="Feedback">
+                </div>
+                </div>
+                
+                <div class="clearfix"></div>
+                
+                 <div class="control-group zik-inline-block mr-btm-0">
+                <label class="control-label mr-top-10 feedback-label" for="Assign_nm">Feedback When InCorrect</label>
+                <div class="controls feedback-input mr-top-10">
+                <input type="text" id="Assign_nm" class="input-xlarge" placeholder="Feedback">
+                </div>
+                </div>
+               
+               <div class="clearfix"></div>
+               
+                <div class="control-group zik-inline-block mr-btm-0">
+                <label class="control-label mr-top-10 feedback-label" for="Assign_nm">Attach Additional information</label>
+                <div class="controls feedback-input mr-top-10">
+                <div class="fileupload fileupload-new" data-provides="fileupload">
+  <span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" placeholder="No File Chosen" /></span>
+  <span class="fileupload-preview"></span>
+  <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+</div>
+                </div>
+                </div>
+               
+               
+                 
+                
+             </form>
+            
+            
+            </div>
+            <!--End of form_container -->
+            
+            
+            </div>
+            <!--End of taketest_question -->
+            
+           
+      
+           </li>
+            
+          <li>
+           
+            <div class="taketest_question">
+            
+            <div class="form_container">
+            
+            <form class="form-horizontal">
+            
+            
+           	 <div class="control-group zik-inline-block">
+                <div class="controls mr-l-0">
+                <textarea type="text" id="Que_txt" class="input-large" rows="4" style="width:820px; resize:vertical;"  placeholder="Question Text"></textarea>
+                </div>
+                </div>
+               
+               
+             <div class="clearfix"></div>
+             
+             
+              <div class="controls zik-inline-block mr-l-0">
+               <input type="text" id="Instruction_user" class="taketest_input" placeholder="Instructions to the User">
+                </div>   
+              
+              
+              
+              <div class="clearfix"></div>
+              
+              
+              <div class="control-group zik-inline-block">
+               <label class="control-label mr-top-10" for="Assign_nm">Select the Answer:</label>
+               <div class="controls mr-top-10">
+                <label class="radio pull-left">
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  True
+                </label>  
+                
+                <label class="radio pull-left mr-l-20 mr-top-5">
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  False
+                </label>  
+                </div>              
+                </div>
+              
+              
+              
+              
+               <div class="clearfix"></div>
+               
+               
+               
+               <div class="control-group zik-inline-block mr-btm-0">
+                <label class="control-label mr-top-10 feedback-label" for="Assign_nm">Feedback When Correct</label>
+                <div class="controls feedback-input mr-top-10">
+                <input type="text" id="Assign_nm" class="input-xlarge" placeholder="Feedback">
+                </div>
+                </div>
+                
+                <div class="clearfix"></div>
+                
+                 <div class="control-group zik-inline-block mr-btm-0">
+                <label class="control-label mr-top-10 feedback-label" for="Assign_nm">Feedback When InCorrect</label>
+                <div class="controls feedback-input mr-top-10">
+                <input type="text" id="Assign_nm" class="input-xlarge" placeholder="Feedback">
+                </div>
+                </div>
+               
+               <div class="clearfix"></div>
+               
+                <div class="control-group zik-inline-block mr-btm-0">
+                <label class="control-label mr-top-10 feedback-label" for="Assign_nm">Attach Additional information</label>
+                <div class="controls feedback-input mr-top-10">
+                <div class="fileupload fileupload-new" data-provides="fileupload">
+  <span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" placeholder="No File Chosen" /></span>
+  <span class="fileupload-preview"></span>
+  <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+</div>
+                </div>
+                </div>
+               
+               
+                 
+                
+             </form>
+            
+            
+            </div>
+            <!--End of form_container -->
+            
+            
+            </div>
+            <!--End of taketest_question -->
+            
+           
+      
+           </li>
+       </ul>
+   
+    <div class="clearfix"></div>
+   
+   </div>
+            
+            
+            
+            
+            
+           
+ <div class="quesslider-btn">           
+
+ <a class="prev" rel="tooltip" title="Previous Question"><i class="icon-arrow-left fnt-size-24 fnt-color-darkgrey"></i></a>
+ <a class="next mr-l-20" rel="tooltip" title="Next Question"><i class="icon-arrow-right fnt-size-24 fnt-color-darkgrey"></i></a>
+
+ </div> <!--end of quesslider-btn -->
+
+           
+                      <div class="clearfix"></div>
+           
+           
+           <div class="taketest_btncontainer">
+           
+           <input type="button" class="btn btn-limekiln-1 btn_rightcncl pull-right" value="Submit" />
+            <input type="button" class="btn btn-limekiln-1 btn_rightsbt pull-right mr-r-20" value="Save" />
+             <input type="button" class="btn btn-limekiln-1 btn_rightcncl pull-right mr-r-20" value="Pause" />
+            <input type="button" class="btn btn-limekiln-1 btn_rightsbt pull-right mr-r-20" value="Cancel" /> 
+            
+            <div class="clearfix"></div>
+            
+            </div>
+            <!--End of taketest_btncontainer -->
+
+           
+            
+            
+           <div class="clearfix"></div>
+         </div>
+         <!--End of taketest_datacontainer -->
+  
+  
+
+         
+   
+  
+         
+         
+         
+		<div class="clearfix"></div>            
+     </div>
+     <!--End of taketest_wrapper -->
+ 
+
+
+
+
+<script src="../../js/jquery-1.7.2.min.js"> </script>
+<script src="../../js/jcarouselite.js"> </script>
+<script src="../../js/zikscripts.js"> </script>
+<script src="../../js/popover.js"> </script>
+
+<script>
+$(document).ready(function(e) {
+    
+    $('a[rel=tooltip]').tooltip();
+	
+
+  $('.courseperformance').popover({ 
+    html : true,
+    content: function() {
+      return $('#popover_content_wrapper').html();
+    }
+  });
+
+	
+});
+
+</script>
+
+
+<script>
+
+$(".carousel").jCarouselLite({
+  btnNext: ".next",
+   btnPrev: ".prev"
+  });
+
+
+</script>
+
+
+
+</body>
+</html>

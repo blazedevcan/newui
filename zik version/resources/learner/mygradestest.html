@@ -1,0 +1,546 @@
+<!doctype html>
+<html>
+<head>
+<!-- start: Meta -->
+	<meta charset="utf-8" />
+	<title>Ziksana Dashboard</title>
+	<meta name="description" content="Ziksana Dashboard version 1.2" />
+	<meta name="author" content="Kaivalya Shah" />
+	<meta name="keyword" content="Ziksana Version1.2" />
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	
+    <link href="../../css/zik.css" rel="stylesheet" />
+	<link href="../../css/zik-responsive.css" rel="stylesheet" />
+	<link href="../../css/maintheme.css" rel="stylesheet" />
+    <link href="../../css/bg-color.css" rel="stylesheet" />
+    
+    <link href="../../css/learner-mygrade.css" rel="stylesheet"/>
+	
+    <link href="../../css/jRating.jquery.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../../js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <link href="../../css/tooltip_skin_variation.css" type="text/css" rel="stylesheet" />
+    
+    <style>
+		.form-horizontal .controls {
+		margin-left: 5px !important;
+		}
+		
+		.sc-image
+		{
+		height:60px;
+		width:60px;	
+		}
+		
+		.sky-carousel-container
+		{
+		margin-top:25px !important;	
+		}
+		
+	</style>
+  
+	<!-- end: CSS -->
+
+<script type="text/javascript" src="../../js/jquery-1.7.2.min.js"></script>
+
+<script type="text/javascript" src="../../js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+<script>
+$('.fancybox').fancybox();
+</script>
+
+<script type="text/javascript" src="../../js/jquery.isotope.js"> </script>  
+ 
+ <script language="javascript">
+$('#studentslistwrapper').isotope({
+   
+		      });
+
+		
+    $(function(){
+    
+      var $container = $('#studentslistwrapper');
+    
+      $container.isotope({
+        staightDown: {
+          columnWidth: 120
+        },
+        sortBy: 'number',
+        getSortData: {
+          number: function( $elem ) {
+            var number = $elem.hasClass('element') ? 
+              $elem.find('.number').text() :
+              $elem.attr('data-number');
+            return parseInt( number, 10 );
+          },
+          alphabetical: function( $elem ) {
+            var name = $elem.find('.name'),
+                itemText = name.length ? name : $elem;
+            return itemText.text();
+          }
+        }
+      });
+    
+      
+      var $optionSets = $('#options .option-set'),
+          $optionLinks = $optionSets.find('a');
+
+      $optionLinks.click(function(){
+        var $this = $(this);
+        // don't proceed if already selected
+        if ( $this.hasClass('selected') ) {
+          return false;
+        }
+        var $optionSet = $this.parents('.option-set');
+        $optionSet.find('.selected').removeClass('selected');
+        $this.addClass('selected');
+  
+        // make option object dynamically, i.e. { filter: '.my-filter-class' }
+        var options = {},
+            key = $optionSet.attr('data-option-key'),
+            value = $this.attr('data-option-value');
+        // parse 'false' as false boolean
+        value = value === 'false' ? false : value;
+        options[ key ] = value;
+        if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+          // changes in layout modes need extra logic
+          changeLayoutMode( $this, options )
+        } else {
+          // otherwise, apply new options
+          $container.isotope( options );
+        }
+        
+        return false;
+      });
+		 });
+		
+		         
+      
+  
+$('#studentslistwrapper').isotope({ filter: '.my-selector' }, function( $items ) {
+  var id = this.attr('id'),
+      len = $items.length;
+  console.log( 'Isotope has filtered for ' + len + ' items in #' + id );
+});
+
+
+ 
+function showall()
+{
+$('#studentslistwrapper').isotope({ filter: '.All' });
+}
+
+function showactive()
+{
+$('#studentslistwrapper').isotope({ filter: '.Active' });
+}
+
+function showreview()
+{
+$('#studentslistwrapper').isotope({ filter: '.Review' });
+}
+
+</script>
+
+ 
+ <script>
+ 
+ $(document).ready(function(e) {
+
+$(function() {
+		$('.grades-table tr').click(function() {	
+		$('.grades-table tr').removeClass('active-grade-row grades-table grades-table');
+		$(this).addClass('active-grade-row grades-table grades-table');
+		$(this).append('<style>.grades-table tr:before, .grades-table tr:after {		content: "";position: absolute;	top: 30%;	width: 0;	height: 0;}.grades-table tr:before{left: -10px;border-top: 20px solid transparent;border-bottom: 20px solid transparent;border-right: 20px solid #6D6D6D;margin-top: -8px;}</style>');
+		});
+		});
+
+
+    
+});
+ 
+ </script>
+ 
+
+</head>
+
+<body>
+
+<!-- ###################### start of container #################### -->
+<div id="zikcontainer">
+
+<!-- ###################### start of zikheader #################### -->
+
+<div id="ajaxheader"></div>
+
+
+
+<!-- ###################### start of bodycontainer #################### -->
+
+<div id="bodycontainer">
+
+<!-- ###################### start of main-menu #################### -->
+
+<div id="ajaxmenu">
+
+</div>
+
+
+<!-- ###################### end of main-menu #################### -->  
+
+
+<div class="theatrewrapper pull-left ">
+
+<p class="pageheader fnt-color-purple pull-left" style="margin-bottom:0px;"> My Grades </p>
+
+<div class="clearmyfix"> </div>
+
+<hr class="pageheader_border border1px-color-purple" style="margin-top:10px;">
+
+<div class="askzsublinks"> 
+<ul>
+<li style="background-color:none;">
+
+<select style="width:200px;"> 
+<option>Select Program</option>
+
+</select>
+
+ </li>
+ 
+ <li>
+
+<select style="width:200px;" class="zik-inline-block"> 
+<option>Select Course</option>
+
+</select>
+
+<div class="zik-inline-block mr-l-10">
+
+<p class="fnt-size-16"> Communication Skill (Advance) </p>
+
+</div>
+
+ </li>
+ 
+</ul>
+
+</div>
+
+<div id="engagestudentwrapper" class="content_3">
+
+
+            <div class="grade-students pull-left box-shadow">
+            
+            <div id="numberofsubscriberse">
+            
+            
+            <div id="gradelistwrapper">
+           
+            <table class="table table-striped table-hover" style="border:1px solid #ccc;">
+                   
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align:middle;">Assignment-1</td>
+                        <td style="vertical-align:middle;">In Progress</td>
+                        <td style="vertical-align:middle;">A+</td>
+                        <td style="vertical-align:middle;">
+                        <textarea style="height:100px;">Educator Feedback Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </textarea>
+                        </td>
+                      </tr>
+                       <tr>
+                        <td style="vertical-align:middle;">Assignment-1</td>
+                        <td style="vertical-align:middle;">In Progress</td>
+                        <td style="vertical-align:middle;">A+</td>
+                        <td style="vertical-align:middle;">
+                        <textarea style="height:100px;">Educator Feedback Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </textarea>
+                        </td>
+                      </tr>
+                        <tr>
+                        <td style="vertical-align:middle;">Assignment-1</td>
+                        <td style="vertical-align:middle;">In Progress</td>
+                        <td style="vertical-align:middle;">A+</td>
+                        <td style="vertical-align:middle;">
+                        <textarea style="height:100px;">Educator Feedback Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </textarea>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            
+           
+            
+           
+            </div> <!-- end of studentslist --> 
+            
+            
+            
+            
+            
+            </div> <!-- end of subscriber -->
+            
+            
+            
+            
+            </div> <!-- end of grade-students -->
+            
+
+           <div id="gradeswrapper" class="pull-right box-shadow">
+
+
+<table class="table bg-color-grey grades-table">
+              
+              <tbody>
+                <tr>
+                  <td><span class="grade-number fnt-color-blue">1</span></td>
+                  <td><span class="grade-img"><img src="../../img/contact/img2.png"/></span></td>
+                  <td><span class="grade-name fnt-size-20 fnt-color-blue">Laura Mabee </span></td>
+                  <td style="text-align:center;">
+                  <p class="grade-class"><img src="../../img/grades/book.png"style="height:22px;" /></p>
+                  
+                  <span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif"> 48</span></td>
+                  
+                  <td> 
+                  <span style="border-right:1px solid #ccc"> </span>
+                  </td>
+       
+ <td style="text-align:center;">
+ <p class="grade-class"><img src="../../img/grades/like.png"/></p>
+ <span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif"> 35</span></td>                  
+ 
+ 				<td> 
+                  <span style="border-right:1px solid #ccc"> </span>
+                  </td>
+ 
+                  
+                   <td style="text-align:center;">
+
+<p class="grade-class"><img src="../../img/grades/timer.png"/></p>
+
+<span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif"> 65</span></td>
+                   
+               <td> 
+                  <span style="border-right:1px solid #ccc"> </span>
+                  </td>    
+                   
+                  <td style="text-align:center;">
+                  
+                  <p class="grade-class"><img src="../../img/grades/grades.png"/></p>
+                  
+                  <span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif; padding-top:5px;"> A+</span></td>  
+                   
+                </tr>
+                
+  <tr>
+                  <td><span class="grade-number fnt-color-blue">2</span></td>
+                  <td><span class="grade-img"><img src="../../img/contact/img3.png"/></span></td>
+                  <td><span class="grade-name fnt-size-20 fnt-color-blue"> Gill James </span></td>
+                  <td style="text-align:center;">
+                  <p class="grade-class"><img src="../../img/grades/book.png"style="height:22px;" /></p>
+                  
+                  <span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif"> 48</span></td>
+                  
+                  <td> 
+                  <span style="border-right:1px solid #ccc"> </span>
+                  </td>
+       
+ <td style="text-align:center;">
+ <p class="grade-class"><img src="../../img/grades/like.png"/></p>
+ <span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif"> 35</span></td>                  
+ 
+ 				<td> 
+                  <span style="border-right:1px solid #ccc"> </span>
+                  </td>
+ 
+                  
+                   <td style="text-align:center;">
+
+<p class="grade-class"><img src="../../img/grades/timer.png"/></p>
+
+<span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif"> 65</span></td>
+                   
+               <td> 
+                  <span style="border-right:1px solid #ccc"> </span>
+                  </td>    
+                   
+                  <td style="text-align:center;">
+                  
+                  <p class="grade-class"><img src="../../img/grades/grades.png"/></p>
+                  
+                  <span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif; padding-top:5px;"> A+</span></td>  
+                   
+                </tr>
+                
+                
+  
+ <tr>
+                  <td><span class="grade-number fnt-color-blue">3</span></td>
+                  <td><span class="grade-img"><img src="../../img/contact/img6.png"/></span></td>
+                  <td><span class="grade-name fnt-size-20 fnt-color-blue"> Chris olsen </span></td>
+                  <td style="text-align:center;">
+                  <p class="grade-class"><img src="../../img/grades/book.png"style="height:22px;" /></p>
+                  
+                  <span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif"> 32</span></td>
+                  
+                  <td> 
+                  <span style="border-right:1px solid #ccc"> </span>
+                  </td>
+       
+ <td style="text-align:center;">
+ <p class="grade-class"><img src="../../img/grades/like.png"/></p>
+ <span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif"> 42</span></td>                  
+ 
+ 				<td> 
+                  <span style="border-right:1px solid #ccc"> </span>
+                  </td>
+ 
+                  
+                   <td style="text-align:center;">
+
+<p class="grade-class"><img src="../../img/grades/timer.png"/></p>
+
+<span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif"> 65</span></td>
+                   
+               <td> 
+                  <span style="border-right:1px solid #ccc"> </span>
+                  </td>    
+                   
+                  <td style="text-align:center;">
+                  
+                  <p class="grade-class"><img src="../../img/grades/grades.png"/></p>
+                  
+                  <span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif; padding-top:5px;"> A+</span></td>  
+                   
+                </tr>  
+                
+                
+ <tr>
+                  <td><span class="grade-number fnt-color-blue">5</span></td>
+                  <td><span class="grade-img"><img src="../../img/contact/img5.png"/></span></td>
+                  <td><span class="grade-name fnt-size-20 fnt-color-blue"> Jeniffer Yeng</span></td>
+                  <td style="text-align:center;">
+                  <p class="grade-class"><img src="../../img/grades/book.png"style="height:22px;" /></p>
+                  
+                  <span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif"> 32</span></td>
+                  
+                  <td> 
+                  <span style="border-right:1px solid #ccc"> </span>
+                  </td>
+       
+ <td style="text-align:center;">
+ <p class="grade-class"><img src="../../img/grades/like.png"/></p>
+ <span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif"> 42</span></td>                  
+ 
+ 				<td> 
+                  <span style="border-right:1px solid #ccc"> </span>
+                  </td>
+ 
+                  
+                   <td style="text-align:center;">
+
+<p class="grade-class"><img src="../../img/grades/timer.png"/></p>
+
+<span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif"> 65</span></td>
+                   
+               <td> 
+                  <span style="border-right:1px solid #ccc"> </span>
+                  </td>    
+                   
+                  <td style="text-align:center;">
+                  
+                  <p class="grade-class"><img src="../../img/grades/grades.png"/></p>
+                  
+                  <span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif; padding-top:5px;"> A+</span></td>  
+                   
+                </tr>   
+                
+          <tr>
+                  <td><span class="grade-number fnt-color-blue">2</span></td>
+                  <td><span class="grade-img"><img src="../../img/contact/img3.png"/></span></td>
+                  <td><span class="grade-name fnt-size-20 fnt-color-blue"> Gill James </span></td>
+                  <td style="text-align:center;">
+                  <p class="grade-class"><img src="../../img/grades/book.png"style="height:22px;" /></p>
+                  
+                  <span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif"> 48</span></td>
+                  
+                  <td> 
+                  <span style="border-right:1px solid #ccc"> </span>
+                  </td>
+       
+ <td style="text-align:center;">
+ <p class="grade-class"><img src="../../img/grades/like.png"/></p>
+ <span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif"> 35</span></td>                  
+ 
+ 				<td> 
+                  <span style="border-right:1px solid #ccc"> </span>
+                  </td>
+ 
+                  
+                   <td style="text-align:center;">
+
+<p class="grade-class"><img src="../../img/grades/timer.png"/></p>
+
+<span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif"> 65</span></td>
+                   
+               <td> 
+                  <span style="border-right:1px solid #ccc"> </span>
+                  </td>    
+                   
+                  <td style="text-align:center;">
+                  
+                  <p class="grade-class"><img src="../../img/grades/grades.png"/></p>
+                  
+                  <span class="grade-text fnt-color-blue fnt-size-18" style="font-family:Arial, Helvetica, sans-serif; padding-top:5px;"> A+</span></td>  
+                   
+                </tr>                                    
+                
+               
+              </tbody>
+            </table>
+
+</div> <!-- end of gradeswrapper -->
+
+
+
+<div class="clearfix"> </div>
+
+</div><!-- end of engagewrapper -->
+
+<div class="clearfix"> </div>
+
+</div> <!--end of theatrewrapper-->
+
+
+
+
+
+<div class="clearmyfix"> </div>
+
+</div> 
+<!-- ###################### end of bodycontainer #################### -->
+
+<!-- #################### start of footer #################### -->
+
+<div id="ajaxfooter">
+
+</div>
+
+
+
+<!-- #################### end of footer #################### -->
+
+
+
+
+
+</div>
+<!-- ###################### end of container #################### -->
+
+
+
+    
+</body>
+</html>

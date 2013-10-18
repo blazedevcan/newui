@@ -1,0 +1,252 @@
+.height-wizard
+{
+height:100%;
+margin-bottom:10px;
+background-color:#374348;	
+}
+
+.cr-course-bg
+{
+ background-url: http://api.thumbr.it/whitenoise-361x370.png?background=024059ff&noise=626262&density=15&opacity=15
+}
+
+.create-program-wrapper
+{
+height:100%;
+position:relative;
+/*overflow:hidden;*/
+padding-top:20px;	
+}
+
+.top-bar-wizard
+{
+/*width:680px;*/
+margin:auto;
+margin-left: 100px;	
+}
+
+.top-bar-wizard ul
+{
+	
+}
+
+.top-bar-wizard ul li
+{
+display:inline-block;
+padding:10px;
+min-width:200px;
+font-size:22px;	
+}
+
+span.step {
+  font-size:14px;
+  margin-top: 5px;
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.6em;
+  margin-right: 5px;
+  text-align: center;
+  width: 1.6em;
+  text-shadow: none; 
+}
+
+ .non-semantic-protector { position: relative; z-index: 1; }
+
+.wizard-theatre-content-wrapper
+{
+height:100%;
+background-color:#f5f5f5;
+}
+
+.wizard-bar
+{
+padding:10px;	
+}
+
+
+/*form styles*/
+#msform {
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	width:100%;
+	box-sizing: border-box;
+
+	/*stacking fieldsets above each other*/
+	position: absolute;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 10px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	text-align:center;
+	text-transform: uppercase;
+	font-size: 12px;
+	width: 23.33%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 30px;
+    line-height: 30px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+font-size: 17px;
+-webkit-border-radius: 200px;
+-moz-border-radius: 200px;
+-ms-border-radius: 200px;
+-o-border-radius: 200px;
+border-radius: 200px;
+-webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.04);
+-moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.04);
+box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.04);
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 5px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 12px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+text-shadow: 0px -1px 0px #a2b11c;
+color: #ffffff;
+background-color: #C0CF3A;
+background-image: -moz-linear-gradient(top, #deed58, #a2b11c);
+background-image: -ms-linear-gradient(top, #deed58, #a2b11c);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#deed58), to(#a2b11c));
+background-image: -webkit-linear-gradient(top, #deed58, #a2b11c);
+background-image: -o-linear-gradient(top, #deed58, #a2b11c);
+background-image: linear-gradient(top, #deed58, #a2b11c);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#deed58', endColorstr='#a2b11c', GradientType=0);
+border-color: #C0CF3A #a2b11c #a2b11c #C0CF3A;
+border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.25);
+}
+
+
+.assign-header
+{
+font-size:20px;
+padding-left:10px;
+}
+
+.assign-header a
+{
+color:#f5f5f5;	
+}
+
+.assign-header a:hover
+{
+text-decoration:none !important;	
+}
+
+#info-header
+{
+background-color:#e6e7e78;
+padding:10px;
+text-align:left !important;
+font-size:18px;
+-moz-box-shadow: 0 4px 18px -9px #000;
+-webkit-box-shadow: 0 4px 18px -9px #000;
+box-shadow: 0 4px 18px -9px #000;
+margin-bottom:10px;	
+}
+
+.cr-course-info-icon
+{
+font-size:14px;
+vertical-align:middle;
+}
+
+.cr-course-inline-block
+{
+display:inline-block;	
+}
+
+.cr-course-content-area
+{
+min-height:500px;
+background-color:#fff;
+padding:10px;
+position:relative;	
+}
+
+.cr-course-btn
+{
+position:absolute;
+right:10px;
+bottom:10px;	
+}
+
+.Program_information {
+	text-align:left;
+}
+
+.pages_container {
+	text-align:left;
+}
+
+.btn_right {
+	float:right;
+}

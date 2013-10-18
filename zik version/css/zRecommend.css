@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+#zRecommendwrapper
+{
+margin-left:30px;
+height:430px;
+overflow:auto;	
+}
+
+
+
+#box-240-390
+{
+height:409px;
+width:230px;
+border:1px solid #d4d5d7;
+position:relative;
+overflow:hidden;
+float:left;
+margin-right:20px;
+-moz-box-shadow: 0 4px 18px -9px #000;
+-webkit-box-shadow: 0 4px 18px -9px #000;
+box-shadow: 0 4px 18px -9px #000;	
+}
+
+#box-240-390-header
+{
+height:40px;
+position:relative;
+background-color:#e6e7e8;	
+}
+
+#box-240-390-body
+{
+padding:10px;	
+}
+
+
+#box-240-390-footer
+{
+height:40px;
+position:relative;	
+}
+
+
+.subheader
+{
+font-size:23px;
+top:7px;
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+position:absolute;
+right:12px;	
+}
+
+.subfooter
+{
+font-size:20px;
+top:7px;
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+position:absolute;
+right:12px;	
+}
+
+.subfooter a
+{
+color:#fff;	
+}
+
+.subfooter a:hover
+{
+text-decoration:none;	
+}
+
+.boxspan
+{
+width:8px;
+height:40px;
+margin-left:0px;
+margin-right:4px;	
+}
+
+.boxicon
+{
+padding:5px 3px 0px 3px;	
+}
+
+.recommendheader
+{
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+font-size:18px;
+text-align:right;	
+}
+
+.recommendbody
+{
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+font-size:13px;
+height:205px;	
+}
+
+.recommendfooter
+{
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+font-size:13px;	
+}

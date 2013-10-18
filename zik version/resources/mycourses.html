@@ -1,0 +1,675 @@
+<!doctype html>
+<html>
+<head>
+<!-- start: Meta -->
+	<meta charset="utf-8" />
+	<title>Ziksana Dashboard</title>
+	<meta name="description" content="Ziksana Dashboard version 1.2" />
+	<meta name="author" content="Kaivalya Shah" />
+	<meta name="keyword" content="Ziksana Version1.2" />
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	<link href="../css/zik.css" rel="stylesheet" />
+	<link href="../css/zik-responsive.css" rel="stylesheet" />
+	<link href="../css/maintheme.css" rel="stylesheet" />
+    <link href="../css/bg-color.css" rel="stylesheet" />
+    <link href="../css/mycourses.css" rel="stylesheet"/>
+    
+
+ 
+	<!-- end: CSS -->
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/textlimit.js" type="text/javascript"> </script>
+
+
+<script language="javascript">
+
+$(document).ready(function() {
+	$(".box-260-200-body").shorten();
+	
+  
+ });
+ 
+
+</script>
+ 
+<script>
+
+$(function() {
+		$('.subscriptionsublinks li.link').click(function() {
+		$('.subscriptionsublinks li.link').removeClass('activesubscription');
+		$(this).addClass('activesubscription');
+		});
+		});	
+
+</script>
+
+
+      
+<script type="text/javascript" src="../js/jquery.isotope.js"> </script>  
+ 
+ <script language="javascript">
+$('#subscriptionwrapper').isotope({
+   
+		      });
+
+		
+    $(function(){
+    
+      var $container = $('#subscriptionwrapper');
+    
+      $container.isotope({
+        staightDown: {
+          columnWidth: 120
+        },
+        sortBy: 'number',
+        getSortData: {
+          number: function( $elem ) {
+            var number = $elem.hasClass('element') ? 
+              $elem.find('.number').text() :
+              $elem.attr('data-number');
+            return parseInt( number, 10 );
+          },
+          alphabetical: function( $elem ) {
+            var name = $elem.find('.name'),
+                itemText = name.length ? name : $elem;
+            return itemText.text();
+          }
+        }
+      });
+    
+      
+      var $optionSets = $('#options .option-set'),
+          $optionLinks = $optionSets.find('a');
+
+      $optionLinks.click(function(){
+        var $this = $(this);
+        // don't proceed if already selected
+        if ( $this.hasClass('selected') ) {
+          return false;
+        }
+        var $optionSet = $this.parents('.option-set');
+        $optionSet.find('.selected').removeClass('selected');
+        $this.addClass('selected');
+  
+        // make option object dynamically, i.e. { filter: '.my-filter-class' }
+        var options = {},
+            key = $optionSet.attr('data-option-key'),
+            value = $this.attr('data-option-value');
+        // parse 'false' as false boolean
+        value = value === 'false' ? false : value;
+        options[ key ] = value;
+        if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+          // changes in layout modes need extra logic
+          changeLayoutMode( $this, options )
+        } else {
+          // otherwise, apply new options
+          $container.isotope( options );
+        }
+        
+        return false;
+      });
+		 });
+		
+		         
+      
+  
+$('#subscriptionwrapper').isotope({ filter: '.my-selector' }, function( $items ) {
+  var id = this.attr('id'),
+      len = $items.length;
+  console.log( 'Isotope has filtered for ' + len + ' items in #' + id );
+});
+
+
+ 
+function showall()
+{
+$('#subscriptionwrapper').isotope({ filter: '.All' });
+}
+
+function showactive()
+{
+$('#subscriptionwrapper').isotope({ filter: '.Active' });
+}
+
+function showreview()
+{
+$('#subscriptionwrapper').isotope({ filter: '.Review' });
+}
+
+</script>
+ 
+
+    
+
+</head>
+
+<body>
+
+<!-- ###################### start of container #################### -->
+<div id="zikcontainer">
+
+<!-- ###################### start of zikheader #################### -->
+
+<div id="ajaxheader"></div>
+
+
+
+
+
+<!-- ###################### start of bodycontainer #################### -->
+
+<div id="bodycontainer">
+
+<!-- ###################### start of main-menu #################### -->
+
+<div id="ajaxmenu">
+
+</div>
+
+
+<!-- ###################### end of main-menu #################### --> 
+
+
+<div class="theatrewrapper pull-left ">
+
+<p class="pageheader fnt-color-magenta"> My Courses </p>
+<hr class="pageheader_border border1px-color-magenta">
+
+<div class="subscriptionsublinks isotophead"> 
+<ul class="isotoplinks">
+<li class="link activesubscription"><a href="#linkurl" data-option-value="straightDown" onclick="showall()"> All </a></li>
+<li class="link"><a href="#linkurl" data-option-value="straightDown" onclick="showactive()"> Current </a> </li>
+<li class="link"><a href="#linkurl" data-option-value="straightDown" onclick="showreview()"> Past </a> </li>
+</ul>
+</div>
+
+<div id="subscriptionwrapper" class="content_3">
+
+
+<div class="box-260-240 All">
+
+<div class="box-260-200-header bg-color-grey fnt-color-blue border1px-color-blue">
+<p class="boxspan bg-color-blue pull-left"></p>
+<p class="box-260-200-header-text">Data Mining and Applications</p>
+</div> <!-- end of box-260-200-header -->
+
+
+
+<div class="box-260-200-body">
+Examine new techniques for predictive and descriptive learning using concepts that bridge gaps among statistics, computer science, and artificial intelligence. 
+ques for predicques for predicques for predicques for predicques for predicques for predicques for predic  for predicques for predic    for predicques for predic   for predicques for predic 
+</div>  <!--end of 260-200-body -->
+
+<div class="box-260-200-footer bg-color-blue">
+
+ <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">300</p> 
+    <p class="footer-text">Subscribers </p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+     <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">Freinds</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">6</p> 
+    <p class="footer-text">Ratings</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks border-none">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">weeks complete</p>
+    
+    </div> <!-- end of footer-blocks -->
+   
+
+</div>  <!--end of 260-200-footer -->
+
+
+
+</div> <!-- end of box-240-190 -->
+
+
+
+
+<div class="box-260-240 All Review">
+
+<div class="box-260-200-header bg-color-grey fnt-color-purple border1px-color-purple">
+<p class="boxspan bg-color-purple pull-left"></p>
+<p class="box-260-200-header-text">Data Mining and Analysis</p>
+</div> <!-- end of box-260-200-header -->
+
+
+
+<div class="box-260-200-body">
+Data mining is a powerful tool used to discover patterns and relationships in data. Learn how to apply data mining principles to the dissection of large complex data sets Data mining is a powerful tool used to discover patterns 
+</div>  <!--end of 260-200-body -->
+
+<div class="box-260-200-footer bg-color-purple">
+
+ <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">300</p> 
+    <p class="footer-text">Subscribers </p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+     <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">Freinds</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">6</p> 
+    <p class="footer-text">Ratings</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks border-none">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">weeks complete</p>
+    
+    </div> <!-- end of footer-blocks -->
+   
+
+</div>  <!--end of 260-200-footer -->
+
+
+
+
+</div> <!-- end of box-240-190 -->
+
+
+<div class="box-260-240 All">
+
+<div class="box-260-200-header bg-color-grey fnt-color-magenta border1px-color-magenta">
+<p class="boxspan bg-color-magenta pull-left"></p>
+<p class="box-260-200-header-text">Quantitative Strategies</p>
+</div> <!-- end of box-260-200-header -->
+
+
+
+<div class="box-260-200-body">
+This introduction to financial trading strategies will focus on stock and equity markets as well as the use of statistical arbitrage methods
+</div>  <!--end of 260-200-body -->
+
+<div class="box-260-200-footer bg-color-magenta">
+
+ <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">300</p> 
+    <p class="footer-text">Subscribers </p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+     <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">Freinds</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">6</p> 
+    <p class="footer-text">Ratings</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks border-none">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">weeks complete</p>
+    
+    </div> <!-- end of footer-blocks -->
+   
+
+</div>  <!--end of 260-200-footer -->
+
+
+
+</div> <!-- end of box-240-190 -->
+
+
+<div class="box-260-240 Active All">
+
+<div class="box-260-200-header bg-color-grey fnt-color-orange border1px-color-orange">
+<p class="boxspan bg-color-orange pull-left"></p>
+<p class="box-260-200-header-text">Paradigms for Computing</p>
+</div> <!-- end of box-260-200-header -->
+
+
+
+<div class="box-260-200-body">
+This course provides a practical introduction to modern techniques for computing with data, teaching advanced use of the R system and exploring connections
+</div>  <!--end of 260-200-body -->
+
+<div class="box-260-200-footer bg-color-orange">
+
+ <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">300</p> 
+    <p class="footer-text">Subscribers </p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+     <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">Freinds</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">6</p> 
+    <p class="footer-text">Ratings</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks border-none">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">weeks complete</p>
+    
+    </div> <!-- end of footer-blocks -->
+   
+
+</div>  <!--end of 260-200-footer -->
+
+
+
+
+</div> <!-- end of box-240-190 -->
+
+
+<div class="box-260-240 Active All">
+
+<div class="box-260-200-header bg-color-grey fnt-color-blue border1px-color-blue">
+<p class="boxspan bg-color-blue pull-left"></p>
+<p class="box-260-200-header-text">Engineering and the Physical Sciences</p>
+</div> <!-- end of box-260-200-header -->
+
+
+
+<div class="box-260-200-body">
+This course is an introduction to statistics with an emphasis on modern engineering applications. Students explore concepts of probability theory
+</div>  <!--end of 260-200-body -->
+
+<div class="box-260-200-footer bg-color-blue">
+
+ <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">300</p> 
+    <p class="footer-text">Subscribers </p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+     <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">Freinds</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">6</p> 
+    <p class="footer-text">Ratings</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks border-none">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">weeks complete</p>
+    
+    </div> <!-- end of footer-blocks -->
+   
+
+</div>  <!--end of 260-200-footer -->
+
+
+
+</div> <!-- end of box-240-190 -->
+
+
+<div class="box-260-240 All">
+
+<div class="box-260-200-header bg-color-grey fnt-color-purple border1px-color-purple">
+<p class="boxspan bg-color-purple pull-left"></p>
+<p class="box-260-200-header-text">Financial Modeling Methodology</p>
+</div> <!-- end of box-260-200-header -->
+
+
+
+<div class="box-260-200-body">
+Examine new techniques for predictive and descriptive learning using concepts that bridge gaps among statistics, computer science, and artificial intelligence. 
+ques for predicques for predicques for predicques for predicques for predicques for predicques for predic  for predicques for predic    for predicques for predic   for predicques for predic 
+</div>  <!--end of 260-200-body -->
+
+<div class="box-260-200-footer bg-color-purple">
+
+ <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">300</p> 
+    <p class="footer-text">Subscribers </p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+     <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">Freinds</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">6</p> 
+    <p class="footer-text">Ratings</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks border-none">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">weeks complete</p>
+    
+    </div> <!-- end of footer-blocks -->
+   
+
+</div>  <!--end of 260-200-footer -->
+
+
+
+</div> <!-- end of box-240-190 -->
+
+
+<div class="box-260-240 All">
+
+<div class="box-260-200-header bg-color-grey fnt-color-magenta border1px-color-magenta">
+<p class="boxspan bg-color-magenta pull-left"></p>
+<p class="box-260-200-header-text">Risk Management</p>
+</div> <!-- end of box-260-200-header -->
+
+
+
+<div class="box-260-200-body">
+Examine new techniques for predictive and descriptive learning using concepts that bridge gaps among statistics, computer science, and artificial intelligence. 
+ques for predicques for predicques for predicques for predicques for predicques for predicques for predic  for predicques for predic    for predicques for predic   for predicques for predic 
+</div>  <!--end of 260-200-body -->
+
+<div class="box-260-200-footer bg-color-magenta">
+
+ <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">300</p> 
+    <p class="footer-text">Subscribers </p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+     <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">Freinds</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">6</p> 
+    <p class="footer-text">Ratings</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks border-none">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">weeks complete</p>
+    
+    </div> <!-- end of footer-blocks -->
+   
+
+</div>  <!--end of 260-200-footer -->
+
+
+
+
+</div> <!-- end of box-240-190 -->
+
+
+
+<div class="box-260-240 All Review">
+
+<div class="box-260-200-header bg-color-grey fnt-color-orange border1px-color-orange">
+<p class="boxspan bg-color-orange pull-left"></p>
+<p class="box-260-200-header-text">Data Mining and Applications</p>
+</div> <!-- end of box-260-200-header -->
+
+
+
+<div class="box-260-200-body">
+Examine new techniques for predictive and descriptive learning using concepts that bridge gaps among statistics, computer science, and artificial intelligence. 
+ques for predicques for predicques for predicques for predicques for predicques for predicques for predic  for predicques for predic    for predicques for predic   for predicques for predic 
+</div>  <!--end of 260-200-body -->
+
+<div class="box-260-200-footer bg-color-orange">
+
+ <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">300</p> 
+    <p class="footer-text">Subscribers </p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+     <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">Freinds</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks">
+    
+    <p class="footer-digits">6</p> 
+    <p class="footer-text">Ratings</p>
+    
+    </div> <!-- end of footer-blocks -->
+    
+    
+    <div class="zik-inline-block footer-blocks border-none">
+    
+    <p class="footer-digits">32</p> 
+    <p class="footer-text">weeks complete</p>
+    
+    </div> <!-- end of footer-blocks -->
+   
+
+</div>  <!--end of 260-200-footer -->
+
+
+
+</div> <!-- end of box-240-190 -->
+
+
+
+</div> <!--end of summarywrapper-->
+
+
+</div> <!--end of theatrewrapper-->
+
+
+
+
+
+<div class="clearmyfix"> </div>
+
+</div> 
+<!-- ###################### end of bodycontainer #################### -->
+
+<!-- #################### start of footer #################### -->
+
+<div id="ajaxfooter">
+
+</div>
+
+
+
+<!-- #################### end of footer #################### -->
+
+
+
+
+
+
+</div>
+<!-- ###################### end of container #################### -->
+
+
+
+
+</body>
+
+</html>

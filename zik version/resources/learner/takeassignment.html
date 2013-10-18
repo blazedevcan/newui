@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+<head>
+<!-- start: Meta -->
+	<meta charset="utf-8" />
+	<title>Ziksana Dashboard</title>
+	<meta name="description" content="Ziksana Dashboard version 1.2" />
+	<meta name="author" content="Kaivalya Shah" />
+	<meta name="keyword" content="Ziksana Version1.2" />
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->	
+   <link href="../../css/zik.css" rel="stylesheet" />
+	<link href="../../css/zik-responsive.css" rel="stylesheet" />
+	<link href="../../css/maintheme.css" rel="stylesheet" />
+    <link href="../../css/bg-color.css" rel="stylesheet" />
+    <link href="../../css/assignment.css" rel="stylesheet"/>
+    <link href="../../css/select.css" rel="stylesheet"/>
+    <link href="../../css/bootstrap-spinedit.css" rel="stylesheet"/>
+ 
+	<!-- end: CSS -->
+    
+    <script src="../../js/tree/Common/common.js"></script>
+<script  src="../../js/tree/Common/dtree.js"></script>	
+<script language="JavaScript" src="../../js/tree/Menu/menu.js"></script>
+<script language="JavaScript" src="../../js/tree/Menu/menu_ext.js"></script>
+<script language="javascript" src="../../js/tree/Common/tree_ed.js"></script>
+<script language="javascript" src="../../js/tree/Common/dataprocessor.js"></script>
+
+<style>
+
+.selectedTreeRow
+{
+border-color:#27b; background: #6D9EC5; color:#fff;
+font-weight:bold;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;	
+padding-top:-2px;
+padding-bottom:-2px;
+padding-left:3px;
+padding-right:3px;
+}
+
+
+span.standartTreeRow:hover
+{
+background: rgba(85, 142, 187, 0.63);
+color:#fff;	
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+padding:3px;
+}
+
+.table-assignment th, .table td {
+padding: 3px;
+line-height: 20px;
+text-align: center;
+border-top: 1px solid #dddddd;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ###################### start of container #################### -->
+<div id="zikcontainer">
+
+<!-- ###################### start of zikheader #################### -->
+
+<div id="ajaxheader"></div>
+
+
+
+<!-- ###################### start of bodycontainer #################### -->
+
+<div id="bodycontainer">
+
+<!-- ###################### start of main-menu #################### -->
+
+<div id="ajaxmenu">
+
+</div>
+
+
+<!-- ###################### end of main-menu #################### --> 
+
+<div class="theatrewrapper pull-left ">
+
+
+<p class="pageheader fnt-color-orange" style="margin-bottom:3px;"> Take Assignment</p>
+<hr class="pageheader_border border1px-color-orange" style="margin:0px; margin-left:30px; margin-bottom:10px;">
+
+
+<div id="assignmentwrapper">
+
+<div class="zikbox-240 pull-left">
+
+<div class="l-select-box-wrapper">
+<select class="selectpicker">
+    <option>Select Program</option>
+    <option>Communication Skills</option>
+    <option>Science</option>
+  </select>
+</div> <!-- end of l-select-box-wrapper --> 
+
+<div class="l-select-box-wrapper">
+<select class="selectpicker">
+    <option>Select Course</option>
+    <option>Communication Skills</option>
+    <option>Science</option>
+  </select>
+</div> <!-- end of l-select-box-wrapper -->   
+
+<hr class="border1px-color-darkgrey" style="margin:0px;">
+
+
+  
+ <div id="treeboxbox_tree" style="padding:5px; overflow: scroll;
+overflow-x: hidden;" class="dhtmlxTree memassigntree tree-wrapper"
+                setImagePath="../js/tree/treeimages/csh_bluebooks/">
+  
+  <script language="javascript">
+  		tree = new dhtmlXTreeObject("treeboxbox_tree", "100%", "100%", 0);
+		tree.setSkin('dhx_skyblue');
+		tree.setImagePath("../../js/tree/treeimages/csh_bluebooks/");
+		tree.enableDragAndDrop(true);
+		tree.enableMercyDrag(true); 
+		tree.enableTreeLines(true);
+		tree.attachEvent("onRightClick", function (itemId){
+				tree.selectItem(itemId,false);
+			});
+		tree.setImageArrays("plus", "plus_ar.png", "plus_ar.png", "plus_ar.png", "plus_ar.png", "plus_ar.png");
+		tree.setImageArrays("minus", "minus_ar.png", "minus_ar.png", "minus_ar.png", "minus_ar.png", "minus_ar.png");
+		tree.loadXML("../../js/tree/xml/assignment.xml");
+  </script>
+  
+          </div> <!--end of treeboxbox_tree-->
+          
+   <hr class="border1px-color-darkgrey" style="margin:0px; margin-bottom:8px;">
+       
+          
+   <div id="assignment-table">
+   
+   <table class="table table-assignment">
+              <thead class="bg-color-blue fnt-color-white">
+                <tr>
+                  <th>Date</th>
+                  <th>Assignment</th>
+                  <th>Status</th>
+                  <th>Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>11-Aug</td>
+                  <td>English</td>
+                  <td>Complete</td>
+                  <td>A+</td>
+                </tr>
+                 <tr>
+                  <td>12-Aug</td>
+                  <td>Science</td>
+                  <td>Incomplete</td>
+                  <td>C+</td>
+                </tr>
+                 <tr>
+                  <td>14-Aug</td>
+                  <td>Physics</td>
+                  <td>Incomplete</td>
+                  <td>C+</td>
+                </tr>
+              </tbody>
+            </table>
+   
+   
+   </div> <!-- end of assignment-table -->       
+     
+ <div class="pull-right"> 
+ 
+ <a href="#linkurl" class="btn"> Details </a>        
+            
+ </div>
+ 
+ <div class="clearmyfix"> </div>
+
+
+</div> <!--end of span240 -->
+
+
+<div class="zikbox-540 pull-left">
+
+<div class="box-question-wrapper">
+
+<p class="question-number">1.</p>
+
+<div class="question-box">
+
+<textarea class="span3 question-box-text-area" style="height:50px; overflow:auto;"> Question Text </textarea>
+
+</div>
+
+<div class="question-box">
+
+<textarea class="question-box-text-area" style="width:120px; height:50px; overflow:auto;"> Help Description </textarea>
+
+</div>
+
+<div class="question-credential">
+
+<p class="sub-credential"> Type: </p>
+<p class="sub-credential"> Marks: </p>
+<p class="sub-credential"> Time: </p>
+
+</div>
+
+<div class="question-image">
+
+<img src="../../img/draft/chemistry.png"/>
+
+</div>
+
+<div class="question-box">
+
+<textarea class="question-box-text-area"  style="width:422px; margin-top:4px;  height:63px; overflow:auto;">Answer list </textarea>
+
+</div>
+
+
+<div class="pull-right">
+
+<a href="#linkurl" class="btn question-box-btn"> Submit </a>
+<a href="#linkurl" class="btn question-box-btn"> Skip </a>
+<a href="#linkurl" class="btn question-box-btn"> Next </a>
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+
+</div> <!-- end box-question-wrapper -->
+ 
+<div class="box-answer-wrapper">
+
+<p class="fnt-size-18 fnt-color-blue"> Submitted Answers : </p>
+
+
+<div class="answer-box">
+
+<p class="answer-number question-inline-block">1.</p>
+
+<div class="question-inline-block">
+
+<textarea class="question-box-text-area" style="height:50px; width:372px; overflow:auto;"> Question Text </textarea>
+
+</div>
+
+
+<div class="question-credential">
+
+<p class="sub-credential"> Type: </p>
+<p class="sub-credential"> Time: </p>
+
+</div>
+
+<div class="question-inline-block" style="margin-left:14px; margin-top:5px;">
+
+<textarea class="question-box-text-area" style="height:50px; width:242px; overflow:auto;"> My Submission </textarea>
+
+</div>
+
+<div class="question-inline-block">
+
+<textarea class="question-box-text-area" style="height:50px; width:214px; overflow:auto;"> Correct Answer </textarea>
+
+</div>
+
+
+<div class="question-inline-block" style="margin-left:14px; margin-top:5px;">
+
+<textarea class="question-box-text-area" style="height:50px; width:473px; overflow:auto;"> Educator feedback </textarea>
+
+</div>
+
+
+</div> <!-- end of answer-box -->
+
+
+<div class="answer-box">
+
+<p class="answer-number question-inline-block">1.</p>
+
+<div class="question-inline-block">
+
+<textarea class="question-box-text-area" style="height:50px; width:372px; overflow:auto;"> Question Text </textarea>
+
+</div>
+
+
+<div class="question-credential">
+
+<p class="sub-credential"> Type: </p>
+<p class="sub-credential"> Time: </p>
+
+</div>
+
+<div class="question-inline-block" style="margin-left:14px; margin-top:5px;">
+
+<textarea class="question-box-text-area" style="height:50px; width:242px; overflow:auto;"> My Submission </textarea>
+
+</div>
+
+<div class="question-inline-block">
+
+<textarea class="question-box-text-area" style="height:50px; width:214px; overflow:auto;"> Correct Answer </textarea>
+
+</div>
+
+
+<div class="question-inline-block" style="margin-left:14px; margin-top:5px;">
+
+<textarea class="question-box-text-area" style="height:50px; width:473px; overflow:auto;"> Educator feedback </textarea>
+
+</div>
+
+
+</div> <!-- end of answer-box -->
+
+
+</div> <!-- end of box-answer-wrapper --> 
+
+ 
+
+</div> <!-- end of zikbox-540 -->
+
+
+<div class="clearmyfix"> </div>
+
+</div> <!-- end of assignmentwrapper -->
+
+
+</div> <!--end of theatrewrapper-->
+
+
+
+
+
+<div class="clearmyfix"> </div>
+
+</div> 
+<!-- ###################### end of bodycontainer #################### -->
+
+
+
+<!-- #################### start of footer #################### -->
+
+<div id="ajaxfooter">
+
+</div>
+
+<!-- #################### end of footer #################### -->
+
+
+
+
+
+</div>
+<!-- ###################### end of container #################### -->
+
+
+<script src="../../js/jquery-1.9.1.min.js"> </script>
+<script src="../../js/zikscripts.js"> </script>
+<script src="../../js/select.js"> </script>
+
+<script>
+
+$('.selectpicker').selectpicker();
+
+</script>
+
+</body>
+</html>

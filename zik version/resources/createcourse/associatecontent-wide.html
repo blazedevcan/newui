@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+<!-- start: Meta -->
+	<meta charset="utf-8" />
+	<title>Ziksana Dashboard</title>
+	<meta name="description" content="Ziksana Dashboard version 1.2" />
+	<meta name="author" content="Kaivalya Shah" />
+	<meta name="keyword" content="Ziksana Version1.2" />
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	<link href="../../css/zik.css" rel="stylesheet" />
+	<link href="../../css/zik-responsive.css" rel="stylesheet" />
+	<link href="../../css/maintheme.css" rel="stylesheet" />
+    <link href="../../css/bg-color.css" rel="stylesheet" />
+    <link href="../../css/admin-createprogram.css" type="text/css" rel="stylesheet" />
+    <link href="../../css/tooltip.css" type="text/css" rel="stylesheet" />
+    <link href="../../js/tree/styles/styleTree.css" rel="stylesheet" type="text/css" />
+    <!-- for the layout of the tree -->
+     <link href="../../css/tooltip.css" type="text/css" rel="stylesheet" />
+  
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"> </script>  
+<script src="../../js/tooltip.js"></script>
+<script>
+
+
+$(document).ready(function()
+{
+$('div[rel=tooltip]').tooltip();
+	
+});
+
+</script>
+
+
+<script type="text/javascript" src="../../js/tree/gettheme.js"></script> 
+<script type="text/javascript" src="../../js/tree/core.js"></script>
+<script type="text/javascript" src="../../js/tree/buttons.js"></script>
+<script type="text/javascript" src="../../js/tree/scrollbar.js"></script>
+<script type="text/javascript" src="../../js/tree/panel.js"></script>
+<script type="text/javascript" src="../../js/tree/dragdrop.js"></script>
+<script type="text/javascript" src="../../js/tree/tree.js"></script>
+<script type="text/javascript" src="../../js/tree/menujq.js"></script>
+<script type="text/javascript" src="../../js/tree/splitter.js"></script>
+<script type="text/javascript" src="../../js/tree/jqxexpander.js"></script>
+<link rel="stylesheet" type="text/css" href="../../css/tree/menu.css" />
+<link rel="stylesheet" type="text/css" href="../../css/tree/tree.css" />
+ 
+<script src="../../js/tree/Common/common.js"></script>
+<script  src="../../js/tree/Common/dtree.js"></script>	
+<script  type="text/javascript" src="../../js/tree/Menu/menu.js"></script>
+<script type="text/javascript" src="../../js/tree/Menu/menu_ext.js"></script>
+<script type="text/javascript" src="../../js/tree/treedataassociate.js"></script>
+<script type="text/javascript" src="../../js/tree/Common/tree_ed.js"></script>
+<script type="text/javascript" src="../../js/tree/Common/dataprocessor.js"></script>
+<!-- End tree -->
+
+<script>
+
+
+$(document).ready(function()
+{
+	 var theme = getTheme();
+	 	$("#splitter").jqxSplitter({ theme: theme, panels: [{ size: 260}]});
+});
+
+</script>
+
+
+
+<style>
+
+
+.selectedTreeRow
+{
+border-color:#27b; background: #6D9EC5; color:#fff;
+font-weight:bold;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;	
+padding-top:-2px;
+padding-bottom:-2px;
+padding-left:3px;
+padding-right:3px;
+text-align: left;
+}
+
+span.standartTreeRow:hover
+{
+background: rgba(85, 142, 187, 0.63);
+color:#fff;	
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+padding:3px;
+}
+
+</style>
+     
+
+</head>
+
+<body class="cr-course-bg">
+
+<!-- ###################### start of container #################### -->
+
+
+
+
+<!-- ###################### start of bodycontainer #################### -->
+
+<div class="height-wizard">
+
+
+
+<div class="create-program-wrapper">
+
+<p class="assign-header fnt-color-white pull-left"> <a href="#linkurl"><span> <i class="icon-arrow-left-3 fnt-color-white"></i> </span></a> Back to Dashboard</p>
+
+
+<div class="top-bar-wizard pull-left">
+<ul>
+<a href="#linkurl"><li class="button button-primary  fnt-color-white fnt-size-16">Define <span class="step bg-color-white fnt-color-blue pull-right">1</span> </li></a>
+<a href="#linkurl"><li class="button button-orange fnt-color-white fnt-size-16">Enrich <span class="step bg-color-white fnt-color-orange pull-right">2</span> </li></a>
+<a href="#linkurl"><li class="button button-purple fnt-color-white fnt-size-16">Publish<span class="step bg-color-white fnt-color-purple pull-right">3</span> </li></a>
+</ul>
+
+<div class="clearfix"> </div>
+
+</div> <!-- end of top-bar-wizard -->
+
+<div class="clearfix"> </div>
+
+<div class="wizard-theatre-content-wrapper">
+
+
+
+<!-- multistep form -->
+<div id="msform">
+	<!-- progressbar -->
+	
+    
+ <div class="wizard-bar bg-color-blue">
+
+<p class="fnt-color-white fnt-size-18 mr-btm-10" style="text-align:left !important;"> Develop the Learning Program & Curriculum </p>
+   
+    <div class="non-semantic-protector"> 
+
+    <ul id="progressbar">
+    
+    
+		<li class="active">Describe Course</li>
+		<li class="active">Define Structure</li>
+		<li class="active">Associate Content</li>
+        <li>Define Assignment</li>
+        
+	</ul>
+    
+    </div> <!-- end of non-semantic-protector -->
+    
+    
+    </div> <!-- end of wizard-bar -->
+    
+    <div class="clearfix"> </div>
+
+   <div id="info-header">
+   
+  
+   <div class="cr-course-inline-block"> Organize your course info course modules/chapters </div>
+    <div class="cr-course-info-icon fnt-color-orange cr-course-inline-block" 
+   rel="tooltip" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." data-placement="bottom"> 
+   <i class="icon-info fnt-size-16 mr-r-5"></i> </div> 
+  
+   
+   </div> <!-- end of info-header -->
+   
+
+<div class="cr-course-content-area">
+
+    <div id="splitter" style='clear:both;'>
+    
+    <!-- Start of Tree -->   
+  <div id="treeboxbox_tree" style="float:left;padding:5px;" class="dhtmlxTree" setImagePath="../../js/tree/treeimages/csh_bluebooks/">
+    </div> <!-- End of Tree -->
+    
+    
+ <div id="ContentPanel2" style=" font-size:11px; background-image:none; margin-left:25px;">
+    
+    <p></p>
+    
+ </div> <!-- end of contentpanel12 -->
+    
+ </div> <!-- end of splitter -->
+
+
+
+
+	<a href="defineassignment-wide.html" class="btn btn-limekiln-1 cr-course-btn"> Save and Continue </a>
+
+
+</div> <!-- end of cr-course-content-area -->
+
+
+
+        
+        
+        
+        </div> <!-- end of ms-form -->
+
+
+ 
+
+</div> <!-- end of wizard-theatre-content-wrapper -->
+
+</div> <!-- end of create-program-wrapper -->
+
+
+
+</div> 
+<!-- ###################### end of bodycontainer #################### -->
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

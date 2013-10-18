@@ -1,0 +1,1320 @@
+<!doctype html>
+<html>
+<head>
+<!-- start: Meta -->
+	<meta charset="utf-8" />
+	<title>Ziksana Dashboard</title>
+	<meta name="description" content="Ziksana Dashboard version 1.2" />
+	<meta name="author" content="Kaivalya Shah" />
+	<meta name="keyword" content="Ziksana Version1.2" />
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+<link href="../../css/zik.css" rel="stylesheet" />
+<link href="../../css/zik-responsive.css" rel="stylesheet" />
+<link href="../../css/maintheme.css" rel="stylesheet" />
+<link href="../../css/bg-color.css" rel="stylesheet" />
+<link href="../../css/mainmenu.css" rel="stylesheet"/>
+<link href="../../css/tooltip.css" type="text/css" rel="stylesheet" />
+<link href="../../css/dropdown.css" type="text/css" rel="stylesheet" />
+<link href="../../css/masterdata.css" type="text/css" rel="stylesheet" />
+<link href="../../css/icheck/minimal/blue.css" type="text/css" rel="stylesheet" />
+<link href="../../css/daterangepicker-bs2.css" type="text/css" rel="stylesheet" />
+ <link href="../../js/rating/jRating.jquery.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="../../js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+<link rel="stylesheet" type="text/css" href="../../css/date-timepicker/bootstrap-datetimepicker.min.css"/>
+     
+      <style>		
+		
+.menuhoverhome:hover > a > i, .menuhoverhome.active > a > i{background: #f5f5f5;color: #008ecb!important; -moz-box-shadow:    inset 0 0 10px #008ecb;
+   -webkit-box-shadow: inset 0 0 10px #008ecb;
+   box-shadow:         inset 0 0 10px #008ecb;}
+
+.menuhoverhome:hover > a{color: #008ecb;}
+
+
+.menu-home-active
+{
+background: #f5f5f5;color: #008ecb !important; 
+-moz-box-shadow:    inset 0 0 10px #008ecb;
+-webkit-box-shadow: inset 0 0 10px #008ecb;
+box-shadow:         inset 0 0 10px #008ecb;
+}
+
+
+.menuhovercourses:hover > a > i, .menuhoverhome.active > a > i{background: #f5f5f5;color: #ac358d!important;
+
+-moz-box-shadow:    inset 0 0 10px #ac358d;
+   -webkit-box-shadow: inset 0 0 10px #ac358d;
+   box-shadow:         inset 0 0 10px #ac358d;
+
+}
+
+.menuhovercourses:hover > a{color: #ac358d;}
+
+
+.menu-program-active
+{
+background: #f5f5f5;color: #fff !important;
+
+-moz-box-shadow:    inset 0 0 10px #ac358d;
+   -webkit-box-shadow: inset 0 0 10px #ac358d;
+   box-shadow:         inset 0 0 10px #ac358d;	
+}
+
+.menuhoverstudents:hover > a > i, .menuhoverhome.active > a > i{background: #f5f5f5;color: #fc8444!important;
+
+-moz-box-shadow:    inset 0 0 10px #fc8444;
+   -webkit-box-shadow: inset 0 0 10px #fc8444;
+   box-shadow:         inset 0 0 10px #fc8444;
+
+}
+
+
+.menu-students-active
+{
+background: #f5f5f5;color: #fc8444!important;
+
+-moz-box-shadow:    inset 0 0 10px #fc8444;
+   -webkit-box-shadow: inset 0 0 10px #fc8444;
+   box-shadow:         inset 0 0 10px #fc8444;
+}
+
+.menuhoverstudents:hover > a{color: #fc8444;}
+
+.menuhoveranalytics:hover > a > i, .menuhoverhome.active > a > i{background: #f5f5f5;color: #00a847!important;
+
+-moz-box-shadow:    inset 0 0 10px #00a847;
+   -webkit-box-shadow: inset 0 0 10px #00a847;
+   box-shadow:         inset 0 0 10px #00a847;
+
+}
+
+.menu-analytics-active
+{
+background: #f5f5f5;color: #fff !important;
+
+-moz-box-shadow:    inset 0 0 10px #00a847;
+   -webkit-box-shadow: inset 0 0 10px #00a847;
+   box-shadow:         inset 0 0 10px #00a847;
+}
+
+.menuhoveranalytics:hover > a{color: #00a847;}
+
+.table th, .table td {
+padding: 4px;
+line-height: 20px;
+text-align: left;
+vertical-align: top;
+border-top: 1px solid #dddddd;
+font-size: 12px;
+}
+
+		
+	</style> 
+
+	<!-- end: CSS -->
+
+</head>
+
+<body>
+
+<!-- ###################### start of container #################### -->
+<div id="zikcontainer">
+
+<!-- ###################### start of zikheader #################### -->
+
+<!-- ###################### start of zikheader #################### -->
+
+<div id="zikheader">
+
+
+<!-- ###################### start of  logoblock #################### -->
+
+<div id="logoblock" class="pull-left">
+
+<img src="../../img/ziklogo.png"/>
+
+</div>
+<!-- ###################### start of  Profileblock #################### -->
+
+<div class="pull-right">
+
+<div id="profile-points" class="pull-left">
+
+<div class="points-wrapper-name bg-color-torquise fnt-size-14 fnt-color-white">Guru </div>
+<div class="points-wrapper-points bg-color-yellow fnt-size-12 fnt-color-black">4589 Points </div>
+
+</div><!-- end of profilepoints -->
+
+
+<div id="profileblock" class="pull-left">
+
+<img src="../../img/profilepix.png"/>
+
+</div>
+
+<p id="profilename" class="pull-left"> Welcome !! <br>
+Scott Cherish </p>
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+</div>
+<!-- ###################### end of zikheader #################### -->
+
+ <!-- ____________________ start of breadcrumb _____________________ -->
+        
+        <div class="breadcrumbbox">
+      
+       <!-- ###################### start of  rightblock #################### -->
+<div id="dashboard-block" class="pull-left" rel="tooltip" title="My Dashboard" data-placement="right">
+
+<a href="../dashboard.html" class="btn"><img src="../../img/dashboard/dashboardicon.png" style="height:30px;"/></a>
+
+</div> <!-- end of dashboard-block -->
+
+<div id="rightblock" class="pull-right">
+  
+<div class="usermenu_cl btn-group pull-left"> 
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+<img src="../../img/UserMenu.png"/>
+</a>
+<ul class="dropdown-menu">
+<li><a href="#">View Profile</a></li>
+<li><a href="#">Logout</a></li>
+</ul>
+
+</div> 
+<!-- end of usermenu -->  
+
+<div class="searchbtn pull-left">
+<div class="input-append">
+  <input class="span2" id="appendedInput" type="text" placeholder="Enter Keyword" style="height:22px;">
+  <span class="add-on add-onbtn" style="height:22px;"> <img src="../../img/search.png"/></span>
+</div>
+</div>
+
+<!-- end of searchbox --> 
+
+
+<div class="clearmyfix"> </div>
+
+</div>
+<!-- ###################### end of  rightblock #################### -->
+
+
+
+        
+        <div class="clearmyfix">   </div>  
+        
+        </div> <!--end of breadcrumbbox-->
+
+
+
+<!-- ###################### end of zikheader #################### -->
+
+
+
+<!-- ###################### start of bodycontainer #################### -->
+
+<div id="bodycontainer">
+
+<!-- ###################### start of main-menu #################### -->
+
+<div id="mainmenu" class="pull-left">
+<ul class="vertical-nav">
+<li class="menuhoverhome">
+
+<div class="pull-left home-menu-boxspan bg-color-blue"></div>
+
+<div class="clearfix"> </div>
+
+
+<a href="#"><i class="icon-home bg-color-blue fnt-color-white"></i></a><a href="#linkurl" class="text">My Home<span class="submenu-icon"></span></a>
+
+<ul style="margin-top:-32px">
+
+<div class="slidemenuwrapper menu2">
+
+<p style="margin-bottom:0px; margin-top:10px; margin-bottom:5px;"> My Home</p>
+
+<hr style="margin-bottom:15px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<a href="../mysummary.html" rel="load-content" class="tiles-home"> 
+<div class="tilesbox">
+<div class="tiles bg-color-blue">
+<img src="../../img/slidemenu/1MyCourses.png"/>
+</div>
+<p>Summary </p>
+</div>
+</a>
+
+
+<a href="../mycourses.html" rel="load-content" class="tiles-home"> 
+<div class="tilesbox">
+
+<div class="tiles bg-color-blue">
+
+<img src="../../img/slidemenu/2MyContact.png"/>
+
+</div>
+<p>Programs </p>
+
+</div>
+</a>
+
+
+<a href="../messages.html" rel="load-content" class="tiles-home">
+<div class="tilesbox">
+
+<div class="tiles bg-color-blue">
+
+<img src="../../img/slidemenu/3Messages.png" style="left:11px; top:15px;"/>
+
+</div>
+<p>Messages </p>
+
+</div>
+</a>
+
+
+
+
+<a href="../mycontacts.html" rel="load-content" class="tiles-home">
+<div class="tilesbox">
+
+<div class="tiles bg-color-blue">
+
+<img src="../../img/mainmenu/MyStudent.png" style="left:11px; top:15px;"/>
+
+</div>
+<p>Contacts</p>
+
+</div>
+</a>
+
+
+
+
+<a href="../poll.html" rel="load-content" class="tiles-home">
+<div class="tilesbox">
+
+<div class="tiles bg-color-blue">
+
+<img src="../../img/slidemenu/6Poll.png" style=""/>
+
+</div>
+<p>Poll </p>
+
+</div>
+</a>
+
+
+<a href="../knb.html" rel="load-content" class="tiles-home">
+<div class="tilesbox">
+
+<div class="tiles bg-color-blue">
+
+<img src="../../img/slidemenu/7KnowMe.png" style="left:11px; top:15px;"/>
+
+</div>
+<p>Know me Better </p>
+
+</div>
+</a>
+
+
+<a href="../announcement.html" rel="load-content" class="tiles-home">
+<div class="tilesbox">
+
+<div class="tiles bg-color-blue">
+
+<img src="../../img/slidemenu/8Annoucement.png" style="left: 18px;"/>
+
+</div>
+
+
+<p>Announcement </p>
+
+</div>
+</a>
+
+<div class="clearmyfix"> </div>
+
+
+<p style="margin:0px; margin-top:15px; margin-bottom:5px;">  My Tools</p>
+
+<hr style="margin-bottom:15px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div class="toolscontainer" style="margin-left:5px;">
+
+<a href="../myprofile.html" rel="load-content" class="tiles-home">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-blue">
+<img src="../../img/slidemenu/1-MyTools.png" style="top:8px;"/>
+</div>
+<p> Profile </p>
+</div>
+</a>
+
+
+<a href="../blog.html" rel="load-content" class="tiles-home">
+<div class="tilesboxtools" rel="tooltip" title="Blog">
+<div class="tilestools bg-color-blue">
+
+<img src="../../img/slidemenu/5-MyTools.png"/>
+
+</div>
+<p> Blog </p>
+</div>
+</a>
+
+
+
+<a href="Master-Data.html" rel="load-content" class="tiles-home">
+<div class="tilesboxtools" rel="tooltip" title="Blog">
+<div class="tilestools bg-color-blue">
+
+<img src="../../img/slidemenu/5-MyTools.png"/>
+
+</div>
+<p> MasterData </p>
+</div>
+</a>
+
+
+<a href="../locker.html" rel="load-content" class="tiles-home">
+
+<div class="tilesboxtools">
+
+<div class="tilestools bg-color-blue">
+
+<img src="../../img/slidemenu/9-MyTools.png"/>
+
+</div>
+<p> Locker </p>
+
+</div>
+</a>
+
+
+
+<div class="clearmyfix"> </div>
+
+<a href="../myrewards.html" rel="load-content" class="tiles-home">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-blue">
+<img src="../../img/slidemenu/2-MyTools.png" style="top:8px;"/>
+</div>
+<p> Rewards </p>
+</div>
+</a>
+
+
+
+<a href="../zRecommends.html" rel="load-content" class="tiles-home">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-blue">
+
+<img src="../../img/slidemenu/8-MyTools.png"/>
+
+</div>
+
+<p> Recommends </p>
+
+</div>
+</a>
+
+
+<a href="healthcheck.html" rel="load-content" class="tiles-home">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-blue">
+<img src="../../img/slidemenu/010-Mytools.png"/>
+</div>
+<p> Health Check </p>
+</div>
+</a>
+
+
+<a href="../myportfolio.html" rel="load-content" class="tiles-home">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-blue">
+<img src="../../img/slidemenu/010-Mytools.png"/>
+</div>
+<p> Portfolio </p>
+</div>
+</a>
+
+</div> <!--end of tools container-->
+
+</div> <!--end of slidemenuwrapper-->
+
+</ul>
+
+<li class="menuhovercourses"><a href="#"><i class="icon-libreoffice bg-color-purple fnt-color-white"></i></a>
+
+<div class="pull-left programs-menu-boxspan bg-color-purple"></div>
+
+<div class="clearfix"> </div>
+
+
+
+<a href="#linkurl" class="tiles-program" style="padding-left: 5px !important;">My Courses<span class="submenu-icon"></span></a>
+<ul style="margin-top:-146px">
+<div class="slidemenuwrapper menu2">
+
+<p style="margin:0px; margin-top:10px; margin-bottom:5px;"> My Courses </p>
+
+<hr style="margin-bottom:15px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div style="">
+
+<a href="../draft.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../../img/createcourse/Draft.png" style="left:1px; top:1px;"/>
+</div>
+<p> Draft </p>
+</div>
+</a>
+
+<a href="../review.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../../img/createcourse/Review.png" style="left:1px; top:1px;"/>
+</div>
+<p> Review </p>
+</div>
+</a>
+
+<a href="../released.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../../img/createcourse/Release.png" style="left:1px; top:1px;"/>
+</div>
+<p> Released </p>
+</div>
+</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+<p style="margin:0px; margin-top:5px; margin-bottom:5px;"> 
+ Create Courseware </p>
+
+<hr style="margin-bottom:10px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div>
+
+<a href="../createcontent.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../../img/createcourse/CreateContent.png" style="left:1px; top:1px;"/>
+</div>
+<p> Program</p>
+</div>
+</a>
+
+<a href="../mycourses.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../../img/createcourse/CreateCourse.png" style="left:1px; top:1px;"/>
+</div>
+<p> Certificate </p>
+</div>
+</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+
+<p style="margin:0px; margin-top:5px; margin-bottom:5px;"> 
+Publish Courseware </p>
+
+<hr style="margin-bottom:10px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div>
+
+
+<a href="../publishreview.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../../img/createcourse/Review.png" style="left:1px; top:1px;"/>
+</div>
+<p> Review </p>
+</div>
+</a>
+
+<a href="../publishrefine.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../../img/createcourse/Refine.png" style="left:1px; top:1px;"/>
+</div>
+<p> Refine </p>
+</div>
+</a>
+
+<a href="../publishrelease.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../../img/createcourse/Release.png" style="left:1px; top:1px;"/>
+</div>
+<p> Release program </p>
+</div>
+</a>
+
+
+<a href="../publishrelease.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../../img/createcourse/Release.png" style="left:1px; top:1px;"/>
+</div>
+<p> Release course </p>
+</div>
+</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+
+
+<p style="margin:0px; margin-top:5px; margin-bottom:5px;"> 
+Manage Courseware</p>
+
+<hr style="margin-bottom:10px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div>
+
+
+<a href="../engagementrule.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../../img/createcourse/ManageEngagement.png" style="left:1px; top:1px;"/>
+</div>
+<p> Reuse </p>
+</div>
+</a>
+
+<a href="../managegroup.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../../img/createcourse/ManageGroup.png" style="left:1px; top:1px;"/>
+</div>
+<p> Institutions </p>
+</div>
+</a>
+
+
+<a href="../manageassignment.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools" rel="tooltip">
+<div class="tilestools bg-color-purple">
+<img src="../../img/createcourse/ManageAssignment.png" style="left:1px; top:1px;"/>
+</div>
+<p> Educator </p>
+</div>
+</a>
+
+<a href="../coachingcalendar.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools" rel="tooltip">
+<div class="tilestools bg-color-purple">
+<img src="../../img/createcourse/ManageCalender.png" style="left:1px; top:1px;"/>
+</div>
+<p> Curriclum Delivery </p>
+</div>
+</a>
+
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+<p style="margin:0px; margin-top:5px; margin-bottom:5px;"> 
+Learning Performance</p>
+
+<hr style="margin-bottom:10px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div>
+
+<a href="../downloadcontent.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../../img/createcourse/OfflineDownload.png" style="left:1px; top:1px;"/>
+</div>
+<p> Learner Perfomance </p>
+</div>
+</a>
+
+<a href="#linkurl" rel="load-content" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../../img/createcourse/StudyOffline.png" style="left:1px; top:1px;"/>
+</div>
+<p> Learner Leaderboard </p>
+</div>
+</a>
+
+<a href="../synchronize.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../../img/students/Icon-Class.png" style="left:1px; top:1px;"/>
+</div>
+<p> Educator Performance </p>
+</div>
+</a>
+
+<a href="../synchronize.html" rel="load-content" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../../img/students/Icon-Class.png" style="left:1px; top:1px;"/>
+</div>
+<p> Educator Leaderboard </p>
+</div>
+</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+</div> <!--end of slidemenuwrapper-->
+
+</ul>
+
+
+
+<li class="menuhoveranalytics"><a href="#"><i class="icon-stats-up bg-color-magenta fnt-color-white"></i></a>
+
+<div class="pull-left analytics-menu-boxspan bg-color-magenta"></div>
+
+<div class="clearfix"> </div>
+
+<a href="#linkurl" class="tiles-analytic">My Analytics<span class="submenu-icon"></span></a>
+
+<ul style="margin-top:-384px">
+<div class="slidemenuwrapper menu2">
+
+<p style="margin:0px; margin-top:10px; margin-bottom:5px;"> Coaching </p>
+
+<hr style="margin-bottom:15px; margin-top:0px;" class="border1px-color-darkgrey">
+
+
+<div class="tilesbox">
+<div class="tiles bg-color-magenta">
+<img src="../../img/analytics/Profile Analytics.png" style="left: 2px;
+top: 1px;"/>
+
+</div>
+<p>Profile Analytics</p>
+
+</div>
+
+
+<div class="tilesbox">
+<div class="tiles bg-color-magenta">
+<img src="../../img/analytics/Reports.png" style="left: 2px;
+top: 1px;"/>
+
+</div>
+<p> Students</p>
+
+</div>
+
+
+<div class="tilesbox">
+<div class="tiles bg-color-magenta">
+<img src="../../img/analytics/Reports.png" style="left: 2px;
+top: 1px;"/>
+
+</div>
+<p> Courses</p>
+
+</div>
+
+
+<div class="tilesbox">
+<div class="tiles bg-color-magenta">
+<img src="../../img/analytics/Reports.png" style="left: 2px;
+top: 1px;"/>
+
+</div>
+<p> Trend Analysis</p>
+
+</div>
+
+
+<div class="tilesbox">
+<div class="tiles bg-color-magenta">
+<img src="../../img/analytics/Reports.png" style="left: 2px;
+top: 1px;"/>
+
+</div>
+<p> Cost Analysis</p>
+
+</div>
+
+
+
+
+<div class="tilesbox">
+<div class="tiles bg-color-magenta">
+<img src="../../img/analytics/Reports.png" style="left: 2px;
+top: 1px;"/>
+
+</div>
+<p> Investment Analysis</p>
+
+</div>
+
+
+<div class="tilesbox">
+<div class="tiles bg-color-magenta">
+<img src="../../img/analytics/Reports.png" style="left: 2px;
+top: 1px;"/>
+
+</div>
+<p> Reports</p>
+
+</div>
+
+
+
+
+<div class="clearmyfix"> </div>
+
+
+
+
+
+
+
+<div>
+
+
+<p style="margin:0px; margin-top:5px; margin-bottom:5px;"> 
+ Institution Performance </p>
+
+<hr style="margin-bottom:10px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div>
+
+<div class="tilesboxtools">
+<a href="../concurrency.html" rel="load-content" class="tiles-analytic">
+<div class="tilestools bg-color-magenta">
+<img src="../../img/analytics/ActivityConncurrancy.png" style="left:1px; top:1px;"/>
+</div>
+<p>Institution</p>
+</a>
+</div>
+
+
+<div class="tilesboxtools">
+<a href="../teachingtimer.html" rel="load-content" class="tiles-analytic">
+<div class="tilestools bg-color-magenta">
+<img src="../../img/analytics/ActivityLearningTimer.png" style="left:1px; top:1px;"/>
+</div>
+<p>Learning Program</p> 
+</a>
+</div>
+
+
+<div class="tilesboxtools">
+<a href="../teachingclock.html" rel="load-content" class="tiles-analytic">
+<div class="tilestools bg-color-magenta">
+<img src="../../img/analytics/ActivityLearningClock.png" style="left:1px; top:1px;"/>
+</div>
+<p> Curriculum </p>
+</a>
+</div>
+
+
+<div class="tilesboxtools">
+<a href="../teachingclock.html" rel="load-content" class="tiles-analytic">
+<div class="tilestools bg-color-magenta">
+<img src="../../img/analytics/ActivityLearningClock.png" style="left:1px; top:1px;"/>
+</div>
+<p> Course </p>
+</a>
+</div>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+
+
+
+
+
+
+</div> <!--end of slidemenuwrapper-->
+
+</ul>
+
+</li><!--End of Li for Services -->
+
+
+
+</li><!--End of Second level -->
+
+</ul><!--End of Main UL -->
+
+</div> <!--end of mainmenu-->
+
+
+
+
+<!-- ###################### end of main-menu #################### --> 
+
+
+
+<div class="theatrewrapper pull-left ">
+
+<p class="pageheader fnt-color-blue" style="margin-bottom:5px;"> Manage Students </p>
+<hr class="pageheader_border border1px-color-blue" style="margin-top:5px; margin-bottom:10px;">
+
+
+<div class="managestudent-sub-wrapper mr-l-30">
+
+<div class="Course-performance-wrapper">
+
+<p class="fnt-size-16 fnt-color-purple"> Course Performance </p>
+
+<div class="course-performance-table border1px-color-darkgrey mr-btm-10">
+
+<table class="table table-striped">
+              <thead class="bg-color-blue fnt-color-white">
+                <tr>
+                  <th>Item</th>
+                  <th>Duration</th>
+                  <th>Progress</th>
+                  <th>Grade</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Chapter-1</td>
+                  <td>5.3 Hrs.</td>
+                  <td>100%</td>
+                  <td>A</td>
+                  
+                </tr>
+                 <tr>
+                  <td>Chapter-2</td>
+                  <td>2.2 Hrs.</td>
+                  <td>70%</td>
+                  <td>A</td>
+                  
+                </tr>
+                
+                  <tr>
+                  <td>Chapter-2</td>
+                  <td>2.2 Hrs.</td>
+                  <td>70%</td>
+                  <td>A</td>
+                  
+                </tr>
+                
+                  <tr>
+                  <td>Chapter-2</td>
+                  <td>2.2 Hrs.</td>
+                  <td>70%</td>
+                  <td>A</td>
+                  
+                </tr>
+                
+                  <tr>
+                  <td>Chapter-2</td>
+                  <td>2.2 Hrs.</td>
+                  <td>70%</td>
+                  <td>A</td>
+                  
+                </tr>
+                
+              </tbody>
+            </table>
+</div> <!-- course-performance-table -->
+
+
+<p class="zik-inline-block"> Attendance </p>
+
+<input type="text" placeholder="30%" class="zik-inline-block" style="width:30px;"/>
+
+<div class="clearfix"> </div>
+
+<p class="zik-inline-block"> Number of Exceptions </p>
+
+<input type="text" placeholder="30%" class="zik-inline-block" style="width:30px;"/>
+
+<p class="zik-inline-block"> Leaderboard Position </p>
+
+<input type="text" placeholder="30%" class="zik-inline-block" style="width:30px;"/>
+
+</div> <!-- end of course-performance-wrapper -->
+
+
+<div class="Course-performance-wrapper">
+
+<p class="fnt-size-16 fnt-color-purple"> Group Performance </p>
+
+<div class="course-performance-table border1px-color-darkgrey mr-btm-10">
+
+<table class="table table-striped">
+              <thead class="bg-color-blue fnt-color-white">
+                <tr>
+                  <th>Group</th>
+                  <th>Position</th>
+                  <th>Participant</th>
+                  <th>Grade</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Group-1</td>
+                  <td>Leader</td>
+                  <td>100%</td>
+                  <td>A</td>
+                  
+                </tr>
+                 <tr>
+                  <td>Group-2</td>
+                  <td>Member</td>
+                  <td>65%</td>
+                  <td>NR</td>
+                  
+                </tr>
+                
+                  <tr>
+                  <td>Group-2</td>
+                  <td>Member</td>
+                  <td>65%</td>
+                  <td>NR</td>
+                  
+                </tr>
+                
+                  <tr>
+                  <td>Group-2</td>
+                  <td>Member</td>
+                  <td>65%</td>
+                  <td>NR</td>
+                  
+                </tr>
+                  <tr>
+                  <td>Group-2</td>
+                  <td>Member</td>
+                  <td>65%</td>
+                  <td>NR</td>
+                  
+                </tr>
+                
+              </tbody>
+            </table>
+
+</div> <!-- course-performance-table -->
+
+<div class="group-icons">
+
+<a href="#linkurl" rel="tooltip" title="Add to Group"> 
+<img src="../../img/addgroup.png"/>
+</a>
+
+<a href="#linkurl" rel="tooltip" title="Remove from Group"> 
+<img src="../../img/removegroup.png"/>
+</a>
+
+</div> <!-- end of group-icons -->
+
+
+<div class="clearfix"> </div>
+
+<p class="zik-inline-block"> Group Participation </p>
+
+<input type="text" placeholder="30%" class="zik-inline-block" style="width:30px;"/>
+
+<div class="clearfix"> </div>
+
+<p class="zik-inline-block"> Social Participation </p>
+
+<input type="text" placeholder="30%" class="zik-inline-block" style="width:30px;"/>
+
+
+</div> <!-- end of course-performance-wrapper -->
+
+
+
+<div class="Course-performance-wrapper">
+
+<p class="fnt-size-16 fnt-color-purple"> Intercation </p>
+
+<div class="course-performance-table border1px-color-darkgrey mr-btm-10">
+
+<table class="table table-striped">
+              <thead class="bg-color-blue fnt-color-white">
+                <tr>
+                  <th>When</th>
+                  <th>Made</th>
+                  <th>Status</th>
+                  <th>Reason</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12-10-13</td>
+                  <td>Video</td>
+                  <td>Complete</td>
+                  <td>To guide with test-2</td>
+                  
+                </tr>
+                
+                 <tr>
+                  <td>12-10-13</td>
+                  <td>Video</td>
+                  <td>Complete</td>
+                  <td>To guide with test-2</td>
+                  
+                </tr>
+                
+                
+                 <tr>
+                  <td>12-10-13</td>
+                  <td>Video</td>
+                  <td>Complete</td>
+                  <td>To guide with test-2</td>
+                  
+                </tr>
+                
+                 <tr>
+                  <td>12-10-13</td>
+                  <td>Video</td>
+                  <td>Complete</td>
+                  <td>To guide with test-2</td>
+                  
+                </tr>
+                
+                 <tr>
+                  <td>12-11-13</td>
+                  <td>Meeting</td>
+                  <td>Complete</td>
+                  <td>Discuss Grade</td>
+                  
+                </tr>
+                
+              </tbody>
+            </table>
+
+</div> <!-- course-performance-table -->
+
+
+<div class="group-icons">
+
+<a href="#linkurl" rel="tooltip" title="Add Interaction"> 
+<img src="../../img/addinteraction.png"/>
+</a>
+
+<a href="#linkurl" rel="tooltip" title="Cancel Intercation"> 
+<img src="../../img/removeinteraction.png"/>
+</a>
+
+</div> <!-- end of group-icons -->
+
+
+<div class="clearfix"> </div>
+
+<textarea style="width:96%; height:70px;">Engagement Notes </textarea>
+
+</div> <!-- end of course-performance-wrapper -->
+
+
+
+<div class="clearfix"> </div>
+
+
+<div class="manage-sub-wrapper-btn">
+
+<a href="#linkurl" class="btn btn-limekiln-1"> Save </a>
+
+<a href="#linkurl" class="btn btn-limekiln-1"> Return </a>
+
+
+</div> <!-- end of manage-sub-wrapper-btn -->
+
+
+
+</div> <!-- end of managestudent-sub-wrapper -->
+
+
+
+</div> <!--end of theatrewrapper-->
+
+
+
+
+
+<div class="clearmyfix"> </div>
+
+</div> 
+<!-- ###################### end of bodycontainer #################### -->
+
+
+
+<!-- #################### start of footer #################### -->
+
+
+
+<div id="footerwrapper">
+
+<div class="footerheader">
+
+<div class="newsletter">
+
+<form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label pull-left" for="inputEmail" style="font-size:17px;">Newsletter Signup</label>
+    <div class="controls pull-left" style="margin-left:5px;">
+      <input type="text" id="inputEmail" placeholder="Enter your Email Address">
+    </div>
+    
+     <div class="controls pull-left" style="margin-left:5px;">
+      <input type="button" class="btn" value="Subscribe">
+    </div>
+  </div>
+  
+</form>
+
+<div class="clearmyfix"> </div>
+
+</div>
+
+
+</div> <!-- end of footerheader -->
+
+
+<div class="footerbody">
+
+<div class="company pull-left">
+
+<div style="color:#999; font-size:18px; margin-bottom:5px;"> <b> Company </b> </div>
+
+<ul>
+
+<li><a href="#linkurl"> About us </a> </li>
+<li><a href="#linkurl"> Ziksana Connect </a> </li>
+<li><a href="#linkurl"> Contact us </a> </li>
+
+</ul>
+
+</div> <!--end of company-->
+
+
+<div class="location pull-right">
+
+<div style="color:#999; font-size:18px; margin-bottom:5px;"> <b> Locations </b> </div>
+
+<ul>
+
+<li> <a href="#linkurl"> New York </a> </li>
+<li><a href="#linkurl"> Amasterdam </a> </li>
+<li><a href="#linkurl"> Banglore </a> </li>
+
+</ul>
+
+</div> <!--end of location-->
+
+<div id="socialmedia">
+
+<ul>
+<li><a href="#linkurl"><img src="../../img/socialmedia/facebook_001.jpg"/></a></li>
+
+<li><a href="#linkurl"><img src="../../img/socialmedia/Twitter_001.jpg"/></a></li>
+
+<li><a href="#linkurl"><img src="../../img/socialmedia/Linkedin_001.jpg"/></a></li>
+
+<li><a href="#linkurl"><img src="../../img/socialmedia/YouTube_001.jpg"/></a></li>
+
+<li><a href="#linkurl"><img src="../../img/socialmedia/RSS_001.jpg"/></a></li>
+
+<li><a href="#linkurl"><img src="../../img/socialmedia/email_001.jpg"/></a></li>
+
+
+
+</ul>
+
+</div>
+
+
+<div class="clearmyfix"> </div>
+
+
+
+
+</div> <!-- end of footerbody -->
+
+<div class="footercopyright">
+
+<p> &copy;Copyright 2013 - Ziksana </p>
+
+</div> <!-- end of footercopyright -->
+
+
+
+</div>
+
+<!-- #################### end of footer #################### -->
+
+
+
+
+
+
+</div>
+<!-- ###################### end of container #################### -->
+
+
+<script src="../../js/jquery-1.9.1.min.js"> </script>
+
+<script type="text/javascript" src="../../js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+	
+
+<script type="text/javascript" src="../../js/google-maps.js"></script>
+
+<script type="text/javascript" src="../../js/dropdown.js"></script>
+
+<script type="text/javascript" src="../../js/jquery.chained.js"></script>
+
+<script src="../../js/tooltip.js"></script>
+
+<script type="text/javascript" src="../../js/moment.js"></script>
+
+<script type="text/javascript" src="../../js/daterangepicker.js"></script>
+
+<script type="text/javascript" src="../../js/date-timepicker/bootstrap-datetimepicker.min.js"></script>
+
+<script type="text/javascript" src="../../js/filetype.js"></script>
+
+		
+
+<script type="text/javascript" src="../../js/custom/masterdata.js"></script>
+
+
+</body>
+</html>

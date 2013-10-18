@@ -1,0 +1,782 @@
+<!doctype html>
+<html>
+<head>
+<!-- start: Meta -->
+	<meta charset="utf-8" />
+	<title>Ziksana Dashboard</title>
+	<meta name="description" content="Ziksana Dashboard version 1.2" />
+	<meta name="author" content="Kaivalya Shah" />
+	<meta name="keyword" content="Ziksana Version1.2" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	<link href="../../css/zik.css" rel="stylesheet" />
+	<link href="../../css/zik-responsive.css" rel="stylesheet" />
+	<link href="../../css/maintheme.css" rel="stylesheet" />
+    <link href="../../css/bg-color.css" rel="stylesheet" />
+    <link href="../../css/admin-createprogram.css" type="text/css" rel="stylesheet" />
+    <link href="../../css/tooltip.css" type="text/css" rel="stylesheet" />
+    <link href="../../js/tree/styles/styleTree.css" rel="stylesheet" type="text/css" />
+    <!-- for the layout of the tree -->
+     <link href="../../css/tooltip.css" type="text/css" rel="stylesheet" />
+  
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"> </script>  
+<script type="text/javascript" src="../../js/filetype.js"></script>
+<script src="../../js/tooltip.js"></script>
+<script>
+
+
+$(document).ready(function()
+{
+$('div[rel=tooltip]').tooltip();
+	
+});
+
+</script>
+
+
+<script type="text/javascript" src="../../js/tree/gettheme.js"></script> 
+<script type="text/javascript" src="../../js/tree/core.js"></script>
+<script type="text/javascript" src="../../js/tree/buttons.js"></script>
+<script type="text/javascript" src="../../js/tree/scrollbar.js"></script>
+<script type="text/javascript" src="../../js/tree/panel.js"></script>
+<script type="text/javascript" src="../../js/tree/dragdrop.js"></script>
+<script type="text/javascript" src="../../js/tree/tree.js"></script>
+<script type="text/javascript" src="../../js/tree/menujq.js"></script>
+<script type="text/javascript" src="../../js/tree/splitter.js"></script>
+<script type="text/javascript" src="../../js/tree/jqxexpander.js"></script>
+<link rel="stylesheet" type="text/css" href="../../css/tree/menu.css" />
+<link rel="stylesheet" type="text/css" href="../../css/tree/tree.css" />
+ 
+<script src="../../js/tree/Common/common.js"></script>
+<script  src="../../js/tree/Common/dtree.js"></script>	
+<script  type="text/javascript" src="../../js/tree/Menu/menu.js"></script>
+<script type="text/javascript" src="../../js/tree/Menu/menu_ext.js"></script>
+<script type="text/javascript" src="../../js/tree/treedatalearningprogramadmin.js"></script>
+<script type="text/javascript" src="../../js/tree/Common/tree_ed.js"></script>
+<script type="text/javascript" src="../../js/tree/Common/dataprocessor.js"></script>
+<!-- End tree -->
+
+<script>
+
+
+$(document).ready(function()
+{
+	 var theme = getTheme();
+	 	$("#splitter").jqxSplitter({ theme: theme, panels: [{ size: 300}]});
+});
+
+</script>
+
+
+
+<style>
+
+
+.selectedTreeRow
+{
+border-color:#27b; background: #6D9EC5; color:#fff;
+font-weight:bold;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;	
+padding-top:-2px;
+padding-bottom:-2px;
+padding-left:3px;
+padding-right:3px;
+text-align: left;
+}
+
+span.standartTreeRow:hover
+{
+background: rgba(85, 142, 187, 0.63);
+color:#fff;	
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+padding:3px;
+}
+
+</style>
+     
+
+</head>
+
+<body>
+
+<!-- ###################### start of container #################### -->
+
+
+
+
+<!-- ###################### start of bodycontainer #################### -->
+
+<div class="height-wizard" style="min-width:1200px;">
+
+
+
+<div class="create-program-wrapper">
+
+<p class="assign-header fnt-color-white"> <a href="#linkurl"><span> <i class="icon-arrow-left-3 fnt-color-white"></i> </span></a> Back to Dashboard</p>
+
+
+<div class="top-bar-wizard">
+<ul>
+<a href="#linkurl"><li class="button button-primary  fnt-color-white fnt-size-16">Create <span class="step bg-color-white fnt-color-blue pull-right">1</span> </li></a>
+<a href="#linkurl"><li class="button button-orange fnt-color-white fnt-size-16">Publish<span class="step bg-color-white fnt-color-orange pull-right">2</span> </li></a>
+<a href="#linkurl"><li class="button button-purple fnt-color-white fnt-size-16">Manage<span class="step bg-color-white fnt-color-purple pull-right">3</span> </li></a>
+</ul>
+
+<div class="clearfix"> </div>
+
+</div> <!-- end of top-bar-wizard -->
+
+<div class="wizard-theatre-content-wrapper">
+
+
+
+<!-- multistep form -->
+<div id="msform">
+	<!-- progressbar -->
+	
+    
+ 
+    
+    <div class="clearfix"> </div>
+
+   <div id="info-header">
+   
+  
+   <div class="cr-course-inline-block"> Organize your course info course modules/chapters </div>
+    <div class="cr-course-info-icon fnt-color-orange cr-course-inline-block" 
+   rel="tooltip" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." data-placement="bottom"> 
+   <i class="icon-info fnt-size-16 mr-r-5"></i> </div> 
+  
+   
+   </div> <!-- end of info-header -->
+   
+
+<div class="cr-course-content-area">
+
+    <div id="splitter" style='clear:both;'>
+    
+    <!-- Start of Tree -->   
+  <div id="treeboxbox_tree" style="float:left;padding:5px;" class="dhtmlxTree" setImagePath="../../js/tree/treeimages/csh_bluebooks/" >
+    </div> <!-- End of Tree -->
+    
+    
+ <div id="ContentPanel2" style=" font-size:11px; background-image:none; text-align:left;">
+ 
+ 
+<div class="pages_container">   
+
+
+
+
+
+
+<!--<div class="Program_information">
+   
+   <div class="form_container">
+   
+        <form class="form-horizontal">
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Institute_nm">Institution Name</label>
+            <div class="controls">
+            <input type="text" id="Institute_nm" class="input-large" placeholder="Ziksana">
+            </div>
+            </div>
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Dept_nm">Department Name</label>
+            <div class="controls">
+            <input type="text" id="Dept_nm" class="input-large" placeholder="Physics Department">
+            </div>
+            </div>
+            
+         
+            <div class="clearfix mr-top-10"></div>
+            
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Prg_nm">Program Name</label>
+            <div class="controls">
+            <input type="text" id="Prg_nm" class="input-xxlargelpadmin" placeholder="Program Name">
+            </div>
+            </div>
+            
+            <div class="clearfix mr-top-10"></div>
+            
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Prg_Desc">Program Description</label>
+            <div class="controls">
+            <textarea type="text" id="Prg_Desc" class="input-large" rows="7" style="width:645px; resize:vertical;"  placeholder="Description..."></textarea>
+            </div>
+            </div>
+                
+            <div class="clearfix mr-top-10"></div> 
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Prg_Identifier">Program Identifier</label>
+            <div class="controls">
+            <input type="text" id="Prg_Identifier" class="input-large" placeholder="Program Identifiers">
+            </div>
+            </div>
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Prg_Type">Program Type</label>
+            <div class="controls">
+            <select name="Prg_Type" id="Prg_Type">
+            <option>Program Type</option>
+            </select>
+            </div>
+            </div>
+           
+            <div class="clearfix mr-top-10"></div> 
+            
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Prg_Identifier">Version</label>
+            <div class="controls">
+            <input type="text" id="Prg_Identifier" class="input-mini" placeholder="Version">
+            </div>
+            </div>
+            
+            <div class="control-group zik-inline-block mr-l-30" style="margin-left:180px;">
+            <label class="control-label" for="Certificate_type">Certificate Type</label>
+            <div class="controls">
+            <select name="Certificate_type" id="Certificate_type">
+            <option>Certificate Type</option>
+            </select>
+            </div>
+            </div>
+            
+            <div class="clearfix mr-top-10"></div> 
+            
+            <div class="control-group zik-inline-block mr-l-30 mr-btm-0">
+            <label class="control-label" for="Prg_Curriculum">Program Curriculum</label>
+            <div class="controls">
+            <select name="Prg_Curriculum" id="Prg_Curriculum">
+            <option>Program Curriculum</option>
+            </select>
+            </div>
+            </div> 
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Curriculum_Step">Curriculum Steps</label>
+            <div class="controls">
+            <select name="Curriculum_Step" id="Curriculum_Step">
+            <option>Curriculum Steps</option>
+            </select>
+            </div>
+            </div> 
+            
+            <div class="clearfix mr-top-10"></div> 
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Prg_Duration">Program Duration</label>
+            <div class="controls">
+            <select name="Prg_Duration" id="Prg_Duration">
+            <option>Program Duration</option>
+            </select>
+            </div>
+            </div> 
+            
+            <div class="control-group zik-inline-block mr-l-30">
+           <label class="checkbox">
+              <input type="checkbox" value="" >
+             Exclusive to Ziksana Indicator
+            </label>
+            </div> 
+           
+            <div class="clearfix mr-top-10"></div> 
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="End_Date">Program Start Date</label>
+            <div class="controls">
+            <input type="text" id="End_Date" class="input-large" placeholder="Program Name">
+            </div>
+            </div>
+           
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="End_Date">Program End Date</label>
+            <div class="controls">
+            <input type="text" id="End_Date" class="input-large" placeholder="Program Name">
+            </div>
+            </div>  
+            
+            <div class="clearfix mr-top-10"></div>
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Prg_rating">Program Rating</label>
+            <div class="controls">
+            <input type="text" id="Prg_rating" class="input-xxlarge" placeholder="Program Name">
+            </div>
+            </div> 
+            
+            <div class="clearfix mr-top-10"></div>
+            
+          
+            <input type="button" class="btn btn-limekiln-1 btn_right pull-right mr-r-20" value="Cancel" />
+            <input type="button" class="btn btn-limekiln-1 btn_right pull-right mr-r-20" value="Submit" />
+            
+        </form>
+        
+         <div class="clearfix"></div>
+    </div><!--End of form_container -->
+        
+        <div class="clearfix"></div>
+</div><!--End of Program_information -->
+-->
+
+
+<div class="Participant_infomration">
+
+
+
+
+ <div class="form_container">
+   
+        <form class="form-horizontal">
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Institute_nm">Institution Name</label>
+            <div class="controls">
+            <input type="text" id="Institute_nm" class="input-large" placeholder="Ziksana">
+            </div>
+            </div>
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Dept_nm">Department Name</label>
+            <div class="controls">
+            <input type="text" id="Dept_nm" class="input-large" placeholder="Physics Department">
+            </div>
+            </div>
+            
+         
+            <div class="clearfix mr-top-10"></div>
+            
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Participant_nm">Participant Name</label>
+            <div class="controls">
+            <input type="text" id="Participant_nm" class="input-xxlargelpadmin" placeholder="Participant Name">
+            </div>
+            </div>
+            
+            <div class="clearfix mr-top-10"></div>
+            
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Participant_Desc">Participant Description</label>
+            <div class="controls">
+            <textarea type="text" id="Participant_Desc" class="input-large" rows="7" style="width:645px; resize:vertical;"  placeholder="Description..."></textarea>
+            </div>
+            </div>
+                
+            <div class="clearfix mr-top-10"></div> 
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Participant_type">Participant Type</label>
+            <div class="controls">
+            <select name="Participant_type" id="Participant_type">
+            <option>Participant Type</option>
+            </select>
+            </div>
+            </div> 
+            
+         
+            
+            <div class="control-group zik-inline-block mr-l-30">
+           <label class="checkbox">
+              <input type="checkbox" value="" >
+             External Indicator
+            </label>
+            </div> 
+            
+              <div class="control-group zik-inline-block mr-l-30">
+           <label class="checkbox">
+              <input type="checkbox" value="" >
+             Certifies Indicator
+            </label>
+            </div> 
+                     
+            <div class="clearfix mr-top-10"></div>
+            
+            
+             <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="End_Date">Program Start Date</label>
+            <div class="controls">
+            <input type="text" id="End_Date" class="input-large" placeholder="Start Date">
+            </div>
+            </div>
+           
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="End_Date">Program End Date</label>
+            <div class="controls">
+            <input type="text" id="End_Date" class="input-large" placeholder="End Date">
+            </div>
+            </div> 
+            
+          
+          
+            <div class="clearfix mr-top-10"></div>
+            
+             <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Certificate_type">Certificate Type</label>
+            <div class="controls">
+            <select name="Certificate_type" id="Certificate_type">
+            <option>Certificate Type</option>
+            </select>
+            </div>
+            </div> 
+            
+             <div class="clearfix mr-top-10"></div>
+ 			
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Prg_rating">Certification Template</label>
+             <div class="controls">
+                <div class="fileupload fileupload-new" data-provides="fileupload">
+  <div class="fileupload-new thumbnail" style="width: 50px; height: 50px;"><img src="http://www.placehold.it/50x50/EFEFEF/AAAAAA" /></div>
+  <div class="fileupload-preview fileupload-exists thumbnail" style="width: 50px; height: 50px;"></div>
+  <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file" /></span>
+  <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+  </div>
+			</div>
+            </div>
+            
+            
+             <div class="clearfix mr-top-10"></div>
+            
+           
+           
+            
+            <input type="button" class="btn btn-limekiln-1 btn_right pull-right mr-r-20" value="Cancel" />
+            <input type="button" class="btn btn-limekiln-1 btn_right pull-right mr-r-20" value="Submit" />
+         
+        </form>
+         
+         
+ </div><!-- End of form_container -->
+ <div class="clearfix mr-top-10"></div>
+ 
+ 
+</div><!--End of Participant_infomration -->
+
+
+
+
+
+
+
+<div class="Programterm_infomration">
+
+
+
+
+ <div class="form_container">
+   
+        <form class="form-horizontal">
+            <div class="control-group zik-inline-block mr-l-10">
+            <label class="control-label" for="Institute_nm">Institution Name</label>
+            <div class="controls">
+            <input type="text" id="Institute_nm" class="input-medium" placeholder="Ziksana">
+            </div>
+            </div>
+            
+            <div class="control-group zik-inline-block mr-l-10">
+            <label class="control-label" for="Dept_nm">Department Name</label>
+            <div class="controls">
+            <input type="text" id="Dept_nm" class="input-medium" placeholder="Physics Department">
+            </div>
+            </div>
+            
+            <div class="control-group zik-inline-block mr-l-10">
+            <label class="control-label" for="Prg_nm">Program Name</label>
+            <div class="controls">
+            <input type="text" id="Prg_nm" class="input-medium" placeholder="Program Name">
+            </div>
+            </div> 
+            
+         
+            <div class="clearfix mr-top-10"></div>
+            <div class="mr-top-10"></div>
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="nm">Name</label>
+            <div class="controls">
+            <input type="text" id="nm" class="input-xxlargelpadmin" placeholder="Name">
+            </div>
+            </div>
+            
+            
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Desc">Description</label>
+            <div class="controls">
+            <textarea type="text" id="Desc" class="input-large" rows="7" style="width:645px; resize:vertical;"  placeholder="Description..."></textarea>
+            </div>
+            </div>
+                
+            <div class="clearfix mr-top-10"></div> 
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Desc">Term Identifier</label>
+            <div class="controls">
+            <input type="text" id="Prg_nm" class="input-large" placeholder="Identifiers">
+            </div>
+            </div>
+            
+            
+            <div class="clearfix mr-top-10"></div>
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="End_Date">Program Start Date</label>
+            <div class="controls">
+            <input type="text" id="End_Date" class="input-large" placeholder="Start Date">
+            </div>
+            </div>
+           
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="End_Date">Program End Date</label>
+            <div class="controls">
+            <input type="text" id="End_Date" class="input-large" placeholder="End Date">
+            </div>
+            </div> 
+            
+          
+            <div class="clearfix mr-top-10"></div>
+            
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Participant_type">Duration</label>
+            <div class="controls">
+            <select name="Duration" id="Duration">
+            <option>Duration</option>
+            </select>
+            </div>
+            </div>
+           
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Participant_type">Version</label>
+            <div class="controls">
+            <input type="text" id="Version" class="input-large" placeholder="Version">
+            </div>
+            </div>
+            
+            <div class="clearfix mr-top-10"></div>
+            
+                        
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Prg_rating">Overall Learner Rating</label>
+            <div class="controls">
+            <input type="text" id="Prg_rating" class="input-large" placeholder="Program Name">
+            </div>
+            </div> 
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Prg_rating">Overall Educator Rating</label>
+            <div class="controls">
+            <input type="text" id="Prg_rating" class="input-large" placeholder="Program Name">
+            </div>
+            </div> 
+            <div class="clearfix mr-top-10"></div>
+            
+          
+            <input type="button" class="btn btn-limekiln-1 btn_right pull-right mr-r-20" value="Cancel" />
+            <input type="button" class="btn btn-limekiln-1 btn_right pull-right mr-r-20" value="Submit" />
+            
+            
+		</form>
+        
+        
+        
+ <div class="clearfix"></div>       
+ </div><!--end of form_container -->
+
+<div class="clearfix"></div>
+</div><!--end of Programterm_infomration -->
+
+
+
+
+
+
+<div class="Programadditional_infomration">
+
+
+
+
+ <div class="form_container">
+   
+        <form class="form-horizontal">
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Institute_nm">Institution Name</label>
+            <div class="controls">
+            <input type="text" id="Institute_nm" class="input-large" placeholder="Ziksana">
+            </div>
+            </div>
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Dept_nm">Department Name</label>
+            <div class="controls">
+            <input type="text" id="Dept_nm" class="input-large" placeholder="Physics Department">
+            </div>
+            </div>
+            
+             <div class="clearfix mr-top-10"></div>
+             
+             
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Prg_nm">Program Name</label>
+            <div class="controls">
+            <input type="text" id="Prg_nm" class="input-large" placeholder="Program Name">
+            </div>
+            </div> 
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="nm">Term Name</label>
+            <div class="controls">
+            <input type="text" id="nm" class="input-large" placeholder="Name">
+            </div>
+            </div>
+            
+            
+            <div class="clearfix mr-top-10"></div>
+            
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Trmcourse_nm">Term Course Name</label>
+            <div class="controls">
+            <input type="text" id="Trmcourse_nm" class="input-large" placeholder="Program Name">
+            </div>
+            </div> 
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Author_nm">Author Name</label>
+            <div class="controls">
+            <input type="text" id="Author_nm" class="input-large" placeholder="Name">
+            </div>
+            </div>
+            
+            <div class="clearfix mr-top-10"></div>
+            
+             <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Termcourse_identifier">Term Course Identifier</label>
+            <div class="controls">
+            <input type="text" id="Termcourse_identifier" class="input-xxlargelpadmin" placeholder="Identifiers">
+            </div>
+            </div>
+            
+            <div class="clearfix mr-top-10"></div>
+            <div class="mr-top-10"></div>
+            
+            <fieldset class="addmoreblock" style="border:1px solid #777; box-shadow:none; padding-top:20px; width:900px;">
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Property_nm">Property Name</label>
+            <div class="controls">
+            <input type="text" id="Property_nm" class="input-large" placeholder="Program Name">
+            </div>
+            </div> 
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Property_value">Property Value</label>
+            <div class="controls">
+            <input type="text" id="Property_value" class="input-large" placeholder="Name">
+            </div>
+            </div>
+            
+             <div class="clearfix mr-top-10"></div>
+             
+              <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Propertyusage_type">Property Usage Type</label>
+            <div class="controls">
+            <select id="Propertyusage_type" name="Propertyusage_type">
+            <option>Property Usage Type</option>
+            </select>
+            </div>
+            </div> 
+            
+            <div class="control-group zik-inline-block mr-l-30">
+            <label class="control-label" for="Propertydata_type">Property Data Type</label>
+            <div class="controls">
+            <select id="Propertydata_type" name="Propertydata_type">
+            <option>Property Data Type</option>
+            </select>
+            </div>
+            </div> 
+            
+            </fieldset>
+            <!--End of addmoreblock -->
+                
+            <div class="clearfix mr-top-10"></div> 
+            
+            <input type="button" class="btn btn-limekiln-1 btn_right pull-right mr-r-20" value="Cancel" />
+            <input type="button" class="btn btn-limekiln-1 btn_right pull-right mr-r-20" value="Submit" />
+            s
+		 </form>
+         
+         
+ </div> 
+ <!--End of form_container -->
+ 
+ 
+</div>        
+<!--End of Programadditional_infomration -->
+
+<div class="clearfix"></div>
+
+</div><!--End of pages_container -->
+
+<div class="clearfix"></div>
+    
+ </div> <!-- end of contentpanel12 -->
+    
+ </div> <!-- end of splitter -->
+
+
+<div class="clearfix"></div>
+
+
+
+
+</div> <!-- end of cr-course-content-area -->
+
+
+
+        
+        
+        
+        </div> <!-- end of ms-form -->
+
+
+ 
+
+</div> <!-- end of wizard-theatre-content-wrapper -->
+
+</div> <!-- end of create-program-wrapper -->
+
+
+
+</div> 
+<!-- ###################### end of bodycontainer #################### -->
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

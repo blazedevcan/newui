@@ -1,0 +1,639 @@
+<!doctype html>
+<html>
+<head>
+<!-- start: Meta -->
+	<meta charset="utf-8" />
+	<title>Ziksana Dashboard</title>
+	<meta name="description" content="Ziksana Dashboard version 1.2" />
+	<meta name="author" content="Kaivalya Shah" />
+	<meta name="keyword" content="Ziksana Version1.2" />
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	
+     <link href="../css/zik.css" rel="stylesheet" />
+	<link href="../css/zik-responsive.css" rel="stylesheet" />
+	<link href="../css/maintheme.css" rel="stylesheet" />
+    <link href="../css/bg-color.css" rel="stylesheet" />
+    <link href="../css/collobrate.css" rel="stylesheet"/>
+    <link href="../css/date-timepicker/bootstrap-datetimepicker.min.css" rel="stylesheet"/>
+    <!-- end: CSS -->
+    
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+	<script src="../js/tabs.js"></script>
+	<script src="../js/date-timepicker/bootstrap-datetimepicker.min.js"></script>
+
+    <script>
+	
+	$(function() {
+    $('#dp3').datetimepicker({
+      language: 'en',
+      pick12HourFormat: true
+    });
+  });
+  
+  $(function() {
+    $('#dp2').datetimepicker({
+      language: 'en',
+      pick12HourFormat: true
+    });
+  });
+	
+	</script>
+    
+
+
+</head>
+
+<body>
+
+<!-- ###################### start of container #################### -->
+<div id="zikcontainer">
+
+<!-- ###################### start of zikheader #################### -->
+
+<div id="ajaxheader"></div>
+
+
+
+<!-- ###################### start of bodycontainer #################### -->
+
+<div id="bodycontainer">
+
+<!-- ###################### start of main-menu #################### -->
+
+<div id="ajaxmenu">
+
+</div>
+
+
+<!-- ###################### end of main-menu #################### --> 
+
+<div class="theatrewrapper pull-left ">
+
+<p class="pageheader fnt-color-magenta"> Collobrate </p>
+<hr class="pageheader_border border1px-color-magenta">
+
+
+<div id="cc-tabs">
+
+
+<div class="tabbable"> <!-- Only required for left/right tabs -->
+  <ul class="nav nav-tabs mr-l-30" style="margin-bottom:0px;">
+    <li class="active"><a href="#tab1" data-toggle="tab" class="bg-color-magenta fnt-color-white span1 mr-0">Group</a></li>
+    <li><a href="#tab2" data-toggle="tab" class="bg-color-orange fnt-color-white span1 mr-0">Class</a></li>
+     <li><a href="#tab3" data-toggle="tab" class="bg-color-blue fnt-color-white span1 mr-0">Forum</a></li>
+  <li><a href="#tab4" data-toggle="tab" class="bg-color-purple fnt-color-white span1 mr-0">Educator</a></li>   
+     
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+    
+  
+  <div class="subscriptionsublinks"> 
+<ul>
+<li>
+
+<select class="span2 mr-l-5 mr-btm-0"> 
+<option>Select Group</option>
+
+</select>
+
+ </li>
+ 
+ <li>
+
+<select class="span2 mr-btm-0"> 
+<option>Select Topic</option>
+
+</select>
+
+ </li>
+ 
+ <li>
+
+<a href="#linkurl" class="btn"> Show All </a>
+
+ </li>
+ 
+ <li>
+
+<div class="zik-inline-block"> To </div>
+
+<div class="zik-inline-block mr-l-5"> <div class="input-append date mr-0" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+				<input  style="width:100px;" type="text" value="12-02-2012" readonly>
+	<span class="add-on"><i class="icon-calendar"></i></span>
+			  </div> </div>
+
+
+ </li>
+ 
+ <li>
+
+<div class="zik-inline-block"> To </div>
+
+<div class="zik-inline-block mr-l-5"> <div class="input-append date mr-0" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+				<input  style="width:100px;" type="text" value="12-02-2012" readonly>
+	<span class="add-on"><i class="icon-calendar"></i></span>
+			  </div> </div>
+
+
+ </li>
+ 
+ 
+
+</ul>
+
+</div>
+  
+  
+  
+  
+    
+      
+    <div id="messagewrapper">
+
+<div class="messagecontainer">
+
+<div class="messagerow">
+
+<ul class="chats">
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-blue">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Bob Nilson</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="out">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs2.png">
+                                    <div class="message border-color-darkgrey">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Lisa Wong</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-magenta">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Bob Nilson</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="out">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs2.png">
+                                    <div class="message border-color-darkgrey">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Richard Doe</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-blue">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Richard Doe</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="out">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs2.png">
+                                    <div class="message border-color-darkgrey">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Bob Nilson</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-magenta">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Richard Doe</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+                                       sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                              </ul>
+
+<div class="clearmyfix"> </div>
+
+</div> <!--end of messagerow-->
+
+
+
+</div> <!--end of messagecontainer-->
+
+
+
+</div> <!--end of messagewrapper-->
+    
+    
+    
+    </div><!-- end of tab-1 ---->
+    
+    
+    
+    
+    
+    <div class="tab-pane" id="tab2">
+     
+  
+      <div id="messagewrapper">
+
+<div class="messagecontainer">
+
+<div class="messagerow">
+
+<ul class="chats">
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-blue">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Bob Nilson</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="out">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs2.png">
+                                    <div class="message border-color-darkgrey">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Lisa Wong</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-magenta">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Bob Nilson</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="out">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs2.png">
+                                    <div class="message border-color-darkgrey">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Richard Doe</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-blue">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Richard Doe</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="out">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs2.png">
+                                    <div class="message border-color-darkgrey">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Bob Nilson</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-magenta">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Richard Doe</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+                                       sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                              </ul>
+
+<div class="clearmyfix"> </div>
+
+</div> <!--end of messagerow-->
+
+
+
+</div> <!--end of messagecontainer-->
+
+
+
+</div> <!--end of messagewrapper-->
+    
+     
+  
+   
+    </div><!-- tab-2 -->
+    
+    
+
+ <div class="tab-pane" id="tab3">
+     
+  
+      <div id="messagewrapper">
+
+<div class="messagecontainer">
+
+<div class="messagerow">
+
+<ul class="chats">
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-blue">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Bob Nilson</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="out">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs2.png">
+                                    <div class="message border-color-darkgrey">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Lisa Wong</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-magenta">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Bob Nilson</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="out">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs2.png">
+                                    <div class="message border-color-darkgrey">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Richard Doe</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-blue">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Richard Doe</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="out">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs2.png">
+                                    <div class="message border-color-darkgrey">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Bob Nilson</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-magenta">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Richard Doe</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+                                       sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                              </ul>
+
+<div class="clearmyfix"> </div>
+
+</div> <!--end of messagerow-->
+
+
+
+</div> <!--end of messagecontainer-->
+
+
+
+</div> <!--end of messagewrapper-->
+    
+     
+  
+   
+    </div><!-- tab-3 -->    
+
+
+
+
+
+
+<div class="tab-pane" id="tab4">
+     
+  
+      <div id="messagewrapper">
+
+<div class="messagecontainer">
+
+<div class="messagerow">
+
+<ul class="chats">
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-blue">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Bob Nilson</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="out">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs2.png">
+                                    <div class="message border-color-darkgrey">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Lisa Wong</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-magenta">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Bob Nilson</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="out">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs2.png">
+                                    <div class="message border-color-darkgrey">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Richard Doe</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-blue">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Richard Doe</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="out">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs2.png">
+                                    <div class="message border-color-darkgrey">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Bob Nilson</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                                 <li class="in">
+                                    <img class="avatar" alt="" src="../img/messages/profileimgs.png">
+                                    <div class="message border-color-magenta">
+                                       <span class="arrow"></span>
+                                       <a href="#" class="name">Richard Doe</a>
+                                       <span class="datetime">at Jul 25, 2012 11:09</span>
+                                       <span class="body">
+                                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+                                       sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                       </span>
+                                    </div>
+                                 </li>
+                              </ul>
+
+<div class="clearmyfix"> </div>
+
+</div> <!--end of messagerow-->
+
+
+
+</div> <!--end of messagecontainer-->
+
+
+
+</div> <!--end of messagewrapper-->
+    
+     
+  
+   
+    </div><!-- tab-4 -->    
+
+
+
+
+
+
+    
+    
+    
+  
+  </div><!-- end of tabwrapper -->
+  </div> <!-- end of tabs -->
+     
+   </div> <!-- cc-tabs --> 
+
+
+
+</div> <!--end of theatrewrapper-->
+
+
+
+
+
+<div class="clearmyfix"> </div>
+
+</div> 
+<!-- ###################### end of bodycontainer #################### -->
+
+
+
+<!-- #################### start of footer #################### -->
+
+<div id="ajaxfooter">
+
+</div>
+
+<!-- #################### end of footer #################### -->
+
+
+
+
+
+</div>
+<!-- ###################### end of container #################### -->
+
+
+</body>
+</html>

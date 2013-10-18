@@ -1,0 +1,1699 @@
+<!doctype html>
+<html>
+<head>
+<!-- start: Meta -->
+	<meta charset="utf-8" />
+	<title>Ziksana Dashboard</title>
+	<meta name="description" content="Ziksana Dashboard version 1.2" />
+	<meta name="author" content="Kaivalya Shah" />
+	<meta name="keyword" content="Ziksana Version1.2" />
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	<link href="../css/zik.css" rel="stylesheet" />
+	<link href="../css/zik-responsive.css" rel="stylesheet" />
+	<link href="../css/maintheme.css" rel="stylesheet" />
+    <link href="../css/bg-color.css" rel="stylesheet" />
+    <link href="../css/mainmenu.css" rel="stylesheet"/>
+    <link href="../css/tooltip.css" type="text/css" rel="stylesheet" />
+    <link href="../css/dropdown.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <link href="../css/engagegroup.css" rel="stylesheet"/>
+    <link href="../css/tooltip_skin_variation.css" type="text/css" rel="stylesheet" />
+     
+      <style>		
+		
+.menuhoverhome:hover > a > i, .menuhoverhome:active > a > i{background: #f5f5f5;color: #008ecb!important; -moz-box-shadow:    inset 0 0 10px #008ecb;
+   -webkit-box-shadow: inset 0 0 10px #008ecb;
+   box-shadow:         inset 0 0 10px #008ecb;}
+
+.menuhoverhome:hover > a{color: #008ecb;}
+
+
+.menu-home-active
+{
+background: #f5f5f5 !important;color: #008ecb !important; 
+-moz-box-shadow:    inset 0 0 10px #008ecb;
+-webkit-box-shadow: inset 0 0 10px #008ecb;
+box-shadow:         inset 0 0 10px #008ecb;
+}
+
+
+.menuhovercourses:hover > a > i, .menuhovercourses:active > a > i{background: #f5f5f5;color: #ac358d!important;
+
+-moz-box-shadow:    inset 0 0 10px #ac358d;
+   -webkit-box-shadow: inset 0 0 10px #ac358d;
+   box-shadow:         inset 0 0 10px #ac358d;
+
+}
+
+.menuhovercourses:hover > a{color: #ac358d;}
+
+
+.menu-program-active
+{
+background: #f5f5f5 !important;color: #6b2a85 !important;
+
+-moz-box-shadow:    inset 0 0 10px #ac358d;
+   -webkit-box-shadow: inset 0 0 10px #ac358d;
+   box-shadow:         inset 0 0 10px #ac358d;	
+}
+
+.menuhoverstudents:hover > a > i, .menuhoverstudents:active > a > i{background: #f5f5f5;color: #fc8444!important;
+
+-moz-box-shadow:    inset 0 0 10px #fc8444;
+   -webkit-box-shadow: inset 0 0 10px #fc8444;
+   box-shadow:         inset 0 0 10px #fc8444;
+
+}
+
+
+.menu-students-active
+{
+background: #f5f5f5 !important; color: #fc8444!important;
+
+-moz-box-shadow:    inset 0 0 10px #fc8444;
+   -webkit-box-shadow: inset 0 0 10px #fc8444;
+   box-shadow:         inset 0 0 10px #fc8444;
+}
+
+.menuhoverstudents:hover > a{color: #fc8444;}
+
+.menuhoveranalytics:hover > a > i, .menuhoveranalytics:active > a > i{background: #f5f5f5;color: #00a847!important;
+
+-moz-box-shadow:    inset 0 0 10px #00a847;
+   -webkit-box-shadow: inset 0 0 10px #00a847;
+   box-shadow:         inset 0 0 10px #00a847;
+
+}
+
+.menu-analytics-active
+{
+background: #f5f5f5 !important;color: #6b9c00 !important;
+
+-moz-box-shadow:    inset 0 0 10px #00a847;
+   -webkit-box-shadow: inset 0 0 10px #00a847;
+   box-shadow:         inset 0 0 10px #00a847;
+}
+
+.menuhoveranalytics:hover > a{color: #00a847;}
+
+.sc-image
+		{
+		height:60px;
+		width:60px;	
+		}
+		
+		.sky-carousel-container
+		{
+		margin-top:25px !important;	
+		}
+		
+		.table 
+		{
+		margin-bottom:0px;	
+		}
+		
+		.table tr td:first-child {
+			width:330px;
+		}
+		
+</style> <!-- end: CSS -->
+
+
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(e) {
+ 
+$('.home-menu-boxspan').hide();
+$('.programs-menu-boxspan').hide();
+$('.students-menu-boxspan').show();
+$('.analytics-menu-boxspan').hide();
+   
+});
+
+</script>
+<script type="text/javascript" src="../js/google-maps.js"></script>
+
+<script type="text/javascript" src="../js/dropdown.js"></script>
+
+<script type="text/javascript" src="../js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+
+<script src="../js/tooltip.js"></script>
+
+<script> 
+$(function() {
+    $('div[rel=tooltip]').tooltip();
+});
+
+$(function() {
+    $('a[rel=tooltip]').tooltip();
+});
+
+
+$('.fancybox').fancybox();
+
+</script>
+
+<script type="text/javascript" src="../js/custom/dashboard.js"></script>
+
+<script type="text/javascript" src="../js/jquery.sky.carousel-1.0.2.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.sky-carousel').carousel({
+					itemWidth: 60,
+					itemHeight: 60,
+					distance: 12,
+					selectedItemDistance: 75,
+					selectedItemZoomFactor: 1,
+					unselectedItemZoomFactor: 0.5,
+					unselectedItemAlpha: 0.6,
+					motionStartDistance: 210,
+					topMargin: 115,
+					gradientStartPoint: 0.35,
+					gradientOverlayColor: "#ebebeb",
+					gradientOverlaySize: 190,
+					selectByClick: true
+				});
+			});
+		</script>
+
+</head>
+
+<body>
+
+<!-- ###################### start of container #################### -->
+<div id="zikcontainer" class="effect8">
+
+<!-- ###################### start of zikheader #################### -->
+
+<!-- ###################### start of zikheader #################### -->
+
+<div id="zikheader">
+
+
+<!-- ###################### start of  logoblock #################### -->
+
+<div id="logoblock" class="pull-left">
+
+
+<img src="../img/samplelogo.png" class="zik-inline-block partner-logo"/>
+<img src="../img/ziklogo.png" class="zik-inline-block home-logo"/>
+
+</div>
+<!-- ###################### start of  Profileblock #################### -->
+
+<div class="pull-right">
+
+<div id="profile-points" class="pull-left">
+
+<div class="points-wrapper-name bg-color-torquise fnt-size-14 fnt-color-white">Guru </div>
+<div class="points-wrapper-points bg-color-yellow fnt-size-12 fnt-color-black">4589 Points </div>
+
+</div><!-- end of profilepoints -->
+
+
+<div id="profileblock" class="pull-left">
+
+<img src="../img/profilepix.png"/>
+
+</div>
+
+<p id="profilename" class="pull-left"> Welcome !! <br>
+Scott Cherish </p>
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+</div>
+<!-- ###################### end of zikheader #################### -->
+
+ <!-- ____________________ start of breadcrumb _____________________ -->
+        
+        <div class="breadcrumbbox bg-color-grey-gradient">
+      
+       <!-- ###################### start of  rightblock #################### -->
+
+<div id="rightblock" class="pull-right">
+
+<div id="dashboard-block" class="pull-left" rel="tooltip" title="My Dashboard" data-placement="bottom">
+
+<a href="dashboard.html"><img src="../img/dashboard/dashboardicon.png" style="height:30px;"/></a>
+
+</div> <!-- end of dashboard-block -->
+
+
+  
+<div class="usermenu_cl btn-group pull-left"> 
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+<img src="../img/UserMenu.png"/>
+</a>
+<ul class="dropdown-menu">
+<li><a href="#">View Profile</a></li>
+<li><a href="#">Logout</a></li>
+</ul>
+
+</div> 
+<!-- end of usermenu -->  
+
+<div class="searchbtn pull-left">
+<div class="input-append">
+  <input class="span2" id="appendedInput" type="text" placeholder="Enter Keyword" style="height:22px;">
+  <span class="add-on add-onbtn" style="height:22px;"> <img src="../img/search.png"/></span>
+</div>
+</div>
+
+<!-- end of searchbox --> 
+
+
+<div class="clearmyfix"> </div>
+
+</div>
+<!-- ###################### end of  rightblock #################### -->
+
+
+
+        
+        <div class="clearmyfix">   </div>  
+        
+        </div> <!--end of breadcrumbbox-->
+
+
+
+<!-- ###################### end of zikheader #################### -->
+
+
+
+<!-- ###################### start of bodycontainer #################### -->
+
+<div id="bodycontainer">
+
+<!-- ###################### start of main-menu #################### -->
+
+<div id="mainmenu" class="pull-left">
+<ul class="vertical-nav">
+<li class="menuhoverhome">
+
+<div class="pull-left home-menu-boxspan bg-color-blue"></div>
+
+<div class="clearfix"> </div>
+
+
+<a href="#"><i class="icon-home bg-color-blue fnt-color-white "></i></a><a href="#linkurl" class="text">My Home<span class="submenu-icon"></span></a>
+
+<ul style="margin-top:-32px">
+
+<div class="slidemenuwrapper menu2">
+
+<p style="margin-bottom:0px; margin-top:10px; margin-bottom:5px;"> My Home</p>
+
+<hr style="margin-bottom:15px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<a href="summary.html" class="tiles-home"> 
+<div class="tilesbox">
+<div class="tiles bg-color-blue">
+<img src="../img/slidemenu/1MyCourses.png"/>
+</div>
+<p>Summary </p>
+</div>
+</a>
+
+
+<a href="courses.html" class="tiles-home"> 
+<div class="tilesbox">
+
+<div class="tiles bg-color-blue">
+
+<img src="../img/slidemenu/2MyContact.png"/>
+
+</div>
+<p>Courses </p>
+
+</div>
+</a>
+
+
+<a href="messages.html" class="tiles-home">
+<div class="tilesbox">
+
+<div class="tiles bg-color-blue">
+
+<img src="../img/slidemenu/3Messages.png" style="left:11px; top:15px;"/>
+
+</div>
+<p>Messages </p>
+
+</div>
+</a>
+
+
+
+
+<a href="contacts.html"  class="tiles-home">
+<div class="tilesbox">
+
+<div class="tiles bg-color-blue">
+
+<img src="../img/mainmenu/MyStudent.png" style="left:11px; top:15px;"/>
+
+</div>
+<p>Contacts</p>
+
+</div>
+</a>
+
+
+
+
+
+<a href="class.html"  class="tiles-home">
+<div class="tilesbox">
+
+<div class="tiles bg-color-blue">
+
+<img src="../img/slidemenu/4MyClass.png" style="left:11px; top:15px;"/>
+
+</div>
+<p>Class</p>
+
+</div>
+</a>
+
+
+<a href="collage.html"  class="tiles-home">
+<div class="tilesbox">
+
+<div class="tiles bg-color-blue">
+
+<img src="../img/slidemenu/5Collage.png" style="left:15px; top:15px;"/>
+
+</div>
+<p>Collage</p>
+
+</div>
+</a>
+
+
+<a href="poll.html" class="tiles-home">
+<div class="tilesbox">
+
+<div class="tiles bg-color-blue">
+
+<img src="../img/slidemenu/6Poll.png" style=""/>
+
+</div>
+<p>Poll </p>
+
+</div>
+</a>
+
+
+<a href="knb.html" class="tiles-home">
+<div class="tilesbox">
+
+<div class="tiles bg-color-blue">
+
+<img src="../img/slidemenu/7KnowMe.png" style="left:11px; top:15px;"/>
+
+</div>
+<p>Know me Better </p>
+
+</div>
+</a>
+
+
+<a href="announcement.html" class="tiles-home">
+<div class="tilesbox">
+
+<div class="tiles bg-color-blue">
+
+<img src="../img/slidemenu/8Annoucement.png" style="left: 18px;"/>
+
+</div>
+
+
+<p>Announcement </p>
+
+</div>
+</a>
+
+<div class="clearmyfix"> </div>
+
+
+<p style="margin:0px; margin-top:15px; margin-bottom:5px;">  My Tools</p>
+
+<hr style="margin-bottom:15px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div class="toolscontainer" style="margin-left:5px;">
+
+<a href="myprofile.html" class="tiles-home ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-blue">
+
+<img src="../img/slidemenu/1-MyTools.png" style="top:8px;"/>
+
+</div>
+<p> Profile </p>
+</div>
+</a>
+
+
+
+<a href="myrewards.html" class="tiles-home">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-blue">
+<img src="../img/slidemenu/2-MyTools.png" style="top:8px;"/>
+</div>
+<p> Rewards </p>
+</div>
+</a>
+
+<a href="askZ.html" class="tiles-home">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-blue">
+<img src="../img/slidemenu/3-MyTools.png" style="top:8px;"/>
+</div>
+<p> Q&A </p>
+</div>
+</a>
+
+
+<a href="blog.html" class="tiles-home">
+<div class="tilesboxtools" rel="tooltip" title="Blog">
+<div class="tilestools bg-color-blue">
+
+<img src="../img/slidemenu/5-MyTools.png"/>
+
+</div>
+<p> Blog </p>
+</div>
+</a>
+
+<div class="clearmyfix"> </div>
+
+<a href="ziks.html" class="tiles-home">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-blue">
+<img src="../img/slidemenu/7-MyTools.png" style="left:4px;"/>
+</div>
+<p> Ziks </p>
+</div>
+</a>
+
+
+<a href="zRecommends.html" class="tiles-home">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-blue">
+
+<img src="../img/slidemenu/8-MyTools.png"/>
+
+</div>
+
+<p style="margin-left:-5px;"> Recommends </p>
+
+</div>
+</a>
+
+<a href="locker.html" class="tiles-home">
+
+<div class="tilesboxtools">
+
+<div class="tilestools bg-color-blue">
+
+<img src="../img/slidemenu/9-MyTools.png"/>
+
+</div>
+<p> Locker </p>
+
+</div>
+</a>
+
+<a href="myportfolio.html" class="tiles-home">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-blue">
+<img src="../img/slidemenu/010-Mytools.png"/>
+</div>
+<p> Portfolio </p>
+</div>
+</a>
+
+</div> <!--end of tools container-->
+
+</div> <!--end of slidemenuwrapper-->
+
+</ul>
+
+<li class="menuhovercourses"><a href="#"><i class="icon-libreoffice bg-color-purple fnt-color-white"></i></a>
+
+<div class="pull-left programs-menu-boxspan bg-color-purple"></div>
+
+<div class="clearfix"> </div>
+
+
+
+<a href="#linkurl" class="tiles-program" style="">My Courses<span class="submenu-icon"></span></a>
+<ul style="margin-top:-146px">
+<div class="slidemenuwrapper menu2">
+
+<p style="margin:0px; margin-top:10px; margin-bottom:5px;"> My Courses </p>
+
+<hr style="margin-bottom:15px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div style="">
+
+<a href="draft.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/Draft.png" style="left:1px; top:1px;"/>
+</div>
+<p> Draft </p>
+</div>
+</a>
+
+<a href="review.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/Review.png" style="left:1px; top:1px;"/>
+</div>
+<p> Review </p>
+</div>
+</a>
+
+<a href="released.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/Release.png" style="left:1px; top:1px;"/>
+</div>
+<p> Released </p>
+</div>
+</a>
+
+<a href="learninggoals.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/analytics/Coaching Plan.png" style="left:1px; top:1px;"/>
+</div>
+<p> Coaching Goals </p>
+</div>
+</a>
+
+
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+<p style="margin:0px; margin-top:5px; margin-bottom:5px;"> 
+ Create Courseware </p>
+
+<hr style="margin-bottom:10px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div>
+
+<a href="createcontent.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/CreateContent.png" style="left:1px; top:1px;"/>
+</div>
+<p> Content </p>
+</div>
+</a>
+
+<a href="createcourse/definecourse-wide.html" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/CreateCourse.png" style="left:1px; top:1px;"/>
+</div>
+<p> Course </p>
+</div>
+</a>
+
+<a href="questionbank.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/QuestionBank.png" style="left:1px; top:1px;"/>
+</div>
+<p> QBank </p>
+</div>
+</a>
+
+<a href="createrubrics.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/Rubric.png" style="left:1px; top:1px;"/>
+</div>
+<p> Rubrics </p>
+</div>
+</a>
+
+
+
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+
+<p style="margin:0px; margin-top:5px; margin-bottom:5px;"> 
+Publish Courseware </p>
+
+<hr style="margin-bottom:10px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div>
+
+
+<a href="socialize.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/Socialize.png" style="left:1px; top:1px;"/>
+</div>
+<p> Socialize </p>
+</div>
+</a>
+
+<a href="publishreview.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/Review.png" style="left:1px; top:1px;"/>
+</div>
+<p> Review </p>
+</div>
+</a>
+
+<a href="publishrefine.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/Refine.png" style="left:1px; top:1px;"/>
+</div>
+<p> Refine </p>
+</div>
+</a>
+
+<a href="publishrelease.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/Release.png" style="left:1px; top:1px;"/>
+</div>
+<p> Release </p>
+</div>
+</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+
+
+<p style="margin:0px; margin-top:5px; margin-bottom:5px;"> 
+Manage Courseware</p>
+
+<hr style="margin-bottom:10px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div>
+
+
+<a href="engagementrule.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/ManageEngagement.png" style="left:1px; top:1px;"/>
+</div>
+<p> Engagement Rules </p>
+</div>
+</a>
+
+<a href="managegroup.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/ManageGroup.png" style="left:1px; top:1px;"/>
+</div>
+<p> Groups </p>
+</div>
+</a>
+
+
+<a href="manageassignment.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools" rel="tooltip">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/ManageAssignment.png" style="left:1px; top:1px;"/>
+</div>
+<p> Assignment </p>
+</div>
+</a>
+
+<a href="coachingcalendar.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools" rel="tooltip">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/ManageCalender.png" style="left:1px; top:1px;"/>
+</div>
+<p> Calendar </p>
+</div>
+</a>
+
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+<p style="margin:0px; margin-top:5px; margin-bottom:5px;"> 
+Work Offline</p>
+
+<hr style="margin-bottom:10px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div>
+
+<a href="downloadcontent.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/OfflineDownload.png" style="left:1px; top:1px;"/>
+</div>
+<p> Download </p>
+</div>
+</a>
+
+<a href="#linkurl" class="tiles-program">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/createcourse/StudyOffline.png" style="left:1px; top:1px;"/>
+</div>
+<p> Study </p>
+</div>
+</a>
+
+<a href="synchronize.html" class="tiles-program ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-purple">
+<img src="../img/students/Icon-Class.png" style="left:1px; top:1px;"/>
+</div>
+<p> Synchronize </p>
+</div>
+</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+</div> <!--end of slidemenuwrapper-->
+
+</ul>
+
+
+<li class="menuhoverstudents"><a href="#"><i class="icon-user bg-color-orange fnt-color-white menu-students-active"></i></a>
+
+<div class="pull-left students-menu-boxspan bg-color-orange"></div>
+
+<div class="clearfix"> </div>
+
+
+<a href="#linkurl" class="tiles-student" style="">My Students<span class="submenu-icon"></span></a>
+
+<ul style="margin-top:-259px">
+<div class="slidemenuwrapper menu2">
+
+<p style="margin-top:10px; margin-bottom:5px;"> My Students</p>
+
+<hr style="margin-bottom:15px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<a href="student-courses.html" class="tiles-student ajaxtrigger"> 
+<div class="tilesbox">
+<div class="tiles bg-color-orange">
+<img src="../img/slidemenu/1MyCourses.png"/>
+</div>
+<p> Subscribed Courses </p>
+</div>
+</a>
+
+<a href="students.html" class="tiles-student ajaxtrigger">
+<div class="tilesbox">
+<div class="tiles bg-color-orange">
+<img src="../img/students/Icon-Student50.png"  style="left: 2px;top: 1px;"/>
+</div>
+<p> Students </p>
+</div>
+</a>
+
+
+<div class="clearmyfix"> </div>
+
+<p style="margin:0px; margin-top:5px; margin-bottom:5px;">  Grade </p>
+
+<hr style="margin-bottom:15px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div>
+
+
+<a href="gradestudent.html" class="tiles-student ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-orange">
+<img src="../img/students/Icon-Student.png" style="left:1px; top:1px;"/>
+</div>
+<p> Students </p>
+</div>
+</a>
+
+
+<a href="gradegroup.html" class="tiles-student ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-orange">
+<img src="../img/students/Icon-Group.png" style="left:1px; top:1px;"/>
+</div>
+<p> Group </p>
+</div>
+</a>
+
+<a href="gradeclass.html" class="tiles-student ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-orange">
+<img src="../img/students/Icon-Class.png" style="left:1px; top:1px;"/>
+</div>
+<p> Class </p>
+</div>
+</a>
+
+
+<a href="gradeforum.html" class="tiles-student ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-orange">
+<img src="../img/students/Icon-Forum.png" style="left:1px; top:1px;"/>
+</div>
+<p> Forum </p>
+</div>
+</a>
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+<p style="margin:0px; margin-top:5px; margin-bottom:5px;"> 
+ Engage </p>
+
+<hr style="margin-bottom:10px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div>
+
+<a href="engagestudent.html" class="tiles-student ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-orange">
+<img src="../img/students/Icon-Student.png" style="left:1px; top:1px;"/>
+</div>
+<p> Students </p>
+</div>
+</a>
+
+<a href="engagegroup.html" class="tiles-student ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-orange">
+<img src="../img/students/Icon-Group.png" style="left:1px; top:1px;"/>
+</div>
+<p> Group </p>
+</div>
+</a>
+
+<a href="engageclass.html" class="tiles-student ajaxtrigger">
+<div class="tilesboxtools">
+<div class="tilestools bg-color-orange">
+<img src="../img/students/Icon-Class.png" style="left:1px; top:1px;"/>
+</div>
+<p> Class </p>
+</div>
+</a>
+
+<div class="tilesboxtools">
+<a href="engageforum.html" class="tiles-student ajaxtrigger">
+<div class="tilestools bg-color-orange">
+<img src="../img/students/Icon-Forum.png" style="left:1px; top:1px;"/>
+</div>
+<p> Forum </p>
+</a>
+</div>
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+</div> <!--end of slidemenuwrapper-->
+
+</ul>
+
+</li><!--End of Li for Services -->
+
+
+<li class="menuhoveranalytics"><a href="#"><i class="icon-stats-up bg-color-magenta fnt-color-white"></i></a>
+
+<div class="pull-left analytics-menu-boxspan bg-color-magenta"></div>
+
+<div class="clearfix"> </div>
+
+<a href="#linkurl" class="tiles-analytic">My Analytics<span class="submenu-icon"></span></a>
+
+<ul style="margin-top:-384px">
+<div class="slidemenuwrapper menu2">
+
+<p style="margin:0px; margin-top:10px; margin-bottom:5px;"> Coaching </p>
+
+<hr style="margin-bottom:15px; margin-top:0px;" class="border1px-color-darkgrey">
+
+
+<div class="tilesbox">
+<div class="tiles bg-color-magenta">
+<img src="../img/analytics/Profile Analytics.png" style="left: 2px;
+top: 1px;"/>
+
+</div>
+<p> Profile Analytics</p>
+
+</div>
+
+
+<div class="tilesbox">
+<div class="tiles bg-color-magenta">
+<img src="../img/analytics/Reports.png" style="left: 2px;
+top: 1px;"/>
+
+</div>
+<p> Reports</p>
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+<div>
+
+
+<p style="margin:0px; margin-top:5px; margin-bottom:5px;"> 
+ Activity Meter </p>
+
+<hr style="margin-bottom:10px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div>
+
+<div class="tilesboxtools">
+<a href="concurrency.html" class="tiles-analytic ajaxtrigger">
+<div class="tilestools bg-color-magenta">
+<img src="../img/analytics/ActivityConncurrancy.png" style="left:1px; top:1px;"/>
+</div>
+<p>Concurrency </p>
+</a>
+</div>
+
+
+<div class="tilesboxtools mr-l-10">
+<a href="teachingtimer.html" class="tiles-analytic ajaxtrigger">
+<div class="tilestools bg-color-magenta">
+<img src="../img/analytics/ActivityLearningTimer.png" style="left:1px; top:1px;"/>
+</div>
+<p>Creative Time </p> 
+</a>
+</div>
+
+
+<div class="tilesboxtools">
+<a href="teachingclock.html" class="tiles-analytic ajaxtrigger">
+<div class="tilestools bg-color-magenta">
+<img src="../img/analytics/ActivityLearningClock.png" style="left:1px; top:1px;"/>
+</div>
+<p> Teaching Clock </p>
+</a>
+</div>
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+
+<p style="margin:0px; margin-top:5px; margin-bottom:5px;"> 
+Performance Meter </p>
+
+<hr style="margin-bottom:10px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div>
+
+<div class="tilesboxtools">
+<a href="perfomancemeter.html" class="tiles-analytic ajaxtrigger">
+<div class="tilestools bg-color-magenta">
+<img src="../img/analytics/Paerformance.png" style="left:1px; top:1px;"/>
+</div>
+<p> Performance </p>
+</a>
+</div>
+
+
+<div class="tilesboxtools mr-l-10">
+<a href="perfomanceinvestment.html" class="tiles-analytic ajaxtrigger">
+<div class="tilestools bg-color-magenta">
+<img src="../img/analytics/Investment.png" style="left:1px; top:1px;"/>
+</div>
+<p> Investment </p>
+</a>
+</div>
+
+
+<div class="tilesboxtools mr-l-10">
+<a href="perfomancemeter.html" class="tiles-analytic ajaxtrigger">
+<div class="tilestools bg-color-magenta">
+<img src="../img/analytics/PerformanceLeaderBoard.png" style="left:1px; top:1px;"/>
+</div>
+<p> Leaderboard </p>
+</a>
+</div>
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+
+
+<p style="margin:0px; margin-top:5px; margin-bottom:5px;"> 
+Risk Meter </p>
+
+<hr style="margin-bottom:10px; margin-top:0px;" class="border1px-color-darkgrey">
+
+<div>
+
+<div class="tilesboxtools">
+<a href="riskmeter.html" class="tiles-analytic ajaxtrigger">
+<div class="tilestools bg-color-magenta">
+<img src="../img/analytics/ActivityRisk.png" style="left:1px; top:1px;"/>
+</div>
+<p> Activity Risk </p> 
+</a>
+</div>
+
+
+<div class="tilesboxtools">
+<a href="riskmeterperformancerisk.html" class="tiles-analytic ajaxtrigger">
+<div class="tilestools bg-color-magenta">
+<img src="../img/analytics/ComplationRisk.png" style="left:1px; top:1px;"/>
+</div>
+<p> Completion Risk </p>
+</a>
+</div>
+
+
+<div class="tilesboxtools mr-l-5">
+<a href="riskmeterperformancerisk.html" class="tiles-analytic ajaxtrigger">
+<div class="tilestools bg-color-magenta">
+<img src="../img/analytics/PerformanceRisk.png" style="left:1px; top:1px;"/>
+</div>
+<p> Performance Risk </p>
+</a>
+</div>
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+
+
+</div> <!--end of slidemenuwrapper-->
+
+</ul>
+
+</li><!--End of Li for Services -->
+
+
+
+</li><!--End of Second level -->
+
+</ul><!--End of Main UL -->
+
+</div> <!--end of mainmenu-->
+
+
+
+
+<!-- ###################### end of main-menu #################### --> 
+
+
+
+<div class="theatrewrapper pull-left ">
+
+<p class="pageheader fnt-color-orange pull-left" style="margin-bottom:0px;">Engage Groups </p>
+
+<div class="clearmyfix"> </div>
+
+<hr class="pageheader_border border1px-color-orange" style="margin-top:10px;">
+
+<div class="askzsublinks"> 
+<ul>
+<li style="background-color:none;">
+
+<select style="width:200px;"> 
+<option>Select Program</option>
+
+</select>
+
+ </li>
+ 
+ <li>
+
+<select style="width:200px;"> 
+<option>Select Course</option>
+
+</select>
+
+</li>
+
+<li>
+<div class="zik-inline-block">
+
+<p class="fnt-size-16"> Communication Skill (Advance) </p>
+
+</div>
+
+</li>
+ 
+</ul>
+
+</div>
+
+<div id="engagestudentwrapper" class="content_3">
+
+
+<div id="engagewrapper">
+
+<div id="engagetablerow">
+
+<div id="engageheader">
+
+<div class="engagename border-color-blue">
+
+<P class="pull-left fnt-color-blue"> Group 1</P>
+
+<div class="engageimgabs">
+<div class="number of subscribers">
+
+<div class="sky-carousel">
+			<div class="sky-carousel-wrapper">
+				<ul class="sky-carousel-container">
+					<li>
+						<img src="../img/contact/img1.png" alt="" />
+						<div class="sc-content">
+							<h2>Maria Vann</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img2.png" alt="" />
+						<div class="sc-content">
+							<h2>Leslie Lawson</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img3.png" alt="" />
+						<div class="sc-content">
+							<h2>Dora Thomas</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img4.png" alt="" />
+						<div class="sc-content">
+							<h2>Karen Olsen</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img5.png" alt="" />
+						<div class="sc-content">
+							<h2>Mittie Phillips</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img6.png" alt="" />
+						<div class="sc-content">
+							<h2>Dori Moss</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img7.png" alt="" />
+						<div class="sc-content">
+							<h2>Maria Vann</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img8.png" alt="" />
+						<div class="sc-content">
+							<h2>Leslie Lawson</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img1.png" alt="" />
+						<div class="sc-content">
+							<h2>Dora Thomas</h2>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+</div> <!-- end of subscriber -->
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+</div> <!-- engagename -->
+
+</div><!-- engageheader -->
+
+<table class="table table-hover table-striped" style="margin-left:410px; width:55.2%">
+       
+        <tbody>
+          <tr>
+            <td>Discussion to identify areas where the Group is having difficulty studying</td>
+            <td>Email</td>
+            <td>
+             <a href="#linkurl" rel="tooltip" title="" data-original-title="Add"><img src="../img/add-btn.png"/></a>
+                        <a href="#linkurl" rel="tooltip" title="" data-original-title="Edit"><img src="../img/edit-btn.png"/></a>
+                       <a href="#linkurl" rel="tooltip" title="" data-original-title="Delete"><img src="../img/delete-btn.png"/></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Discussion to identify how to engage better on the Discussion Forum</td>
+            <td>Phone</td>
+            <td>
+            <a href="#linkurl" rel="tooltip" title="" data-original-title="Add"><img src="../img/add-btn.png"/></a>
+                        <a href="#linkurl" rel="tooltip" title="" data-original-title="Edit"><img src="../img/edit-btn.png"/></a>
+                       <a href="#linkurl" rel="tooltip" title="" data-original-title="Delete"><img src="../img/delete-btn.png"/></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Discussion to appreciate performance on Assignment 3 </td>
+            <td>Future</td>
+            <td>
+             <a href="#linkurl" rel="tooltip" title="" data-original-title="Add"><img src="../img/add-btn.png"/></a>
+                        <a href="#linkurl" rel="tooltip" title="" data-original-title="Edit"><img src="../img/edit-btn.png"/></a>
+                       <a href="#linkurl" rel="tooltip" title="" data-original-title="Delete"><img src="../img/delete-btn.png"/></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+</div> <!-- end of engagetable row -->
+
+
+<div id="engagetablerow">
+
+<div id="engageheader">
+
+<div class="engagename border-color-purple">
+
+<P class="pull-left fnt-color-purple"> Group 2</P>
+
+<div class="engageimgabs">
+<div class="number of subscribers">
+
+<div class="sky-carousel">
+			<div class="sky-carousel-wrapper">
+				<ul class="sky-carousel-container">
+					<li>
+						<img src="../img/contact/img1.png" alt="" />
+						<div class="sc-content">
+							<h2>Maria Vann</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img2.png" alt="" />
+						<div class="sc-content">
+							<h2>Leslie Lawson</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img3.png" alt="" />
+						<div class="sc-content">
+							<h2>Dora Thomas</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img4.png" alt="" />
+						<div class="sc-content">
+							<h2>Karen Olsen</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img5.png" alt="" />
+						<div class="sc-content">
+							<h2>Mittie Phillips</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img6.png" alt="" />
+						<div class="sc-content">
+							<h2>Dori Moss</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img7.png" alt="" />
+						<div class="sc-content">
+							<h2>Maria Vann</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img8.png" alt="" />
+						<div class="sc-content">
+							<h2>Leslie Lawson</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img1.png" alt="" />
+						<div class="sc-content">
+							<h2>Dora Thomas</h2>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+</div> <!-- end of subscriber -->
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+</div> <!-- engagename -->
+
+</div><!-- engageheader -->
+
+<table class="table table-hover table-striped" style="margin-left:410px; width:55.2%">
+       
+        <tbody>
+          <tr>
+            <td>Discussion to appreciate performance on Assignment 2</td>
+            <td>Email</td>
+            <td>
+             <a href="#linkurl" rel="tooltip" title="" data-original-title="Add"><img src="../img/add-btn.png"/></a>
+                        <a href="#linkurl" rel="tooltip" title="" data-original-title="Edit"><img src="../img/edit-btn.png"/></a>
+                       <a href="#linkurl" rel="tooltip" title="" data-original-title="Delete"><img src="../img/delete-btn.png"/></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Discussion to identify how to make the Discussion Forum better</td>
+            <td>Phone</td>
+            <td>
+            <a href="#linkurl" rel="tooltip" title="" data-original-title="Add"><img src="../img/add-btn.png"/></a>
+                        <a href="#linkurl" rel="tooltip" title="" data-original-title="Edit"><img src="../img/edit-btn.png"/></a>
+                       <a href="#linkurl" rel="tooltip" title="" data-original-title="Delete"><img src="../img/delete-btn.png"/></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Discussion to appreciate performance on Assignment 3</td>
+            <td>Future</td>
+            <td>
+             <a href="#linkurl" rel="tooltip" title="" data-original-title="Add"><img src="../img/add-btn.png"/></a>
+                        <a href="#linkurl" rel="tooltip" title="" data-original-title="Edit"><img src="../img/edit-btn.png"/></a>
+                       <a href="#linkurl" rel="tooltip" title="" data-original-title="Delete"><img src="../img/delete-btn.png"/></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+</div> <!-- end of engagetable row -->
+
+
+
+<div id="engagetablerow">
+
+<div id="engageheader">
+
+<div class="engagename border-color-orange">
+
+<P class="pull-left fnt-color-orange">Group 3</P>
+
+<div class="engageimgabs">
+<div class="number of subscribers">
+
+<div class="sky-carousel">
+			<div class="sky-carousel-wrapper">
+				<ul class="sky-carousel-container">
+					<li>
+						<img src="../img/contact/img1.png" alt="" />
+						<div class="sc-content">
+							<h2>Maria Vann</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img2.png" alt="" />
+						<div class="sc-content">
+							<h2>Leslie Lawson</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img3.png" alt="" />
+						<div class="sc-content">
+							<h2>Dora Thomas</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img4.png" alt="" />
+						<div class="sc-content">
+							<h2>Karen Olsen</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img5.png" alt="" />
+						<div class="sc-content">
+							<h2>Mittie Phillips</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img6.png" alt="" />
+						<div class="sc-content">
+							<h2>Dori Moss</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img7.png" alt="" />
+						<div class="sc-content">
+							<h2>Maria Vann</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img8.png" alt="" />
+						<div class="sc-content">
+							<h2>Leslie Lawson</h2>
+						</div>
+					</li>
+					<li>
+						<img src="../img/contact/img1.png" alt="" />
+						<div class="sc-content">
+							<h2>Dora Thomas</h2>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+</div> <!-- end of subscriber -->
+
+
+</div>
+
+<div class="clearmyfix"> </div>
+
+
+</div> <!-- engagename -->
+
+</div><!-- engageheader -->
+
+<table class="table table-hover table-striped" style="margin-left:410px; width:55.2%">
+       
+        <tbody>
+          <tr>
+            <td>Discussion to identify areas where the Group is having difficulty studying</td>
+            <td>Email</td>
+            <td>
+             <a href="#linkurl" rel="tooltip" title="" data-original-title="Add"><img src="../img/add-btn.png"/></a>
+                        <a href="#linkurl" rel="tooltip" title="" data-original-title="Edit"><img src="../img/edit-btn.png"/></a>
+                       <a href="#linkurl" rel="tooltip" title="" data-original-title="Delete"><img src="../img/delete-btn.png"/></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Discussion to identify how to engage better on the Discussion Forum</td>
+            <td>Phone</td>
+            <td>
+            <a href="#linkurl" rel="tooltip" title="" data-original-title="Add"><img src="../img/add-btn.png"/></a>
+                        <a href="#linkurl" rel="tooltip" title="" data-original-title="Edit"><img src="../img/edit-btn.png"/></a>
+                       <a href="#linkurl" rel="tooltip" title="" data-original-title="Delete"><img src="../img/delete-btn.png"/></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Discussion to appreciate performance on Assignment 3 </td>
+            <td>Future</td>
+            <td>
+             <a href="#linkurl" rel="tooltip" title="" data-original-title="Add"><img src="../img/add-btn.png"/></a>
+                        <a href="#linkurl" rel="tooltip" title="" data-original-title="Edit"><img src="../img/edit-btn.png"/></a>
+                       <a href="#linkurl" rel="tooltip" title="" data-original-title="Delete"><img src="../img/delete-btn.png"/></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div> <!-- end of engagetable row -->
+
+
+
+
+
+
+</div><!-- end of engagewrapper -->
+
+</div> <!--end of askzwrapper-->
+
+
+</div> <!--end of theatrewrapper-->
+
+<div class="clearmyfix"> </div>
+
+</div> 
+<!-- ###################### end of bodycontainer #################### -->
+
+
+
+<!-- #################### start of footer #################### -->
+
+
+
+<div id="footerwrapper">
+
+<div class="footerheader">
+
+<div class="newsletter">
+
+<form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label pull-left newletter-text-label" for="inputEmail">Newsletter Signup</label>
+    <div class="controls pull-left" style="margin-left:5px;">
+      <input type="text" id="inputEmail" placeholder="Enter your Email Address">
+    </div>
+    
+     <div class="controls pull-left" style="margin-left:5px;">
+      <input type="button" class="btn news-letter-btn" value="Subscribe">
+    </div>
+  </div>
+  
+</form>
+
+<div class="clearmyfix"> </div>
+
+</div>
+
+</div> <!-- end of footerheader -->
+
+
+<div class="footerbody">
+
+<div class="company pull-left">
+
+<div class="company-header"> Company </div>
+
+<ul>
+
+<li><a href="#linkurl"> About us </a> </li>
+<li><a href="#linkurl"> Ziksana Connect </a> </li>
+<li><a href="#linkurl"> Contact us </a> </li>
+
+</ul>
+
+</div> <!--end of company-->
+
+
+<div class="location pull-right">
+
+<div class="location-header"> Locations  </div>
+
+<ul>
+
+<li> <a href="#linkurl"> New York </a> </li>
+<li><a href="#linkurl"> Amasterdam </a> </li>
+<li><a href="#linkurl"> Banglore </a> </li>
+
+</ul>
+
+</div> <!--end of location-->
+<div id="socialmedia">
+
+<ul>
+<li><a href="#linkurl"><img src="../img/socialmedia/facebook_001.jpg"/></a></li>
+
+<li><a href="#linkurl"><img src="../img/socialmedia/Twitter_001.jpg"/></a></li>
+
+<li><a href="#linkurl"><img src="../img/socialmedia/Linkedin_001.jpg"/></a></li>
+
+<li><a href="#linkurl"><img src="../img/socialmedia/YouTube_001.jpg"/></a></li>
+
+<li><a href="#linkurl"><img src="../img/socialmedia/RSS_001.jpg"/></a></li>
+
+<li><a href="#linkurl"><img src="../img/socialmedia/email_001.jpg"/></a></li>
+
+
+
+</ul>
+
+</div>
+
+
+<div class="clearmyfix"> </div>
+
+
+
+
+</div> <!-- end of footerbody -->
+
+<div class="footercopyright">
+
+<p> &copy;Copyright 2013 - Ziksana </p>
+
+</div> <!-- end of footercopyright -->
+
+
+
+</div>
+
+<!-- #################### end of footer #################### -->
+
+
+
+
+
+
+</div>
+<!-- ###################### end of container #################### -->
+
+       
+
+  
+
+
+
+
+    
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<tree id="0">
+	<item text="Model Thinking" id="Model Thinking Program" im0="Tree.png" im1="Tree.png" im2="Tree.png" call="1" open="1" select="1">
+		<item text="Program Participants" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" open="1" id="Participants">
+		<item text = "Gill James" im0="notesIcon.png" im1="ppt.png" im2="notesIcon.png" id="Participant"/>
+		<item text = "Rosy H" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" id="Participant"/>
+		<item text = "Peter Pariera" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" id="Participant"/>
+	</item>
+		
+	<item text="Program Term" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" open="1" id="Terms">
+		<item text="Term 1" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" open="1" id="Term">
+			<item text="Decision Models" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" open="1" id="Course">
+				<item text = "Additional Details" im0="notesIcon.png" im1="notesIcon.png" im2="word.png" id="Additional Details Details"/>
+				<item text = "Faculty" im0="notesIcon.png" im1="video.png" im2="notesIcon.png" id="Faculty Details"/>
+				<item text = "Planner" im0="notesIcon.png" im1="ppt.png" im2="notesIcon.png" id="Planner Readable"/>
+				<item text = "Playbook" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" id="Playbook Readable"/>
+				
+			</item>
+			
+		<item text = "Term Planner" im0="notesIcon.png" im1="ppt.png" im2="notesIcon.png" id="FullTerm Planner Readable"/>
+		<item text = "Term Playbook" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" id="FullTerm Playbook Readable"/>
+			
+		</item>
+		
+	</item>
+		
+	<item text = "Program Planner" im0="notesIcon.png" im1="ppt.png" im2="notesIcon.png" id="FullProgram Planner Readable"/>
+	<item text = "Program Playbook" im0="notesIcon.png" im1="notesIcon.png" im2="notesIcon.png" id="FullProgram Playbook Readable"/>
+
+</item>
+</tree> 

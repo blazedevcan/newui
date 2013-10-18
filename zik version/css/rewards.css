@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+#rewardwrapper
+{
+margin-left:30px;
+height:520px;
+overflow:auto;	
+}
+
+.separator
+{
+width:260px; height: 440px;
+border:1px solid #ccc;
+padding:20px;
+
+}
+
+.totalrewards
+{
+margin-top:20px;	
+}
+
+.rewardsrow
+{
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+height:30px; text-align:center; font-size:18px;
+	
+}
+
+.rewardsbox1
+{
+height:100px;	
+}
+
+.rewardsfnt
+{
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+width:90px; text-align:right; font-size:18px;
+margin-bottom:0px;
+height:25px;
+}
+
+.rewardsearnedfnt
+{
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+width:90px; text-align:right; font-size:20px;
+margin-bottom:0px;
+height:25px;	
+}
+
+.rewardamt
+{
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+width:73px; text-align:right; font-size:40px;
+color:#848688;
+margin-left:22px;	
+margin-bottom:0px;
+}
+
+.separator2
+{
+width: 450px;
+border: 1px solid rgb(204, 204, 204);
+padding: 20px;
+margin-left: 115px;
+padding-right: 0px;
+}
+
+#box-240-190
+{
+height:121px;
+width:240px;
+border:1px solid #d4d5d7;
+position:relative;
+overflow:hidden;
+float:left;
+margin-right:20px;
+margin-bottom:20px;	
+}
+
+#box-240-190-header
+{
+height:30px;
+position:relative;
+background-color:#e6e7e8;		
+}
+
+#box-240-190-body
+{
+height:97px;
+padding:5px;
+position:relative;
+}
+
+.ziks-more
+{
+position:absolute;
+bottom:3px;
+right:3px;	
+}
+
+#box-240-190-footer
+{
+height:1px;
+position:relative;	
+}
+
+
+.subheader
+{
+font-size:16px;
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+position:absolute;
+right:12px;
+top:5px;	
+}
+
+.subfooter
+{
+font-size:16px;
+top:3px;
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+position:absolute;
+right:12px;	
+}
+
+.subfooter a
+{
+}
+
+.subfooter a:hover
+{
+text-decoration:none;	
+}
+
+.boxspan
+{
+width:8px;
+height:40px;
+margin-left:0px;
+margin-right:4px;	
+}
+
+.boxicon
+{
+padding:5px 3px 0px 3px;	
+}
+
+.totalrewards2
+{
+font-size:12px;
+margin:0px;	
+}
+
+.rewardsearnedfnt2
+{
+font-size:16px;
+width:100px;	
+}
+
+.rewardamt2
+{
+font-size: 25px;	
+margin-top: 10px;
+color:rgb(132, 134, 136);
+}
+
+.width200
+{
+width:200px !important;	
+}

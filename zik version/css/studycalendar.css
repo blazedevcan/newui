@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+#studycaldendarwrapper
+{
+margin-left:30px;
+height:495px;
+overflow:auto;
+margin-top:10px;
+padding:4p;
+-moz-box-shadow: 0 4px 18px -9px #000;
+-webkit-box-shadow: 0 4px 18px -9px #000;
+box-shadow: 0 4px 18px -9px #000;		
+}
+
+.selectcriteria
+{
+margin-left:30px;
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+font-size:16px;		
+}
+
+.selection-dropdown-wrapper
+{
+padding:10px;	
+}
+
+.period-selection
+{
+margin-right:10px;
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+font-size:16px;	
+}
+
+.periodlistbox 
+{
+border-right:1px solid #ccc;
+padding-right:8px;	
+}
+
+
+.periodlistbox ul li
+{
+padding:2px;
+border-bottom:1px solid #ccc;
+width:150px;
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+font-size:12px;
+}
+
+.selectionboxwrapper
+{
+float:left;
+margin-right:10px;	
+}
+
+#subject-pbar
+{
+display:inline-block;
+margin-right:10px;	
+}
+
+.no-of-alert
+{
+display:inline-block;
+}
+
+.recommendation
+{
+display:inline-block;
+margin-right:10px;
+vertical-align:super;	
+}
+
+.socializeptext
+{
+display:inline-block;
+margin-right:10px;	
+}
+
+.table
+{
+	
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+background-color:#f5f5f5;
+margin-bottom:0px;
+padding-left:10px;
+}
+
+.subjectdate
+{
+font-weight: bold;
+font-size: 12px !important;
+border-right: 1px solid #ccc;
+}
+
+.subjectheader
+{
+font-size:18px;	
+}
+
+.subjectdescription
+{
+color:#888a8c;	
+}
+
+.selectlabel
+{
+display:inline-block; float:right; margin-top: 3px;
+margin-right: 7px;	
+}

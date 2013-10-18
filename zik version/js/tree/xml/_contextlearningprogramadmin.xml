@@ -1,0 +1,20 @@
+<?xml version='1.0' ?>
+<menu id="1">
+		
+		
+		<!--Menu For the participant root node -->
+		<item text="Add Participant" img="plus.png"  id="Add_participant"></item>
+				
+		<!--Menu For the Program Term -->
+		<item text="Associat Course" img="View.png"  id="Associate_Course"></item>
+		
+		<!--Menu For the Program Term -->
+		<!--Menu For the Assignment Created By the Root and First child Element -->
+		<item text="Add" img="plus.png"  id="Add"></item>	
+		<item text="View" img="View.png"  id="View"></item>
+		<item text="Edit" img="edit.png" id="Edit"></item>
+		<item text="Remove" img="cross.png"  id="Delete"></item>
+		
+		
+</menu>
+

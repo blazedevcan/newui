@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+#portfoliowrapper
+{
+margin-left: 200px;
+margin-top: 30px;
+height: 450px;
+position: relative;
+overflow: auto;
+}
+
+
+#portfolioimg
+{	
+position:relative;	
+}
+
+.portfolio-header
+{
+position: absolute;
+top: 315px;
+left: 80px;
+font-size: 56px;
+}
+
+.portfolio-img
+{
+position: absolute;
+top: 200px;
+left: 80px;	
+}
+
+
+.portfolio-img img
+{
+height:70px;
+width:70px;
+border:2px solid #9c9c9c;	
+}
+
+
+#portfolioimg img
+{	
+	
+}
+
+.portfolio-name
+{
+position: absolute;
+top: 245px;
+left: 170px;
+font-size: 16px;	
+}
+
+
+#portfolio-links
+{
+width:35px;
+height:300px;
+margin-top:60px;
+border-top-right-radius:7px;
+border-bottom-right-radius:7px;	
+}
+
+#thesis
+{
+height:100px;
+}
+
+
+#badge
+{
+height:100px;
+}
+
+#certificate
+{
+	
+}
+
+#sliderwrapper
+{
+position:absolute;	
+}
+
+
+
+
+h2 {display:inline;}
+.div1, .div2 {width:400px;}
+.div1 {margin-top:30px;margin-bottom:60px;text-align:center;line-height:20px;}
+.div1 P {font-size:18px;}
+.div1 a, .div2 a {color:#07C;}
+.div2 {margin-top:30px;}
+.div2 li {padding-top:6px;padding-bottom:6px;}
+.floatLeft {float:left;}

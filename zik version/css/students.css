@@ -1,0 +1,372 @@
+@charset "UTF-8";
+
+#studentswrapper
+{
+margin-left:30px;
+height:480px;
+overflow:auto;	
+}
+
+.askzsublinks
+{
+margin-left:30px;
+height:40px;
+margin-top:20px;
+margin-bottom:10px;
+position:relative;
+
+}
+
+
+
+.sublinkborder
+{
+width:4px;
+height:23px;
+position:absolute;
+left:1px;		
+}
+
+.askzsublinks ul
+{
+list-style-type: none;	
+}
+
+.askzsublinks li
+{
+display:inline;	
+margin-right:19px;
+font-size:18px;
+padding-bottom:5px;	
+}
+
+#box-body
+{
+background-color:#f5f5f5;	
+}
+
+
+#box-359-560
+{
+width:459px;
+height:480px;
+border:1px solid #ccc;
+background-color:#f5f5f5;
+overflow:auto;
+}
+
+#box-380-560
+{
+width:410px;
+height:480px;
+border:1px solid #ccc;
+padding:10px;
+background-color:#f5f5f5;
+overflow:auto;	
+}
+
+.statsubheader
+{
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+font-size:13px;
+margin:5px;
+margin-left:0px;	
+}
+
+
+
+#studentrow
+{
+padding:10px;	
+}
+
+#statsnumber
+{
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+font-size:20px;
+position:relative;		
+}
+
+#statsrate
+{
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+font-size:20px;
+position:relative;
+	
+}
+
+.engagename
+{	
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+font-size:25px;
+position:relative;
+padding-left:20px;
+}
+
+.engageimgabs
+{
+position:absolute;
+margin-top:10px;	
+}
+
+.engagename img
+{
+height: 60px;
+width: 60px;
+border: 4px solid #ccc;	
+margin-right:8px;
+display:block;
+}
+
+.noofsubscriber
+{
+float:right;
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+font-size:20px;	
+}
+
+
+#box-240-560-header
+{
+height:40px;
+position:relative;
+background-color:#e6e7e8;	
+}
+
+#box-240-560-askheader
+{
+padding-bottom:20px;
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+text-align:right;
+font-size:20px;
+padding:10px;
+margin:5px;	
+}
+
+
+#zaskquestion 
+{
+padding:5px;
+}
+
+#zaskquestion img
+{
+height: 50px;
+width: 50px;
+border: 4px solid #ccc;	
+margin-right:8px;
+display:block;
+}
+
+.question
+{
+width:162px;	
+}
+
+#zaskquestion a:hover
+{
+text-decoration:none;	
+}
+
+.answerheader
+{
+color:#747677;
+margin-right:4px;	
+}
+
+
+.viewpanel
+{
+	
+}
+
+.noofview
+{
+font-size:12px;
+color:#747677;
+margin-right:4px;	
+}
+
+.subheader
+{
+font-size:23px;
+top:7px;
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+position:absolute;
+right:12px;	
+}
+
+.subfooter
+{
+font-size:20px;
+top:7px;
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+position:absolute;
+right:12px;	
+}
+
+.subfooter a
+{
+color:#fff;	
+}
+
+.subfooter a:hover
+{
+text-decoration:none;	
+}
+
+.boxspan
+{
+width:8px;
+height:40px;
+margin-left:0px;
+margin-right:4px;	
+}
+
+.boxicon
+{
+padding:5px 3px 0px 3px;	
+}
+
+#box-240-190-footer
+{
+height:40px;
+position:relative;	
+}
+
+#questionheader
+{
+height:40px;
+padding:5px;
+margin-top:5px;	
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+text-align:right;
+font-size:20px;
+}
+
+#questionmorebody
+{
+margin-top:10px;
+padding:5px;	
+}
+
+#questionmorebody img
+{
+height: 50px;
+width: 50px;
+border: 4px solid #ccc;	
+margin-right:8px;
+display:block;
+margin-bottom:5px;
+}
+
+.morequestionsection
+{
+width:460px; margin-top:10px;
+}
+
+#answerpanel
+{
+margin-top:10px;	
+}
+
+.didwequestion
+{	
+font-weight:bold;
+margin-left:130px;
+margin-top:5px;
+}
+
+.ansmyquestionbtn ul li
+{	
+padding:2px;
+display:inline;
+margin-right:5px;
+}
+
+.commentbox
+{
+height:80px;
+background-color:#e6e7e8;
+margin-top:20px;
+border:1px solid #999;
+padding:7px;	
+}
+
+.morequestionheader
+{
+font-size:15px;
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+line-height:23px;	
+}
+
+.moreanswerheader
+{
+font-size:15px;
+font-family:'SEGOEUIL','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+line-height:23px;
+text-align:justify;	
+}
+
+.giveratingbox
+{
+width:129px;
+margin-top:15px;	
+}
+
+.otheranswerbox
+{
+margin-top:15px;	
+}
+
+.studyhours
+{
+font-size:16px;	
+}
+
+.nooflearners
+{
+font-size:16px;	
+}
+
+
+#studentslistwrapper
+{
+
+-moz-transition: all 1.2s;
+-webkit-transition: all 1.2s;
+-o-transition: all 1.2s;
+background-color:#e6e7e8;	
+}
+
+#studentslistwrapper li
+{
+display:inline-block;
+cursor:pointer;
+text-align:center;
+width:80px;
+min-height:80px;
+padding:3px;
+line-height:16px;
+font-size:11px;
+border:1px solid #ccc;
+overflow:hidden;
+margin-bottom:5px;
+-moz-transition: all 1.2s;
+-webkit-transition: all 1.2s;
+-o-transition: all 1.2s	
+}
+
+#studentslistwrapper li:hover
+{
+background-color:#fff;	
+}
+
+
+#studentslistwrapper li img
+{
+border-radius:7px;
+padding:2px;
+border:1px solid #ccc;
+margin-bottom:4px;	
+}

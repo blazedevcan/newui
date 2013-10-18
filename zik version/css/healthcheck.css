@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+.healthcheckwrapper
+{
+margin-left:30px;
+height:470px;
+overflow:auto;		
+}
+
+.circle {
+	border-radius: 50%;
+	width: 10px;
+	height: 10px; 
+	/* width and height can be anything, as long as they're equal */
+}
+
+
+.healthinfo
+{
+padding:10px;
+border:1px solid #ddd;
+width:302px;	
+background-color: rgba(255, 255, 255, 0.39);
+}
+
+
+.healthinfo textarea
+{
+height:59px;	
+}
+
+.risk-meter
+{
+width:75px;
+padding:5px;
+border:1px solid #ccc;
+background-color:#fff;
+text-align:center;
+margin-bottom:9px;
+margin-top:10px;
+}
+
+.risk-meter label
+{
+text-align:center;
+}
+
+.Impact
+{
+width:75px;
+padding:5px;
+border:1px solid #ccc;
+background-color:#fff;
+text-align:center;
+margin-bottom:9px;		
+}
+
+.Impact label
+{
+text-align:center;
+}
+
+.pop-left
+{
+padding: 10px;
+background-color: rgba(235, 232, 232, 0.27);
+border: 1px solid rgb(214, 214, 214);
+}
+
+.pop-right
+{
+padding: 10px;
+background-color: rgba(235, 232, 232, 0.27);
+border: 1px solid rgb(214, 214, 214);
+border-left:none;
+height: 208px;
+}

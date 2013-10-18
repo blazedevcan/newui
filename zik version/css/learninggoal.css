@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+.zik-learner-wrapper
+{
+margin-left:30px;	
+}
+
+.zik-bx-280-400
+{
+width:320px;
+height:440px;
+border:1px solid #ddd;
+padding:10px;
+background-color:#f5f5f5;	
+}
+
+.zik-bx-430-400
+{
+width:430px;
+height:440px;
+border:1px solid #ddd;
+padding:10px;
+margin-left:30px;
+background-color:#f5f5f5;	
+}
+
+.zik-bx-sub-header
+{
+padding:10px;	
+}
+
+.zik-program-sets
+{
+height:400px;
+overflow:auto;
+overflow-x:hidden;	
+}
+
+.program-row
+{
+margin-top:10px;
+background-color:#f5f5f5;
+border-bottom:1px solid #a8a8a8;
+cursor:pointer;
+position: relative;
+width:290px;
+	
+}
+
+.program-row:hover
+{
+margin-top:10px;
+background-color:#D6D6D6;
+border-bottom:1px solid #a8a8a8;
+color:#FFF;
+}
+
+.active-program-row
+{
+margin-top:10px;
+background-color:#D6D6D6;
+border-bottom:1px solid #a8a8a8;
+color:#FFF;	
+}
+
+.active-program-row:after
+{
+border-left: solid transparent 10px;
+border-right: solid transparent 10px;
+border-top: solid red 10px;
+content: " ";
+height: 0;
+position: absolute;
+width: 0;
+border-top: 15px solid transparent;
+border-bottom: 15px solid transparent;
+border-left: 15px solid green;
+border-left-color: #D6D6D6;
+right: -24px;
+margin-top: -50px;	
+}
+
+
+.program-row:hover .program-row-head
+{
+background-color:#008ecb;
+}
+
+.program-row-head:active
+{
+background-color:#008ecb;
+}
+
+
+.program-row:hover .program-row-item 
+{
+color:#008ecb !important;
+}
+
+.program-row:hover .program-row-date
+{
+color:#008ecb !important;
+}
+
+
+.program-row:hover:after
+{
+border-left: solid transparent 10px;
+border-right: solid transparent 10px;
+border-top: solid red 10px;
+content: " ";
+height: 0;
+position: absolute;
+width: 0;
+border-top: 15px solid transparent;
+border-bottom: 15px solid transparent;
+border-left: 15px solid green;
+border-left-color: #D6D6D6;
+right: -24px;
+margin-top: -50px;
+}
+
+
+
+.program-row-head
+{	
+}
+
+.program-course-name
+{
+width:130px;
+padding:6px;	
+}
+
+.program-status
+{
+padding:6px;
+padding-left:0px;
+padding-top:8px;
+}
+
+.program-row-content
+{
+padding:6px;	
+}
+
+.program-row-footer
+{
+padding:6px;
+}
+
+.program-row-item
+{
+text-align:left;
+padding-bottom:0px;
+margin-bottom:0px;	
+}
+
+.program-row-date
+{
+text-align:right;
+margin-bottom:0px;
+padding-bottom:0px;	
+}
+
+.zik-bx-coaching-table-wrapper
+{
+	
+}
+
+.zik-bx-coaching-description
+{
+	
+}
+
+.coachingdescription
+{
+width:413px;
+height:42px;
+resize:none;
+overflow:auto;	
+}
+
+.coaching-btn
+{	
+}

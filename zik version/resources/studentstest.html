@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+<!-- start: Meta -->
+	<meta charset="utf-8" />
+	<title>Ziksana Dashboard</title>
+	<meta name="description" content="Ziksana Dashboard version 1.2" />
+	<meta name="author" content="Kaivalya Shah" />
+	<meta name="keyword" content="Ziksana Version1.2" />
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+    <link href="../css/zik.css" rel="stylesheet" />
+	<link href="../css/zik-responsive.css" rel="stylesheet" />
+	<link href="../css/maintheme.css" rel="stylesheet" />
+    <link href="../css/bg-color.css" rel="stylesheet" />
+    <link href="../css/contact.css" rel="stylesheet"/>
+	<link href="../css/students.css" rel="stylesheet"/>
+    <link href="../css/jRating.jquery.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+    
+    <link href="../css/tooltip_skin_variation.css" type="text/css" rel="stylesheet" />
+	<style>
+		
+		.form-horizontal .controls {
+		margin-left: 5px !important;
+		}
+		
+		.sc-image
+		{
+		height:60px;
+		width:60px;	
+		}
+		
+		.sky-carousel-container
+		{
+		margin-top:25px !important;	
+		}
+		
+	</style>
+    
+    	<script src="../js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.sky.carousel-1.0.2.min.js"></script>
+		<script type="text/javascript">
+//			$(function() {
+//				$('.sky-carousel').carousel({
+//					itemWidth: 60,
+//					itemHeight: 60,
+//					distance: 12,
+//					selectedItemDistance: 75,
+//					selectedItemZoomFactor: 1,
+//					unselectedItemZoomFactor: 0.5,
+//					unselectedItemAlpha: 0.6,
+//					motionStartDistance: 210,
+//					topMargin: 115,
+//					gradientStartPoint: 0.35,
+//					gradientOverlayColor: "#ebebeb",
+//					gradientOverlaySize: 190,
+//					selectByClick: true
+//				});
+//			});
+		</script>
+
+	<!-- end: CSS -->
+
+</head>
+
+<body>
+
+<!-- ###################### start of container #################### -->
+<div id="zikcontainer">
+
+<!-- ###################### start of zikheader #################### -->
+
+<div id="ajaxheader"></div>
+
+
+
+<!-- ###################### start of bodycontainer #################### -->
+
+<div id="bodycontainer">
+
+<!-- ###################### start of main-menu #################### -->
+
+<div id="ajaxmenu">
+
+</div>
+
+
+<!-- ###################### end of main-menu #################### -->  
+
+
+<div class="theatrewrapper pull-left ">
+
+
+
+<div class="number of subscribers">
+
+
+<a href="#linkurl" id="adcarousel"> Addd </a>
+
+<div id="listbox" class="advallist">
+<img src="../img/contact/img1.png" class="imgval1" alt="" /><input type="checkbox" id="val1" class="val" /> 
+<img src="../img/contact/img2.png" class="imgval2" alt="" /><input type="checkbox" id="val2" class="val" /> 
+<img src="../img/contact/img3.png" class="imgval3" alt="" /><input type="checkbox" id="val3" class="val" /> 
+<img src="../img/contact/img4.png" class="imgval4" alt="" /><input type="checkbox" id="val4" class="val" /> 
+<img src="../img/contact/img5.png" class="imgval5" alt="" /><input type="checkbox" id="val5" class="val" /> 
+
+</div>
+
+
+
+<a href="#linkurl"> Remove </a>
+
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $("#adcarousel").click(function(e) {
+        //var idselect = $(this).attr('id');
+		$(".val").each(function(index, element) {
+			
+         if (this.checked) {
+       		var indeval = index;
+			var checkedindval = $(this).attr('id');
+			var clasval = 'img' + $(this).attr('id');
+			//alert(clasval);
+			var imgpath = $("."+clasval).attr('src');
+			
+			$(".sky-carousel-wrapper ul").append('<li><img src='+imgpath+' class="sc-image" alt="" /><div class="sc-content"><h2>Maria Vann</h2></div></li>');
+			
+			carouselload();
+			
+   			}
+        });
+
+		//alert(idselect);
+    });
+});
+
+
+			function carouselload() {
+				$('.sky-carousel').carousel({
+					itemWidth: 60,
+					itemHeight: 60,
+					distance: 12,
+					selectedItemDistance: 75,
+					selectedItemZoomFactor: 1,
+					unselectedItemZoomFactor: 0.5,
+					unselectedItemAlpha: 0.6,
+					motionStartDistance: 210,
+					topMargin: 115,
+					gradientStartPoint: 0.35,
+					gradientOverlayColor: "#ebebeb",
+					gradientOverlaySize: 190,
+					selectByClick: true,
+					preload: true
+				});
+			}
+
+</script>
+
+<div class="sky-carousel">
+			<div class="sky-carousel-wrapper">
+				<ul class="sky-carousel-container">
+					
+				</ul>
+			</div>
+		</div>
+
+</div> <!-- end of subscriber -->
+
+
+
+
+<div class="clearmyfix"> </div>
+
+</div> <!--end of studentswrapper-->
+
+
+</div> <!--end of theatrewrapper-->
+
+
+
+
+
+<div class="clearmyfix"> </div>
+
+</div> 
+<!-- ###################### end of bodycontainer #################### -->
+
+<!-- #################### start of footer #################### -->
+
+<div id="ajaxfooter">
+
+</div>
+
+
+
+<!-- #################### end of footer #################### -->
+
+
+
+
+
+</div>
+<!-- ###################### end of container #################### -->
+
+
+
+        <script src="../js/jRating.jquery.js"/> </script>
+
+		<script>
+		
+		$('.basic').jRating();
+			
+			$('.exemple2').jRating({
+				type:'small',
+				length : 4,
+				decimalLength : 1
+			});
+
+		</script>
+        
+
+<script type="text/javascript" src="../js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+
+
+<script>
+$('.fancybox').fancybox();
+
+
+</script>
+
+  
+    
+</body>
+</html>
